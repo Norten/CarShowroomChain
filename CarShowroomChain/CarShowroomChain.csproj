@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{62F919EC-2759-45F9-BAD1-0A364FED5A86}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CarShowroomChain</RootNamespace>
+    <AssemblyName>CarShowroomChain</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DBConnection.cs" />
+    <Compile Include="FormAccountManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAccountManagement.Designer.cs">
+      <DependentUpon>FormAccountManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCarSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCarSearch.Designer.cs">
+      <DependentUpon>FormCarSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormClientSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormClientSearch.Designer.cs">
+      <DependentUpon>FormClientSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMainView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMainView.Designer.cs">
+      <DependentUpon>FormMainView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDictionaryData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDictionaryData.Designer.cs">
+      <DependentUpon>FormDictionaryData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNewCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNewCar.Designer.cs">
+      <DependentUpon>FormNewCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNewClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNewClient.Designer.cs">
+      <DependentUpon>FormNewClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNewCarOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNewCarOrder.Designer.cs">
+      <DependentUpon>FormNewCarOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNewServiceOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNewServiceOrder.Designer.cs">
+      <DependentUpon>FormNewServiceOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNewUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNewUser.Designer.cs">
+      <DependentUpon>FormNewUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOrders.Designer.cs">
+      <DependentUpon>FormOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReports.Designer.cs">
+      <DependentUpon>FormReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormServiceOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormServiceOptions.Designer.cs">
+      <DependentUpon>FormServiceOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUsers.Designer.cs">
+      <DependentUpon>FormUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAccountManagement.resx">
+      <DependentUpon>FormAccountManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCarSearch.resx">
+      <DependentUpon>FormCarSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormClientSearch.resx">
+      <DependentUpon>FormClientSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMainView.resx">
+      <DependentUpon>FormMainView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDictionaryData.resx">
+      <DependentUpon>FormDictionaryData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNewCar.resx">
+      <DependentUpon>FormNewCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNewClient.resx">
+      <DependentUpon>FormNewClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNewCarOrder.resx">
+      <DependentUpon>FormNewCarOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNewServiceOrder.resx">
+      <DependentUpon>FormNewServiceOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNewUser.resx">
+      <DependentUpon>FormNewUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOrders.resx">
+      <DependentUpon>FormOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReports.resx">
+      <DependentUpon>FormReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormServiceOptions.resx">
+      <DependentUpon>FormServiceOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUsers.resx">
+      <DependentUpon>FormUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
