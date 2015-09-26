@@ -25,9 +25,16 @@ namespace CarShowroomChain
         private void buttonLogin_Click(object sender, EventArgs e)
         {
             var dbConnection = new DBConnection();
+            var login = textBoxLogin;
+            var pass = textBoxPass;
             dbConnection.OpenConnection();
-
+            
             dbConnection.CloseConnection();
+            FormMainView fmv = new FormMainView();
+            this.Hide();
+            fmv.ShowDialog();
+            fmv.Activate();
+
         }
     }
 }
