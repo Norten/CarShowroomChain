@@ -15,7 +15,7 @@ namespace CarShowroomChain {
 
         public DBConnection() {
             String connectionString;
-            using (var reader = new StreamReader("dbParams\\dbConnectionParams.txt"))
+            using (var reader = new StreamReader("dbParams//dbConnectionParams.txt"))
                 connectionString = reader.ReadLine();
             this.connection = new MySqlConnection(connectionString);
         }
