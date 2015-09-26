@@ -24,17 +24,19 @@ namespace CarShowroomChain
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            var dbConnection = new DBConnection();
-            var login = textBoxLogin;
-            var pass = textBoxPass;
-            dbConnection.OpenConnection();
-            
-            dbConnection.CloseConnection();
-            FormMainView fmv = new FormMainView();
-            this.Hide();
-            fmv.ShowDialog();
-            fmv.Activate();
-
+            var dbModel = new DatabaseModel();
+            var db = dbModel.user_data.SqlQuery("SELECT * FROM user_data;").ToList();
+            var login = textBoxLogin.Text;
+            var pass = textBoxPass.Text;
+            var resultLogin = db.Find(item => item.login == login);
+            var resultPass = db.Find(item => item.password == pass);
+            if (resultLogin != null && resultPass != null && resultLogin.id == resultPass.id)
+            {
+                FormMainView fmv = new FormMainView();
+                this.Hide();
+                fmv.ShowDialog();
+                fmv.Activate();           
+            }
         }
     }
 }
