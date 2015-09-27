@@ -12,6 +12,7 @@ namespace CarShowroomChain
 {
     public partial class FormClientSearch : Form
     {
+        DataGridViewRow row;
         public FormClientSearch()
         {
             InitializeComponent();
@@ -30,8 +31,9 @@ namespace CarShowroomChain
 
         private void buttonModify_Click(object sender, EventArgs e)
         {
-            FormNewClient fNC = new FormNewClient();
-            fNC.ShowDialog();
+            var id = row.Cells["idDataGridViewTextBoxColumn"].Value.ToString();
+            FormClientModify fCM = new FormClientModify(Int32.Parse(id));
+            fCM.ShowDialog();
         }
 
         private void FormClientSearch_Load(object sender, EventArgs e)
@@ -43,11 +45,8 @@ namespace CarShowroomChain
 
         private void dataGridViewClients_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow row = this.dataGridViewClients.Rows[e.RowIndex];
-
-            Console.WriteLine("START");
-            Console.WriteLine(row.Cells["idDataGridViewTextBoxColumn"].Value.ToString());
-            Console.WriteLine("STOP");
+            row = this.dataGridViewClients.Rows[e.RowIndex];
+            Console.WriteLine("CLIENT ID: " + row.Cells["idDataGridViewTextBoxColumn"].Value.ToString());
 
         }
     }

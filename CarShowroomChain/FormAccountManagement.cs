@@ -67,7 +67,7 @@ namespace CarShowroomChain
                     {
                         result.password = newPass1;
                         dbModel.SaveChanges();
-                        this.Hide();
+                        this.Close();
                     } 
                     else
                     {

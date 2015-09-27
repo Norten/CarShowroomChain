@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace CarShowroomChain {
     public partial class FormClientModify : Form {
-        public FormClientModify() {
+        public FormClientModify(int clientId) {
             InitializeComponent();
         }
 
