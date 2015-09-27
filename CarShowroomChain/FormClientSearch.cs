@@ -40,5 +40,15 @@ namespace CarShowroomChain
             this.clientTableAdapter.Fill(this.polsl_agatek_bdDataSet.client);
 
         }
+
+        private void dataGridViewClients_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = this.dataGridViewClients.Rows[e.RowIndex];
+
+            Console.WriteLine("START");
+            Console.WriteLine(row.Cells["idDataGridViewTextBoxColumn"].Value.ToString());
+            Console.WriteLine("STOP");
+
+        }
     }
 }
