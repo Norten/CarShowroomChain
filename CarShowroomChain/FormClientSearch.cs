@@ -31,9 +31,12 @@ namespace CarShowroomChain
 
         private void buttonModify_Click(object sender, EventArgs e)
         {
-            var id = row.Cells["idDataGridViewTextBoxColumn"].Value.ToString();
-            FormClientModify fCM = new FormClientModify(Int32.Parse(id));
-            fCM.ShowDialog();
+            if (row != null)
+            {
+                var id = row.Cells["idDataGridViewTextBoxColumn"].Value.ToString();
+                FormClientModify fCM = new FormClientModify(Int32.Parse(id));
+                fCM.ShowDialog();
+            }
         }
 
         private void FormClientSearch_Load(object sender, EventArgs e)
