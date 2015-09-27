@@ -74,7 +74,6 @@
     <Compile Include="client.cs" />
     <Compile Include="client_order.cs" />
     <Compile Include="DatabaseModel.cs" />
-    <Compile Include="DBConnection.cs" />
     <Compile Include="dict_body.cs" />
     <Compile Include="dict_color.cs" />
     <Compile Include="dict_engine.cs" />

@@ -42,7 +42,7 @@ namespace CarShowroomChain
                 }
                 else
                 {
-                    MessageBox.Show("Jesteś nieaktywnym użytkownikiem\nSkontaktuj się z administratorem systemu.");
+                    MessageBox.Show("Jesteś nieaktywnym użytkownikiem.\nSkontaktuj się z administratorem systemu.");
                 }
             } else
             {
