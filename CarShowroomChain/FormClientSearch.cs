@@ -33,5 +33,12 @@ namespace CarShowroomChain
             FormNewClient fNC = new FormNewClient();
             fNC.ShowDialog();
         }
+
+        private void FormClientSearch_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'polsl_agatek_bdDataSet.client' table. You can move, or remove it, as needed.
+            this.clientTableAdapter.Fill(this.polsl_agatek_bdDataSet.client);
+
+        }
     }
 }
