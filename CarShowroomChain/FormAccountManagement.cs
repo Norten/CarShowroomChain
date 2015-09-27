@@ -16,6 +16,23 @@ namespace CarShowroomChain
         {
             InitializeComponent();
             this.panel2BackgroundLogin.Visible = false;
+
+            int user_id = UserSingleton.Instance.userId;
+            var dbModel = new DatabaseModel();
+            var user = dbModel.user_data.Find(user_id);
+            var shop = dbModel.car_shop.Find(user.id_car_shop);
+
+            this.textBoxName.Text = user.first_name;
+            this.textBoxSurname.Text = user.last_name;
+            this.textBoxAddress.Text = user.address;
+            this.textBoxTelephoneNum.Text = user.phone;
+            this.textBoxEmail.Text = user.email;
+            this.textBoxShop.Text = shop.name + ", " + shop.address;
+
+            this.labelRole.Visible = false;
+            this.textBoxRole.Visible = false;
+
+
         }
 
         private void buttonLoginData_Click(object sender, EventArgs e)
