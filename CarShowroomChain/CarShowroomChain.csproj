@@ -93,6 +93,12 @@
     <Compile Include="FormCarSearch.Designer.cs">
       <DependentUpon>FormCarSearch.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormClientModify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormClientModify.Designer.cs">
+      <DependentUpon>FormClientModify.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormClientSearch.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +194,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCarSearch.resx">
       <DependentUpon>FormCarSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormClientModify.resx">
+      <DependentUpon>FormClientModify.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormClientSearch.resx">
       <DependentUpon>FormClientSearch.cs</DependentUpon>

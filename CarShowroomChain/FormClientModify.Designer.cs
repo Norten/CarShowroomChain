@@ -1,7 +1,5 @@
-﻿namespace CarShowroomChain
-{
-    partial class FormNewClient
-    {
+﻿namespace CarShowroomChain {
+    partial class FormClientModify {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -11,10 +9,8 @@
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
+        protected override void Dispose(bool disposing) {
+            if (disposing && (components != null)) {
                 components.Dispose();
             }
             base.Dispose(disposing);
@@ -26,8 +22,7 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
-        {
+        private void InitializeComponent() {
             this.panelBackground = new System.Windows.Forms.Panel();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonAccept = new System.Windows.Forms.Button();
@@ -62,9 +57,9 @@
             this.panelBackground.Location = new System.Drawing.Point(0, 0);
             this.panelBackground.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelBackground.Name = "panelBackground";
-            this.panelBackground.Padding = new System.Windows.Forms.Padding(20, 20, 20, 20);
+            this.panelBackground.Padding = new System.Windows.Forms.Padding(20);
             this.panelBackground.Size = new System.Drawing.Size(682, 353);
-            this.panelBackground.TabIndex = 0;
+            this.panelBackground.TabIndex = 1;
             // 
             // buttonCancel
             // 
@@ -90,7 +85,6 @@
             this.buttonAccept.TabIndex = 20;
             this.buttonAccept.Text = "Akceptuj";
             this.buttonAccept.UseVisualStyleBackColor = true;
-            this.buttonAccept.Click += new System.EventHandler(this.buttonAccept_Click);
             // 
             // textBoxEmail
             // 
@@ -188,16 +182,16 @@
             this.labelName.Text = "Imię";
             this.labelName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // FormNewClient
+            // FormClientModify
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(682, 353);
             this.Controls.Add(this.panelBackground);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximumSize = new System.Drawing.Size(700, 400);
             this.MinimumSize = new System.Drawing.Size(700, 400);
-            this.Name = "FormNewClient";
-            this.Text = "Nowy klient";
+            this.Name = "FormClientModify";
+            this.Text = "Modyfikuj klienta";
             this.panelBackground.ResumeLayout(false);
             this.panelBackground.PerformLayout();
             this.ResumeLayout(false);
@@ -207,17 +201,18 @@
         #endregion
 
         private System.Windows.Forms.Panel panelBackground;
-        private System.Windows.Forms.Label labelSurname;
-        private System.Windows.Forms.Label labelName;
+        private System.Windows.Forms.Button buttonCancel;
+        private System.Windows.Forms.Button buttonAccept;
+        private System.Windows.Forms.TextBox textBoxEmail;
+        private System.Windows.Forms.TextBox textBoxTelephoneNum;
+        private System.Windows.Forms.TextBox textBoxAddress;
         private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.TextBox textBoxSurname;
         private System.Windows.Forms.Label labelEmail;
         private System.Windows.Forms.Label labelTelephoneNum;
         private System.Windows.Forms.Label labelAddress;
-        private System.Windows.Forms.TextBox textBoxEmail;
-        private System.Windows.Forms.TextBox textBoxTelephoneNum;
-        private System.Windows.Forms.TextBox textBoxAddress;
-        private System.Windows.Forms.Button buttonCancel;
-        private System.Windows.Forms.Button buttonAccept;
+        private System.Windows.Forms.Label labelSurname;
+        private System.Windows.Forms.Label labelName;
+
     }
 }
