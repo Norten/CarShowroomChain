@@ -56,6 +56,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -66,7 +68,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="car.cs" />
+    <Compile Include="car_sell.cs" />
+    <Compile Include="car_shop.cs" />
+    <Compile Include="client.cs" />
+    <Compile Include="client_order.cs" />
+    <Compile Include="DatabaseModel.cs" />
     <Compile Include="DBConnection.cs" />
+    <Compile Include="dict_body.cs" />
+    <Compile Include="dict_color.cs" />
+    <Compile Include="dict_engine.cs" />
+    <Compile Include="dict_fuel.cs" />
+    <Compile Include="dict_gearbox.cs" />
+    <Compile Include="dict_series.cs" />
+    <Compile Include="dict_service.cs" />
     <Compile Include="FormAccountManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,8 +172,18 @@
     <Compile Include="FormUsers.Designer.cs">
       <DependentUpon>FormUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="model.cs" />
+    <Compile Include="polsl_agatek_bdDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>polsl_agatek_bdDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="reservation.cs" />
+    <Compile Include="role.cs" />
+    <Compile Include="UserSingleton.cs" />
+    <Compile Include="user_data.cs" />
     <EmbeddedResource Include="FormAccountManagement.resx">
       <DependentUpon>FormAccountManagement.cs</DependentUpon>
     </EmbeddedResource>
@@ -214,6 +239,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="packages.config" />
+    <None Include="polsl_agatek_bdDataSet.xsc">
+      <DependentUpon>polsl_agatek_bdDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="polsl_agatek_bdDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>polsl_agatek_bdDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="polsl_agatek_bdDataSet.xss">
+      <DependentUpon>polsl_agatek_bdDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

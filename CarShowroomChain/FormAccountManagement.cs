@@ -43,14 +43,13 @@ namespace CarShowroomChain
             if (newPass1 == newPass2)
             {
                 var dbModel = new DatabaseModel();
-                var db = dbModel.user_data.SqlQuery("SELECT * FROM user_data;").ToList();
-                var resultLogin = db.Find(item => item.login == login);
-                var resultPass = db.Find(item => item.password == pass);
-                if (resultLogin != null && resultPass != null)
+                var result = dbModel.user_data.Find(user_id);
+                if (result != null)
                 {
-                    if (login == resultLogin.login && pass == resultPass.password && resultLogin.id == resultPass.id && user_id == resultLogin.id)
+                    if (login == result.login && pass == result.password && user_id == result.id)
                     {
-                        dbModel.user_data.SqlQuery("UPDATE user_data SET password = '" + newPass1 + "' WHERE id = " + user_id + ";");
+                        result.password = newPass1;
+                        dbModel.SaveChanges();
                         this.Hide();
                     } 
                     else
