@@ -48,7 +48,7 @@
             this.panelBackground.Controls.Add(this.labelLogin);
             this.panelBackground.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelBackground.Location = new System.Drawing.Point(0, 0);
-            this.panelBackground.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelBackground.Margin = new System.Windows.Forms.Padding(2);
             this.panelBackground.Name = "panelBackground";
             this.panelBackground.Padding = new System.Windows.Forms.Padding(38, 81, 38, 24);
             this.panelBackground.Size = new System.Drawing.Size(344, 197);
@@ -59,7 +59,7 @@
             this.buttonCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCancel.AutoSize = true;
             this.buttonCancel.Location = new System.Drawing.Point(248, 148);
-            this.buttonCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonCancel.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(56, 23);
             this.buttonCancel.TabIndex = 5;
@@ -72,7 +72,7 @@
             this.buttonLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonLogin.AutoSize = true;
             this.buttonLogin.Location = new System.Drawing.Point(187, 148);
-            this.buttonLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonLogin.Margin = new System.Windows.Forms.Padding(2);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(56, 23);
             this.buttonLogin.TabIndex = 4;
@@ -84,10 +84,11 @@
             // 
             this.textBoxPass.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxPass.Location = new System.Drawing.Point(229, 81);
-            this.textBoxPass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxPass.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPass.Name = "textBoxPass";
             this.textBoxPass.Size = new System.Drawing.Size(76, 20);
             this.textBoxPass.TabIndex = 3;
+            this.textBoxPass.UseSystemPasswordChar = true;
             // 
             // labelPassword
             // 
@@ -114,7 +115,7 @@
             // 
             this.labelLogin.AutoSize = true;
             this.labelLogin.Location = new System.Drawing.Point(40, 84);
-            this.labelLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelLogin.Margin = new System.Windows.Forms.Padding(2);
             this.labelLogin.Name = "labelLogin";
             this.labelLogin.Size = new System.Drawing.Size(33, 13);
             this.labelLogin.TabIndex = 0;
@@ -128,7 +129,7 @@
             this.ClientSize = new System.Drawing.Size(344, 197);
             this.Controls.Add(this.panelBackground);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormLogin";
             this.Text = "Logowanie";
             this.panelBackground.ResumeLayout(false);
