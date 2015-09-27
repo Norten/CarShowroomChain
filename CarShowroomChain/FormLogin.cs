@@ -39,6 +39,7 @@ namespace CarShowroomChain
                     this.Hide();
                     fmv.ShowDialog();
                     fmv.Activate();
+                    this.Close();
                 }
                 else
                 {
@@ -48,6 +49,11 @@ namespace CarShowroomChain
             {
                 MessageBox.Show("Błędny login lub hasło.");
             }
+        }
+
+        private void textBoxPass_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e) {
+            if (e.KeyCode == Keys.Enter)
+                this.buttonLogin_Click(new object(), new EventArgs());
         }
 
     }
