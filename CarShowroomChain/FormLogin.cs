@@ -32,17 +32,16 @@ namespace CarShowroomChain
             var resultPass = db.Find(item => item.password == pass);
             if (resultLogin != null && resultPass != null && resultLogin.id == resultPass.id)
             {
-                id_user = resultLogin.id;
+                UserSingleton.Instance.userId = resultLogin.id;
                 FormMainView fmv = new FormMainView();
                 this.Hide();
                 fmv.ShowDialog();
                 fmv.Activate();           
             } else
             {
-                MessageBox.Show("Błędny login lub hasło");
+                MessageBox.Show("Błędny login lub hasło.");
             }
         }
 
-        public int id_user { get; set; }
     }
 }
