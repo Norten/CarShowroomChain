@@ -13,8 +13,9 @@ namespace CarShowroomChain
     public partial class FormDictionaryData : Form
     {
         DatabaseModel dbModelSave = new DatabaseModel();
-        List<string> listAdded = new List<string>();
-        List<decimal> costAdded = new List<decimal>();
+        string valueAdded;
+        string costAdded;
+        string table;
         public FormDictionaryData()
         {
             InitializeComponent();
@@ -30,8 +31,8 @@ namespace CarShowroomChain
             this.labelNewValue.Visible = false;
             this.textBoxNewValue.Visible = false;
             this.buttonAdd.Visible = false;
-            this.listBoxAddedValue.Visible = false;
-            this.listBoxAddedCost.Visible = false;
+            this.textBoxAddedValue.Visible = false;
+            this.textBoxAddedCost.Visible = false;
             this.buttonSaveAndQuit.Visible = false;
         }
 
@@ -47,7 +48,7 @@ namespace CarShowroomChain
 
         }
 
-        public void dictionarySettings (bool visible, List<string> list, List<decimal> cost)
+        public void dictionarySettings (bool visible, List<string> list, List<string> cost)
         {
             this.labelCost.Visible = visible;
             this.listBoxCost.Visible = visible;
@@ -65,7 +66,7 @@ namespace CarShowroomChain
             string[] tables = {"dict_body", "dict_color", "dict_engine", "dict_fuel", "dict_gearbox", "dict_series", "dict_service"};
             var selectedTable = tables[this.listBoxCategories.SelectedIndex];
             List<string> list = new List<string>();
-            List<decimal> cost = new List<decimal>();
+            List<string> cost = new List<string>();
             var dbModel = new DatabaseModel();
             switch (selectedTable)
             {
@@ -136,8 +137,17 @@ namespace CarShowroomChain
             this.listBoxCost.DataSource = cost;
         }
 
+        public void addToDatabase (string toValue, string toCost, string toTable)
+        {
+            valueAdded = toValue;
+            costAdded = toCost;
+            table = toTable;
+        }
+
         private void buttonAdd_Click(object sender, EventArgs e)
         {
+            this.textBoxAddedValue.Visible = true;
+            this.textBoxAddedCost.Visible = false;
             string[] tables = { "dict_body", "dict_color", "dict_engine", "dict_fuel", "dict_gearbox", "dict_series", "dict_service" };
             var selectedTable = tables[this.listBoxCategories.SelectedIndex];
             
@@ -147,8 +157,6 @@ namespace CarShowroomChain
                     var newBody = new dict_body();
                     newBody.body = this.textBoxNewDictionaryData.Text;
                     dbModelSave.dict_body.Add(newBody);
-                    //listAdded.Add();
-                    //costAdded.Add();
                     break;
                 case "dict_color":
                     var newColor = new dict_color();
@@ -156,34 +164,41 @@ namespace CarShowroomChain
                     dbModelSave.dict_color.Add(newColor);
                     break;
                 case "dict_engine":
-                    var newBody = new dict_body();
-                    newBody.body = this.textBoxNewDictionaryData.Text;
-                    dbModelSave.dict_body.Add(newBody);
+                    var newEngine = new dict_engine();
+                    newEngine.engine = this.textBoxNewDictionaryData.Text;
+                    dbModelSave.dict_engine.Add(newEngine);
                     break;
                 case "dict_fuel":
-                    var newBody = new dict_body();
-                    newBody.body = this.textBoxNewDictionaryData.Text;
-                    dbModelSave.dict_body.Add(newBody);
+                    var newFuel = new dict_fuel();
+                    newFuel.fuel = this.textBoxNewDictionaryData.Text;
+                    dbModelSave.dict_fuel.Add(newFuel);
                     break;
                 case "dict_gearbox":
-                    var newBody = new dict_body();
-                    newBody.body = this.textBoxNewDictionaryData.Text;
-                    dbModelSave.dict_body.Add(newBody);
+                    var newGearbox = new dict_gearbox();
+                    newGearbox.gearbox = this.textBoxNewDictionaryData.Text;
+                    dbModelSave.dict_gearbox.Add(newGearbox);
                     break;
                 case "dict_series":
-                    var newBody = new dict_body();
-                    newBody.body = this.textBoxNewDictionaryData.Text;
-                    dbModelSave.dict_body.Add(newBody);
+                    var newSeries = new dict_series();
+                    newSeries.series = this.textBoxNewDictionaryData.Text;
+                    dbModelSave.dict_series.Add(newSeries);
                     break;
                 case "dict_service":
-                    var newBody = new dict_body();
-                    newBody.body = this.textBoxNewDictionaryData.Text;
-                    dbModelSave.dict_body.Add(newBody);
+                    this.textBoxAddedCost.Visible = true;
+                    var newService = new dict_service();
+                    newService.name = this.textBoxNewDictionaryData.Text;
+                    newService.cost = this.textBoxNewValue.Text;
+                    dbModelSave.dict_service.Add(newService);
                     break;
                 default:
                     
                     break;
             }
+            addToDatabase(this.textBoxNewDictionaryData.Text, this.textBoxNewValue.Text, selectedTable);
+            this.textBoxAddedValue.Text = valueAdded;
+            this.textBoxAddedCost.Text = costAdded;
+            this.textBoxNewDictionaryData.Clear();
+            this.textBoxNewValue.Clear();
             
         }
 

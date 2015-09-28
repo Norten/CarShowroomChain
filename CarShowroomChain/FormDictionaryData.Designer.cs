@@ -47,8 +47,8 @@
             this.polslagatekbdDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dictbodyBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dict_bodyTableAdapter = new CarShowroomChain.polsl_agatek_bdDataSetTableAdapters.dict_bodyTableAdapter();
-            this.listBoxAddedValue = new System.Windows.Forms.ListBox();
-            this.listBoxAddedCost = new System.Windows.Forms.ListBox();
+            this.textBoxAddedValue = new System.Windows.Forms.TextBox();
+            this.textBoxAddedCost = new System.Windows.Forms.TextBox();
             this.panelBackground.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.polsl_agatek_bdDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.polslagatekbdDataSetBindingSource)).BeginInit();
@@ -57,8 +57,8 @@
             // 
             // panelBackground
             // 
-            this.panelBackground.Controls.Add(this.listBoxAddedCost);
-            this.panelBackground.Controls.Add(this.listBoxAddedValue);
+            this.panelBackground.Controls.Add(this.textBoxAddedCost);
+            this.panelBackground.Controls.Add(this.textBoxAddedValue);
             this.panelBackground.Controls.Add(this.labelCost);
             this.panelBackground.Controls.Add(this.listBoxCost);
             this.panelBackground.Controls.Add(this.labelNewValue);
@@ -77,7 +77,7 @@
             this.panelBackground.Margin = new System.Windows.Forms.Padding(2);
             this.panelBackground.Name = "panelBackground";
             this.panelBackground.Padding = new System.Windows.Forms.Padding(15, 16, 15, 16);
-            this.panelBackground.Size = new System.Drawing.Size(568, 342);
+            this.panelBackground.Size = new System.Drawing.Size(541, 342);
             this.panelBackground.TabIndex = 0;
             // 
             // labelCost
@@ -132,7 +132,7 @@
             // 
             this.buttonCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCancel.AutoSize = true;
-            this.buttonCancel.Location = new System.Drawing.Point(495, 287);
+            this.buttonCancel.Location = new System.Drawing.Point(468, 287);
             this.buttonCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 24);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(56, 23);
@@ -145,7 +145,7 @@
             // 
             this.buttonSaveAndQuit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSaveAndQuit.AutoSize = true;
-            this.buttonSaveAndQuit.Location = new System.Drawing.Point(409, 287);
+            this.buttonSaveAndQuit.Location = new System.Drawing.Point(382, 287);
             this.buttonSaveAndQuit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 24);
             this.buttonSaveAndQuit.Name = "buttonSaveAndQuit";
             this.buttonSaveAndQuit.Size = new System.Drawing.Size(82, 23);
@@ -157,13 +157,14 @@
             // buttonAdd
             // 
             this.buttonAdd.AutoSize = true;
-            this.buttonAdd.Location = new System.Drawing.Point(195, 245);
+            this.buttonAdd.Location = new System.Drawing.Point(195, 247);
             this.buttonAdd.Margin = new System.Windows.Forms.Padding(2, 8, 2, 2);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(183, 23);
             this.buttonAdd.TabIndex = 5;
             this.buttonAdd.Text = "Dodaj daną słownikową";
             this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // textBoxNewDictionaryData
             // 
@@ -242,29 +243,28 @@
             // 
             this.dict_bodyTableAdapter.ClearBeforeFill = true;
             // 
-            // listBoxAddedValue
+            // textBoxAddedValue
             // 
-            this.listBoxAddedValue.FormattingEnabled = true;
-            this.listBoxAddedValue.Location = new System.Drawing.Point(197, 272);
-            this.listBoxAddedValue.Margin = new System.Windows.Forms.Padding(2);
-            this.listBoxAddedValue.Name = "listBoxAddedValue";
-            this.listBoxAddedValue.Size = new System.Drawing.Size(114, 43);
-            this.listBoxAddedValue.TabIndex = 13;
+            this.textBoxAddedValue.Location = new System.Drawing.Point(195, 283);
+            this.textBoxAddedValue.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxAddedValue.MaxLength = 200;
+            this.textBoxAddedValue.Name = "textBoxAddedValue";
+            this.textBoxAddedValue.Size = new System.Drawing.Size(116, 20);
+            this.textBoxAddedValue.TabIndex = 15;
             // 
-            // listBoxAddedCost
+            // textBoxAddedCost
             // 
-            this.listBoxAddedCost.FormattingEnabled = true;
-            this.listBoxAddedCost.Location = new System.Drawing.Point(315, 272);
-            this.listBoxAddedCost.Margin = new System.Windows.Forms.Padding(2);
-            this.listBoxAddedCost.Name = "listBoxAddedCost";
-            this.listBoxAddedCost.Size = new System.Drawing.Size(63, 43);
-            this.listBoxAddedCost.TabIndex = 14;
+            this.textBoxAddedCost.Location = new System.Drawing.Point(315, 283);
+            this.textBoxAddedCost.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxAddedCost.Name = "textBoxAddedCost";
+            this.textBoxAddedCost.Size = new System.Drawing.Size(64, 20);
+            this.textBoxAddedCost.TabIndex = 16;
             // 
             // FormDictionaryData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(568, 342);
+            this.ClientSize = new System.Drawing.Size(541, 342);
             this.Controls.Add(this.panelBackground);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -301,7 +301,7 @@
         private polsl_agatek_bdDataSetTableAdapters.dict_bodyTableAdapter dict_bodyTableAdapter;
         private System.Windows.Forms.Label labelCost;
         private System.Windows.Forms.ListBox listBoxCost;
-        private System.Windows.Forms.ListBox listBoxAddedCost;
-        private System.Windows.Forms.ListBox listBoxAddedValue;
+        private System.Windows.Forms.TextBox textBoxAddedCost;
+        private System.Windows.Forms.TextBox textBoxAddedValue;
     }
 }

@@ -21,7 +21,7 @@ namespace CarShowroomChain
         [StringLength(250)]
         public string name { get; set; }
 
-        public decimal cost { get; set; }
+        public string cost { get; set; }
 
         public virtual ICollection<client_order> client_order { get; set; }
     }
