@@ -46,11 +46,10 @@ namespace CarShowroomChain
 
         }
 
-        private void dataGridViewClients_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridViewClients_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             row = this.dataGridViewClients.Rows[e.RowIndex];
             Console.WriteLine("CLIENT ID: " + row.Cells["idDataGridViewTextBoxColumn"].Value.ToString());
-
         }
     }
 }
