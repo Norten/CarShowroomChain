@@ -105,13 +105,13 @@ namespace CarShowroomChain
         {
             car newCar = new car();
             newCar.id_body = keyValBody[this.comboBoxCarBody.Text];
-            newCar.id_color = keyValBody[this.comboBoxColor.Text];
-            newCar.id_engine = keyValBody[this.comboBoxEngine.Text];
-            newCar.id_fuel = keyValBody[this.comboBoxFuel.Text];
-            newCar.id_gearbox = keyValBody[this.comboBoxGearbox.Text];
-            newCar.id_series = keyValBody[this.comboBoxSeries.Text];
-            newCar.id_model = keyValBody[this.comboBoxModel.Text];
-            newCar.id_car_shop = keyValBody[this.comboBoxShop.Text];
+            newCar.id_color = keyValColor[this.comboBoxColor.Text];
+            newCar.id_engine = keyValEngine[this.comboBoxEngine.Text];
+            newCar.id_fuel = keyValFuel[this.comboBoxFuel.Text];
+            newCar.id_gearbox = keyValGearbox[this.comboBoxGearbox.Text];
+            newCar.id_series = keyValSeries[this.comboBoxSeries.Text];
+            newCar.id_model = keyValModel[this.comboBoxModel.Text];
+            newCar.id_car_shop = keyValShop[this.comboBoxShop.Text];
             newCar.cost = this.textBoxPrice.Text;
             dbModel.car.Add(newCar);
             dbModel.SaveChanges();
