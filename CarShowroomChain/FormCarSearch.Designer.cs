@@ -226,6 +226,7 @@
             this.buttonChoose.TabIndex = 36;
             this.buttonChoose.Text = "Wybierz";
             this.buttonChoose.UseVisualStyleBackColor = true;
+            this.buttonChoose.Click += new System.EventHandler(this.buttonChoose_Click);
             // 
             // buttonFilter
             // 
