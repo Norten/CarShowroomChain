@@ -46,6 +46,9 @@
             this.clientBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.clientTableAdapter = new CarShowroomChain.polsl_agatek_bdDataSetTableAdapters.clientTableAdapter();
             this.clientBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.textBoxName = new System.Windows.Forms.TextBox();
+            this.textBoxSurname = new System.Windows.Forms.TextBox();
+            this.buttonFilter = new System.Windows.Forms.Button();
             this.panelBackground.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClients)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource2)).BeginInit();
@@ -56,6 +59,9 @@
             // 
             // panelBackground
             // 
+            this.panelBackground.Controls.Add(this.buttonFilter);
+            this.panelBackground.Controls.Add(this.textBoxSurname);
+            this.panelBackground.Controls.Add(this.textBoxName);
             this.panelBackground.Controls.Add(this.buttonCancel);
             this.panelBackground.Controls.Add(this.buttonAddNew);
             this.panelBackground.Controls.Add(this.buttonModify);
@@ -65,7 +71,7 @@
             this.panelBackground.Location = new System.Drawing.Point(0, 0);
             this.panelBackground.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelBackground.Name = "panelBackground";
-            this.panelBackground.Padding = new System.Windows.Forms.Padding(20, 20, 20, 20);
+            this.panelBackground.Padding = new System.Windows.Forms.Padding(20);
             this.panelBackground.Size = new System.Drawing.Size(883, 654);
             this.panelBackground.TabIndex = 0;
             // 
@@ -138,14 +144,14 @@
             this.emailDataGridViewTextBoxColumn,
             this.idDataGridViewTextBoxColumn});
             this.dataGridViewClients.DataSource = this.clientBindingSource2;
-            this.dataGridViewClients.Location = new System.Drawing.Point(23, 22);
+            this.dataGridViewClients.Location = new System.Drawing.Point(23, 249);
             this.dataGridViewClients.Margin = new System.Windows.Forms.Padding(3, 2, 3, 75);
             this.dataGridViewClients.MultiSelect = false;
             this.dataGridViewClients.Name = "dataGridViewClients";
             this.dataGridViewClients.ReadOnly = true;
             this.dataGridViewClients.RowTemplate.Height = 24;
             this.dataGridViewClients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewClients.Size = new System.Drawing.Size(836, 537);
+            this.dataGridViewClients.Size = new System.Drawing.Size(836, 310);
             this.dataGridViewClients.TabIndex = 6;
             this.dataGridViewClients.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewClients_CellClick);
             // 
@@ -215,6 +221,31 @@
             this.clientBindingSource1.DataMember = "client";
             this.clientBindingSource1.DataSource = this.polsl_agatek_bdDataSet;
             // 
+            // textBoxName
+            // 
+            this.textBoxName.Location = new System.Drawing.Point(104, 23);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(100, 22);
+            this.textBoxName.TabIndex = 12;
+            // 
+            // textBoxSurname
+            // 
+            this.textBoxSurname.Location = new System.Drawing.Point(104, 51);
+            this.textBoxSurname.Name = "textBoxSurname";
+            this.textBoxSurname.Size = new System.Drawing.Size(100, 22);
+            this.textBoxSurname.TabIndex = 13;
+            // 
+            // buttonFilter
+            // 
+            this.buttonFilter.AutoSize = true;
+            this.buttonFilter.Location = new System.Drawing.Point(229, 46);
+            this.buttonFilter.Name = "buttonFilter";
+            this.buttonFilter.Size = new System.Drawing.Size(75, 27);
+            this.buttonFilter.TabIndex = 14;
+            this.buttonFilter.Text = "Filtruj";
+            this.buttonFilter.UseVisualStyleBackColor = true;
+            this.buttonFilter.Click += new System.EventHandler(this.buttonFilter_Click);
+            // 
             // FormClientSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -256,5 +287,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource clientBindingSource2;
         private System.Windows.Forms.BindingSource clientBindingSource1;
+        private System.Windows.Forms.Button buttonFilter;
+        private System.Windows.Forms.TextBox textBoxSurname;
+        private System.Windows.Forms.TextBox textBoxName;
     }
 }

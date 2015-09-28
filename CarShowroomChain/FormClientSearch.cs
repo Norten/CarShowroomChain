@@ -66,5 +66,24 @@ namespace CarShowroomChain
             } else 
                 MessageBox.Show("Musisz najpierw wybrać klienta.");
         }
+
+        private void buttonFilter_Click(object sender, EventArgs e) {
+            var name = this.textBoxName.Text;
+            var surname = this.textBoxSurname.Text;
+            var dbModel = new DatabaseModel();
+            string wherePart = " WHERE";
+            if (!String.IsNullOrWhiteSpace(name))
+                wherePart += " first_name like '" + name + "'";
+            if (!String.IsNullOrWhiteSpace(name) && !String.IsNullOrWhiteSpace(surname))
+                wherePart += " AND";
+            if (!String.IsNullOrWhiteSpace(surname))
+                wherePart += " last_name like '" + surname + "' ";
+            if (wherePart.Equals(" WHERE"))
+                wherePart = "";
+            var db = dbModel.client.SqlQuery("SELECT * FROM client" + wherePart +";").ToList();
+            var source = new BindingSource();
+            source.DataSource = db;
+            this.dataGridViewClients.DataSource = source;
+        }
     }
 }
