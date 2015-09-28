@@ -33,7 +33,48 @@ namespace CarShowroomChain
         {
             string[] tables = {"dict_body", "dict_color", "dict_engine", "dict_fuel", "dict_gearbox", "dict_series", "dict_service"};
             var selectedTable = tables[this.listBoxCategories.SelectedIndex];
-            Console.WriteLine(selectedTable);
+            List<string> list = new List<string>();
+            
+            var dbModel = new DatabaseModel();
+            switch (selectedTable)
+            {
+                case "dict_body":
+                    var allDictionary = dbModel.dict_body.SqlQuery("SELECT * FROM dict_body;").ToList();
+                    break;
+                case "dict_color":
+                    Console.WriteLine("Case 2");
+                    break;
+                case "dict_engine":
+                    Console.WriteLine("Case 1");
+                    break;
+                case "dict_fuel":
+                    Console.WriteLine("Case 1");
+                    break;
+                case "dict_gearbox":
+                    Console.WriteLine("Case 1");
+                    break;
+                case "dict_series":
+                    Console.WriteLine("Case 1");
+                    break;
+                case "dict_service":
+                    Console.WriteLine("Case 1");
+                    break;
+                default:
+                    Console.WriteLine("Default case");
+                    break;
+            }
+            var allBody = dbModel.dict_body.SqlQuery("SELECT * FROM dict_body;").ToList();
+
+            
+            foreach(dict_body item in allBody)
+            {
+                list.Add(item.body);
+            }
+            this.listBoxDictionaryData.DataSource = list;
+            //var color = dbModel.dict_color.SqlQuery("SELECT * FROM dict_color;").ToList();
+            //var body = dbModel.dict_body.SqlQuery("SELECT * FROM dict_body;").ToList();
+            //var body = dbModel.dict_body.SqlQuery("SELECT * FROM dict_body;").ToList();
+            //var body = dbModel.dict_body.SqlQuery("SELECT * FROM dict_body;").ToList();
         }
     }
 }
