@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panelBackground = new System.Windows.Forms.Panel();
+            this.labelCost = new System.Windows.Forms.Label();
+            this.listBoxCost = new System.Windows.Forms.ListBox();
             this.labelNewValue = new System.Windows.Forms.Label();
             this.labelDictionaryNewWord = new System.Windows.Forms.Label();
             this.textBoxNewValue = new System.Windows.Forms.TextBox();
@@ -45,8 +47,8 @@
             this.polslagatekbdDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dictbodyBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dict_bodyTableAdapter = new CarShowroomChain.polsl_agatek_bdDataSetTableAdapters.dict_bodyTableAdapter();
-            this.labelCost = new System.Windows.Forms.Label();
-            this.listBoxCost = new System.Windows.Forms.ListBox();
+            this.listBoxAddedValue = new System.Windows.Forms.ListBox();
+            this.listBoxAddedCost = new System.Windows.Forms.ListBox();
             this.panelBackground.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.polsl_agatek_bdDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.polslagatekbdDataSetBindingSource)).BeginInit();
@@ -55,6 +57,8 @@
             // 
             // panelBackground
             // 
+            this.panelBackground.Controls.Add(this.listBoxAddedCost);
+            this.panelBackground.Controls.Add(this.listBoxAddedValue);
             this.panelBackground.Controls.Add(this.labelCost);
             this.panelBackground.Controls.Add(this.listBoxCost);
             this.panelBackground.Controls.Add(this.labelNewValue);
@@ -73,8 +77,28 @@
             this.panelBackground.Margin = new System.Windows.Forms.Padding(2);
             this.panelBackground.Name = "panelBackground";
             this.panelBackground.Padding = new System.Windows.Forms.Padding(15, 16, 15, 16);
-            this.panelBackground.Size = new System.Drawing.Size(497, 342);
+            this.panelBackground.Size = new System.Drawing.Size(568, 342);
             this.panelBackground.TabIndex = 0;
+            // 
+            // labelCost
+            // 
+            this.labelCost.AutoSize = true;
+            this.labelCost.Location = new System.Drawing.Point(391, 24);
+            this.labelCost.Margin = new System.Windows.Forms.Padding(2);
+            this.labelCost.Name = "labelCost";
+            this.labelCost.Size = new System.Drawing.Size(33, 13);
+            this.labelCost.TabIndex = 12;
+            this.labelCost.Text = "Koszt";
+            this.labelCost.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // listBoxCost
+            // 
+            this.listBoxCost.FormattingEnabled = true;
+            this.listBoxCost.Location = new System.Drawing.Point(394, 41);
+            this.listBoxCost.Margin = new System.Windows.Forms.Padding(2);
+            this.listBoxCost.Name = "listBoxCost";
+            this.listBoxCost.Size = new System.Drawing.Size(97, 147);
+            this.listBoxCost.TabIndex = 11;
             // 
             // labelNewValue
             // 
@@ -108,7 +132,7 @@
             // 
             this.buttonCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCancel.AutoSize = true;
-            this.buttonCancel.Location = new System.Drawing.Point(424, 287);
+            this.buttonCancel.Location = new System.Drawing.Point(495, 287);
             this.buttonCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 24);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(56, 23);
@@ -121,13 +145,14 @@
             // 
             this.buttonSaveAndQuit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSaveAndQuit.AutoSize = true;
-            this.buttonSaveAndQuit.Location = new System.Drawing.Point(337, 287);
+            this.buttonSaveAndQuit.Location = new System.Drawing.Point(409, 287);
             this.buttonSaveAndQuit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 24);
             this.buttonSaveAndQuit.Name = "buttonSaveAndQuit";
             this.buttonSaveAndQuit.Size = new System.Drawing.Size(82, 23);
             this.buttonSaveAndQuit.TabIndex = 6;
             this.buttonSaveAndQuit.Text = "Zapisz i wyjdź";
             this.buttonSaveAndQuit.UseVisualStyleBackColor = true;
+            this.buttonSaveAndQuit.Click += new System.EventHandler(this.buttonSaveAndQuit_Click);
             // 
             // buttonAdd
             // 
@@ -217,31 +242,29 @@
             // 
             this.dict_bodyTableAdapter.ClearBeforeFill = true;
             // 
-            // labelCost
+            // listBoxAddedValue
             // 
-            this.labelCost.AutoSize = true;
-            this.labelCost.Location = new System.Drawing.Point(382, 24);
-            this.labelCost.Margin = new System.Windows.Forms.Padding(2);
-            this.labelCost.Name = "labelCost";
-            this.labelCost.Size = new System.Drawing.Size(33, 13);
-            this.labelCost.TabIndex = 12;
-            this.labelCost.Text = "Koszt";
-            this.labelCost.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.listBoxAddedValue.FormattingEnabled = true;
+            this.listBoxAddedValue.Location = new System.Drawing.Point(197, 272);
+            this.listBoxAddedValue.Margin = new System.Windows.Forms.Padding(2);
+            this.listBoxAddedValue.Name = "listBoxAddedValue";
+            this.listBoxAddedValue.Size = new System.Drawing.Size(114, 43);
+            this.listBoxAddedValue.TabIndex = 13;
             // 
-            // listBoxCost
+            // listBoxAddedCost
             // 
-            this.listBoxCost.FormattingEnabled = true;
-            this.listBoxCost.Location = new System.Drawing.Point(383, 43);
-            this.listBoxCost.Margin = new System.Windows.Forms.Padding(2);
-            this.listBoxCost.Name = "listBoxCost";
-            this.listBoxCost.Size = new System.Drawing.Size(97, 147);
-            this.listBoxCost.TabIndex = 11;
+            this.listBoxAddedCost.FormattingEnabled = true;
+            this.listBoxAddedCost.Location = new System.Drawing.Point(315, 272);
+            this.listBoxAddedCost.Margin = new System.Windows.Forms.Padding(2);
+            this.listBoxAddedCost.Name = "listBoxAddedCost";
+            this.listBoxAddedCost.Size = new System.Drawing.Size(63, 43);
+            this.listBoxAddedCost.TabIndex = 14;
             // 
             // FormDictionaryData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(497, 342);
+            this.ClientSize = new System.Drawing.Size(568, 342);
             this.Controls.Add(this.panelBackground);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -278,5 +301,7 @@
         private polsl_agatek_bdDataSetTableAdapters.dict_bodyTableAdapter dict_bodyTableAdapter;
         private System.Windows.Forms.Label labelCost;
         private System.Windows.Forms.ListBox listBoxCost;
+        private System.Windows.Forms.ListBox listBoxAddedCost;
+        private System.Windows.Forms.ListBox listBoxAddedValue;
     }
 }
