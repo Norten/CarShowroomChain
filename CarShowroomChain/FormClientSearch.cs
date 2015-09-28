@@ -18,6 +18,10 @@ namespace CarShowroomChain
         {
             InitializeComponent();
             this.SelectClient = SelectClient;
+            if (this.SelectClient == null)
+            {
+                this.buttonChoose.Visible = false;
+            }
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)
@@ -51,23 +55,24 @@ namespace CarShowroomChain
         private void dataGridViewClients_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             row = this.dataGridViewClients.Rows[e.RowIndex];
-            Console.WriteLine("CLIENT ID: " + row.Cells["idDataGridViewTextBoxColumn"].Value.ToString());
         }
 
-        private void buttonChoose_Click(object sender, EventArgs e) {
-            if (this.SelectClient == null) {
-                this.Close();
-                return;
-            } 
-            if (row != null) {
+        private void buttonChoose_Click(object sender, EventArgs e) 
+        {
+            if (row != null)
+            {
                 this.SelectClient(row);
                 this.Close();
                 return;
-            } else 
+            }
+            else
+            {
                 MessageBox.Show("Musisz najpierw wybrać klienta.");
+            }
         }
 
-        private void buttonFilter_Click(object sender, EventArgs e) {
+        private void buttonFilter_Click(object sender, EventArgs e) 
+        {
             var name = this.textBoxName.Text;
             var surname = this.textBoxSurname.Text;
             var dbModel = new DatabaseModel();
@@ -77,7 +82,7 @@ namespace CarShowroomChain
             if (!String.IsNullOrWhiteSpace(name) && !String.IsNullOrWhiteSpace(surname))
                 wherePart += " AND";
             if (!String.IsNullOrWhiteSpace(surname))
-                wherePart += " last_name like '" + surname + "' ";
+                wherePart += " last_name like '" + surname + "'";
             if (wherePart.Equals(" WHERE"))
                 wherePart = "";
             var db = dbModel.client.SqlQuery("SELECT * FROM client" + wherePart +";").ToList();

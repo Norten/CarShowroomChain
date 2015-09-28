@@ -30,6 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panelBackground = new System.Windows.Forms.Panel();
+            this.buttonFilter = new System.Windows.Forms.Button();
+            this.textBoxSurname = new System.Windows.Forms.TextBox();
+            this.textBoxName = new System.Windows.Forms.TextBox();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonAddNew = new System.Windows.Forms.Button();
             this.buttonModify = new System.Windows.Forms.Button();
@@ -46,9 +49,8 @@
             this.clientBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.clientTableAdapter = new CarShowroomChain.polsl_agatek_bdDataSetTableAdapters.clientTableAdapter();
             this.clientBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.textBoxName = new System.Windows.Forms.TextBox();
-            this.textBoxSurname = new System.Windows.Forms.TextBox();
-            this.buttonFilter = new System.Windows.Forms.Button();
+            this.labelFilterName = new System.Windows.Forms.Label();
+            this.labelFilterSurname = new System.Windows.Forms.Label();
             this.panelBackground.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClients)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource2)).BeginInit();
@@ -59,6 +61,8 @@
             // 
             // panelBackground
             // 
+            this.panelBackground.Controls.Add(this.labelFilterSurname);
+            this.panelBackground.Controls.Add(this.labelFilterName);
             this.panelBackground.Controls.Add(this.buttonFilter);
             this.panelBackground.Controls.Add(this.textBoxSurname);
             this.panelBackground.Controls.Add(this.textBoxName);
@@ -69,20 +73,48 @@
             this.panelBackground.Controls.Add(this.dataGridViewClients);
             this.panelBackground.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelBackground.Location = new System.Drawing.Point(0, 0);
-            this.panelBackground.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelBackground.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelBackground.Name = "panelBackground";
-            this.panelBackground.Padding = new System.Windows.Forms.Padding(20);
-            this.panelBackground.Size = new System.Drawing.Size(883, 654);
+            this.panelBackground.Padding = new System.Windows.Forms.Padding(15, 16, 15, 16);
+            this.panelBackground.Size = new System.Drawing.Size(678, 531);
             this.panelBackground.TabIndex = 0;
+            // 
+            // buttonFilter
+            // 
+            this.buttonFilter.AutoSize = true;
+            this.buttonFilter.Location = new System.Drawing.Point(168, 37);
+            this.buttonFilter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonFilter.Name = "buttonFilter";
+            this.buttonFilter.Size = new System.Drawing.Size(56, 23);
+            this.buttonFilter.TabIndex = 14;
+            this.buttonFilter.Text = "Filtruj";
+            this.buttonFilter.UseVisualStyleBackColor = true;
+            this.buttonFilter.Click += new System.EventHandler(this.buttonFilter_Click);
+            // 
+            // textBoxSurname
+            // 
+            this.textBoxSurname.Location = new System.Drawing.Point(75, 55);
+            this.textBoxSurname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSurname.Name = "textBoxSurname";
+            this.textBoxSurname.Size = new System.Drawing.Size(76, 20);
+            this.textBoxSurname.TabIndex = 13;
+            // 
+            // textBoxName
+            // 
+            this.textBoxName.Location = new System.Drawing.Point(75, 22);
+            this.textBoxName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(76, 20);
+            this.textBoxName.TabIndex = 12;
             // 
             // buttonCancel
             // 
             this.buttonCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCancel.AutoSize = true;
-            this.buttonCancel.Location = new System.Drawing.Point(783, 581);
-            this.buttonCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 30);
+            this.buttonCancel.Location = new System.Drawing.Point(603, 472);
+            this.buttonCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 24);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(76, 33);
+            this.buttonCancel.Size = new System.Drawing.Size(57, 27);
             this.buttonCancel.TabIndex = 11;
             this.buttonCancel.Text = "Anuluj";
             this.buttonCancel.UseVisualStyleBackColor = true;
@@ -92,10 +124,10 @@
             // 
             this.buttonAddNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonAddNew.AutoSize = true;
-            this.buttonAddNew.Location = new System.Drawing.Point(575, 581);
-            this.buttonAddNew.Margin = new System.Windows.Forms.Padding(3, 2, 3, 30);
+            this.buttonAddNew.Location = new System.Drawing.Point(447, 472);
+            this.buttonAddNew.Margin = new System.Windows.Forms.Padding(2, 2, 2, 24);
             this.buttonAddNew.Name = "buttonAddNew";
-            this.buttonAddNew.Size = new System.Drawing.Size(204, 33);
+            this.buttonAddNew.Size = new System.Drawing.Size(153, 27);
             this.buttonAddNew.TabIndex = 10;
             this.buttonAddNew.Text = "Dodaj nowego klienta";
             this.buttonAddNew.UseVisualStyleBackColor = true;
@@ -105,10 +137,10 @@
             // 
             this.buttonModify.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonModify.AutoSize = true;
-            this.buttonModify.Location = new System.Drawing.Point(516, 581);
-            this.buttonModify.Margin = new System.Windows.Forms.Padding(3, 2, 3, 30);
+            this.buttonModify.Location = new System.Drawing.Point(366, 472);
+            this.buttonModify.Margin = new System.Windows.Forms.Padding(2, 2, 2, 24);
             this.buttonModify.Name = "buttonModify";
-            this.buttonModify.Size = new System.Drawing.Size(103, 33);
+            this.buttonModify.Size = new System.Drawing.Size(77, 27);
             this.buttonModify.TabIndex = 9;
             this.buttonModify.Text = "Modyfikuj";
             this.buttonModify.UseVisualStyleBackColor = true;
@@ -118,10 +150,10 @@
             // 
             this.buttonChoose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonChoose.AutoSize = true;
-            this.buttonChoose.Location = new System.Drawing.Point(444, 581);
-            this.buttonChoose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 30);
+            this.buttonChoose.Location = new System.Drawing.Point(293, 472);
+            this.buttonChoose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 24);
             this.buttonChoose.Name = "buttonChoose";
-            this.buttonChoose.Size = new System.Drawing.Size(92, 33);
+            this.buttonChoose.Size = new System.Drawing.Size(69, 27);
             this.buttonChoose.TabIndex = 8;
             this.buttonChoose.Text = "Wybierz";
             this.buttonChoose.UseVisualStyleBackColor = true;
@@ -144,14 +176,14 @@
             this.emailDataGridViewTextBoxColumn,
             this.idDataGridViewTextBoxColumn});
             this.dataGridViewClients.DataSource = this.clientBindingSource2;
-            this.dataGridViewClients.Location = new System.Drawing.Point(23, 249);
-            this.dataGridViewClients.Margin = new System.Windows.Forms.Padding(3, 2, 3, 75);
+            this.dataGridViewClients.Location = new System.Drawing.Point(17, 88);
+            this.dataGridViewClients.Margin = new System.Windows.Forms.Padding(2, 2, 2, 61);
             this.dataGridViewClients.MultiSelect = false;
             this.dataGridViewClients.Name = "dataGridViewClients";
             this.dataGridViewClients.ReadOnly = true;
             this.dataGridViewClients.RowTemplate.Height = 24;
             this.dataGridViewClients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewClients.Size = new System.Drawing.Size(836, 310);
+            this.dataGridViewClients.Size = new System.Drawing.Size(643, 366);
             this.dataGridViewClients.TabIndex = 6;
             this.dataGridViewClients.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewClients_CellClick);
             // 
@@ -221,39 +253,32 @@
             this.clientBindingSource1.DataMember = "client";
             this.clientBindingSource1.DataSource = this.polsl_agatek_bdDataSet;
             // 
-            // textBoxName
+            // labelFilterName
             // 
-            this.textBoxName.Location = new System.Drawing.Point(104, 23);
-            this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(100, 22);
-            this.textBoxName.TabIndex = 12;
+            this.labelFilterName.AutoSize = true;
+            this.labelFilterName.Location = new System.Drawing.Point(18, 25);
+            this.labelFilterName.Name = "labelFilterName";
+            this.labelFilterName.Size = new System.Drawing.Size(26, 13);
+            this.labelFilterName.TabIndex = 15;
+            this.labelFilterName.Text = "Imię";
             // 
-            // textBoxSurname
+            // labelFilterSurname
             // 
-            this.textBoxSurname.Location = new System.Drawing.Point(104, 51);
-            this.textBoxSurname.Name = "textBoxSurname";
-            this.textBoxSurname.Size = new System.Drawing.Size(100, 22);
-            this.textBoxSurname.TabIndex = 13;
-            // 
-            // buttonFilter
-            // 
-            this.buttonFilter.AutoSize = true;
-            this.buttonFilter.Location = new System.Drawing.Point(229, 46);
-            this.buttonFilter.Name = "buttonFilter";
-            this.buttonFilter.Size = new System.Drawing.Size(75, 27);
-            this.buttonFilter.TabIndex = 14;
-            this.buttonFilter.Text = "Filtruj";
-            this.buttonFilter.UseVisualStyleBackColor = true;
-            this.buttonFilter.Click += new System.EventHandler(this.buttonFilter_Click);
+            this.labelFilterSurname.AutoSize = true;
+            this.labelFilterSurname.Location = new System.Drawing.Point(18, 58);
+            this.labelFilterSurname.Name = "labelFilterSurname";
+            this.labelFilterSurname.Size = new System.Drawing.Size(53, 13);
+            this.labelFilterSurname.TabIndex = 16;
+            this.labelFilterSurname.Text = "Nazwisko";
             // 
             // FormClientSearch
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(883, 654);
+            this.ClientSize = new System.Drawing.Size(678, 531);
             this.Controls.Add(this.panelBackground);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MinimumSize = new System.Drawing.Size(699, 499);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MinimumSize = new System.Drawing.Size(528, 413);
             this.Name = "FormClientSearch";
             this.Text = "Wyszukiwanie klientów";
             this.Load += new System.EventHandler(this.FormClientSearch_Load);
@@ -290,5 +315,7 @@
         private System.Windows.Forms.Button buttonFilter;
         private System.Windows.Forms.TextBox textBoxSurname;
         private System.Windows.Forms.TextBox textBoxName;
+        private System.Windows.Forms.Label labelFilterSurname;
+        private System.Windows.Forms.Label labelFilterName;
     }
 }
