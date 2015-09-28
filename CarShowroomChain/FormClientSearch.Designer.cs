@@ -63,20 +63,20 @@
             this.panelBackground.Controls.Add(this.dataGridViewClients);
             this.panelBackground.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelBackground.Location = new System.Drawing.Point(0, 0);
-            this.panelBackground.Margin = new System.Windows.Forms.Padding(2);
+            this.panelBackground.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelBackground.Name = "panelBackground";
-            this.panelBackground.Padding = new System.Windows.Forms.Padding(15, 16, 15, 16);
-            this.panelBackground.Size = new System.Drawing.Size(662, 531);
+            this.panelBackground.Padding = new System.Windows.Forms.Padding(20, 20, 20, 20);
+            this.panelBackground.Size = new System.Drawing.Size(883, 654);
             this.panelBackground.TabIndex = 0;
             // 
             // buttonCancel
             // 
             this.buttonCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCancel.AutoSize = true;
-            this.buttonCancel.Location = new System.Drawing.Point(588, 476);
-            this.buttonCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 24);
+            this.buttonCancel.Location = new System.Drawing.Point(783, 581);
+            this.buttonCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 30);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(56, 23);
+            this.buttonCancel.Size = new System.Drawing.Size(76, 33);
             this.buttonCancel.TabIndex = 11;
             this.buttonCancel.Text = "Anuluj";
             this.buttonCancel.UseVisualStyleBackColor = true;
@@ -86,10 +86,10 @@
             // 
             this.buttonAddNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonAddNew.AutoSize = true;
-            this.buttonAddNew.Location = new System.Drawing.Point(464, 476);
-            this.buttonAddNew.Margin = new System.Windows.Forms.Padding(2, 2, 2, 24);
+            this.buttonAddNew.Location = new System.Drawing.Point(575, 581);
+            this.buttonAddNew.Margin = new System.Windows.Forms.Padding(3, 2, 3, 30);
             this.buttonAddNew.Name = "buttonAddNew";
-            this.buttonAddNew.Size = new System.Drawing.Size(120, 23);
+            this.buttonAddNew.Size = new System.Drawing.Size(204, 33);
             this.buttonAddNew.TabIndex = 10;
             this.buttonAddNew.Text = "Dodaj nowego klienta";
             this.buttonAddNew.UseVisualStyleBackColor = true;
@@ -99,10 +99,10 @@
             // 
             this.buttonModify.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonModify.AutoSize = true;
-            this.buttonModify.Location = new System.Drawing.Point(402, 476);
-            this.buttonModify.Margin = new System.Windows.Forms.Padding(2, 2, 2, 24);
+            this.buttonModify.Location = new System.Drawing.Point(516, 581);
+            this.buttonModify.Margin = new System.Windows.Forms.Padding(3, 2, 3, 30);
             this.buttonModify.Name = "buttonModify";
-            this.buttonModify.Size = new System.Drawing.Size(62, 23);
+            this.buttonModify.Size = new System.Drawing.Size(103, 33);
             this.buttonModify.TabIndex = 9;
             this.buttonModify.Text = "Modyfikuj";
             this.buttonModify.UseVisualStyleBackColor = true;
@@ -112,13 +112,14 @@
             // 
             this.buttonChoose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonChoose.AutoSize = true;
-            this.buttonChoose.Location = new System.Drawing.Point(346, 476);
-            this.buttonChoose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 24);
+            this.buttonChoose.Location = new System.Drawing.Point(444, 581);
+            this.buttonChoose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 30);
             this.buttonChoose.Name = "buttonChoose";
-            this.buttonChoose.Size = new System.Drawing.Size(56, 23);
+            this.buttonChoose.Size = new System.Drawing.Size(92, 33);
             this.buttonChoose.TabIndex = 8;
             this.buttonChoose.Text = "Wybierz";
             this.buttonChoose.UseVisualStyleBackColor = true;
+            this.buttonChoose.Click += new System.EventHandler(this.buttonChoose_Click);
             // 
             // dataGridViewClients
             // 
@@ -137,14 +138,14 @@
             this.emailDataGridViewTextBoxColumn,
             this.idDataGridViewTextBoxColumn});
             this.dataGridViewClients.DataSource = this.clientBindingSource2;
-            this.dataGridViewClients.Location = new System.Drawing.Point(17, 18);
-            this.dataGridViewClients.Margin = new System.Windows.Forms.Padding(2, 2, 2, 61);
+            this.dataGridViewClients.Location = new System.Drawing.Point(23, 22);
+            this.dataGridViewClients.Margin = new System.Windows.Forms.Padding(3, 2, 3, 75);
             this.dataGridViewClients.MultiSelect = false;
             this.dataGridViewClients.Name = "dataGridViewClients";
             this.dataGridViewClients.ReadOnly = true;
             this.dataGridViewClients.RowTemplate.Height = 24;
             this.dataGridViewClients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewClients.Size = new System.Drawing.Size(627, 436);
+            this.dataGridViewClients.Size = new System.Drawing.Size(836, 537);
             this.dataGridViewClients.TabIndex = 6;
             this.dataGridViewClients.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewClients_CellClick);
             // 
@@ -216,12 +217,12 @@
             // 
             // FormClientSearch
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(662, 531);
+            this.ClientSize = new System.Drawing.Size(883, 654);
             this.Controls.Add(this.panelBackground);
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.MinimumSize = new System.Drawing.Size(529, 414);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MinimumSize = new System.Drawing.Size(699, 499);
             this.Name = "FormClientSearch";
             this.Text = "Wyszukiwanie klientów";
             this.Load += new System.EventHandler(this.FormClientSearch_Load);

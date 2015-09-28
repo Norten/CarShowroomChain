@@ -13,9 +13,11 @@ namespace CarShowroomChain
     public partial class FormClientSearch : Form
     {
         DataGridViewRow row;
-        public FormClientSearch()
+        Action<DataGridViewRow> SelectClient;
+        public FormClientSearch(Action<DataGridViewRow> SelectClient = null)
         {
             InitializeComponent();
+            this.SelectClient = SelectClient;
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)
@@ -50,6 +52,19 @@ namespace CarShowroomChain
         {
             row = this.dataGridViewClients.Rows[e.RowIndex];
             Console.WriteLine("CLIENT ID: " + row.Cells["idDataGridViewTextBoxColumn"].Value.ToString());
+        }
+
+        private void buttonChoose_Click(object sender, EventArgs e) {
+            if (this.SelectClient == null) {
+                this.Close();
+                return;
+            } 
+            if (row != null) {
+                this.SelectClient(row);
+                this.Close();
+                return;
+            } else 
+                MessageBox.Show("Musisz najpierw wybrać klienta.");
         }
     }
 }
