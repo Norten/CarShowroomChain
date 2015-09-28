@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panelBackground = new System.Windows.Forms.Panel();
+            this.textBoxAddedCost = new System.Windows.Forms.TextBox();
+            this.textBoxAddedValue = new System.Windows.Forms.TextBox();
             this.labelCost = new System.Windows.Forms.Label();
             this.listBoxCost = new System.Windows.Forms.ListBox();
             this.labelNewValue = new System.Windows.Forms.Label();
@@ -47,8 +49,6 @@
             this.polslagatekbdDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dictbodyBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dict_bodyTableAdapter = new CarShowroomChain.polsl_agatek_bdDataSetTableAdapters.dict_bodyTableAdapter();
-            this.textBoxAddedValue = new System.Windows.Forms.TextBox();
-            this.textBoxAddedCost = new System.Windows.Forms.TextBox();
             this.panelBackground.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.polsl_agatek_bdDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.polslagatekbdDataSetBindingSource)).BeginInit();
@@ -79,6 +79,23 @@
             this.panelBackground.Padding = new System.Windows.Forms.Padding(15, 16, 15, 16);
             this.panelBackground.Size = new System.Drawing.Size(541, 342);
             this.panelBackground.TabIndex = 0;
+            // 
+            // textBoxAddedCost
+            // 
+            this.textBoxAddedCost.Location = new System.Drawing.Point(315, 283);
+            this.textBoxAddedCost.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxAddedCost.Name = "textBoxAddedCost";
+            this.textBoxAddedCost.Size = new System.Drawing.Size(64, 20);
+            this.textBoxAddedCost.TabIndex = 16;
+            // 
+            // textBoxAddedValue
+            // 
+            this.textBoxAddedValue.Location = new System.Drawing.Point(195, 283);
+            this.textBoxAddedValue.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxAddedValue.MaxLength = 200;
+            this.textBoxAddedValue.Name = "textBoxAddedValue";
+            this.textBoxAddedValue.Size = new System.Drawing.Size(116, 20);
+            this.textBoxAddedValue.TabIndex = 15;
             // 
             // labelCost
             // 
@@ -216,7 +233,8 @@
             "Paliwo",
             "Skrzynia biegów",
             "Seria",
-            "Usługi"});
+            "Usługi",
+            "Model"});
             this.listBoxCategories.Location = new System.Drawing.Point(19, 43);
             this.listBoxCategories.Margin = new System.Windows.Forms.Padding(2);
             this.listBoxCategories.Name = "listBoxCategories";
@@ -242,23 +260,6 @@
             // dict_bodyTableAdapter
             // 
             this.dict_bodyTableAdapter.ClearBeforeFill = true;
-            // 
-            // textBoxAddedValue
-            // 
-            this.textBoxAddedValue.Location = new System.Drawing.Point(195, 283);
-            this.textBoxAddedValue.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxAddedValue.MaxLength = 200;
-            this.textBoxAddedValue.Name = "textBoxAddedValue";
-            this.textBoxAddedValue.Size = new System.Drawing.Size(116, 20);
-            this.textBoxAddedValue.TabIndex = 15;
-            // 
-            // textBoxAddedCost
-            // 
-            this.textBoxAddedCost.Location = new System.Drawing.Point(315, 283);
-            this.textBoxAddedCost.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxAddedCost.Name = "textBoxAddedCost";
-            this.textBoxAddedCost.Size = new System.Drawing.Size(64, 20);
-            this.textBoxAddedCost.TabIndex = 16;
             // 
             // FormDictionaryData
             // 

@@ -15,7 +15,6 @@ namespace CarShowroomChain
         DatabaseModel dbModelSave = new DatabaseModel();
         string valueAdded;
         string costAdded;
-        string table;
         public FormDictionaryData()
         {
             InitializeComponent();
@@ -63,7 +62,7 @@ namespace CarShowroomChain
             this.textBoxNewDictionaryData.Visible = true;
             this.buttonAdd.Visible = true;
             this.buttonSaveAndQuit.Visible = true;
-            string[] tables = {"dict_body", "dict_color", "dict_engine", "dict_fuel", "dict_gearbox", "dict_series", "dict_service"};
+            string[] tables = {"dict_body", "dict_color", "dict_engine", "dict_fuel", "dict_gearbox", "dict_series", "dict_service", "model"};
             var selectedTable = tables[this.listBoxCategories.SelectedIndex];
             List<string> list = new List<string>();
             List<string> cost = new List<string>();
@@ -127,6 +126,14 @@ namespace CarShowroomChain
                         cost.Add(item.cost);
                     }
                     break;
+                case "model":
+                    dictionarySettings(false, list, cost);
+                    var allModel = dbModel.model.SqlQuery("SELECT * FROM model;").ToList();
+                    foreach (model item in allModel)
+                    {
+                        list.Add(item.name);
+                    }
+                    break;
                 default:
                     list.Clear();
                     cost.Clear();
@@ -137,18 +144,17 @@ namespace CarShowroomChain
             this.listBoxCost.DataSource = cost;
         }
 
-        public void addToDatabase (string toValue, string toCost, string toTable)
+        public void addToDatabase (string toValue, string toCost)
         {
             valueAdded = toValue;
             costAdded = toCost;
-            table = toTable;
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             this.textBoxAddedValue.Visible = true;
             this.textBoxAddedCost.Visible = false;
-            string[] tables = { "dict_body", "dict_color", "dict_engine", "dict_fuel", "dict_gearbox", "dict_series", "dict_service" };
+            string[] tables = { "dict_body", "dict_color", "dict_engine", "dict_fuel", "dict_gearbox", "dict_series", "dict_service", "model" };
             var selectedTable = tables[this.listBoxCategories.SelectedIndex];
             
             switch (selectedTable)
@@ -190,11 +196,16 @@ namespace CarShowroomChain
                     newService.cost = this.textBoxNewValue.Text;
                     dbModelSave.dict_service.Add(newService);
                     break;
+                case "model":
+                    var newModel = new model();
+                    newModel.name = this.textBoxNewDictionaryData.Text;
+                    dbModelSave.model.Add(newModel);
+                    break;
                 default:
                     
                     break;
             }
-            addToDatabase(this.textBoxNewDictionaryData.Text, this.textBoxNewValue.Text, selectedTable);
+            addToDatabase(this.textBoxNewDictionaryData.Text, this.textBoxNewValue.Text);
             this.textBoxAddedValue.Text = valueAdded;
             this.textBoxAddedCost.Text = costAdded;
             this.textBoxNewDictionaryData.Clear();
