@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelBackground = new System.Windows.Forms.Panel();
+            this.label = new System.Windows.Forms.Label();
             this.comboBoxShop = new System.Windows.Forms.ComboBox();
             this.comboBoxEngine = new System.Windows.Forms.ComboBox();
             this.comboBoxSeries = new System.Windows.Forms.ComboBox();
@@ -49,7 +50,6 @@
             this.labelEngine = new System.Windows.Forms.Label();
             this.labelColor = new System.Windows.Forms.Label();
             this.labelModel = new System.Windows.Forms.Label();
-            this.label = new System.Windows.Forms.Label();
             this.panelBackground.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,6 +83,17 @@
             this.panelBackground.Padding = new System.Windows.Forms.Padding(15, 16, 15, 16);
             this.panelBackground.Size = new System.Drawing.Size(510, 253);
             this.panelBackground.TabIndex = 0;
+            // 
+            // label
+            // 
+            this.label.AutoSize = true;
+            this.label.Location = new System.Drawing.Point(418, 110);
+            this.label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(28, 13);
+            this.label.TabIndex = 22;
+            this.label.Text = "PLN";
+            this.label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // comboBoxShop
             // 
@@ -151,6 +162,7 @@
             this.buttonAccept.TabIndex = 16;
             this.buttonAccept.Text = "Akceptuj";
             this.buttonAccept.UseVisualStyleBackColor = true;
+            this.buttonAccept.Click += new System.EventHandler(this.buttonAccept_Click);
             // 
             // buttonCancel
             // 
@@ -288,17 +300,6 @@
             this.labelModel.TabIndex = 0;
             this.labelModel.Text = "Model";
             this.labelModel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label
-            // 
-            this.label.AutoSize = true;
-            this.label.Location = new System.Drawing.Point(418, 110);
-            this.label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(28, 13);
-            this.label.TabIndex = 22;
-            this.label.Text = "PLN";
-            this.label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormNewCar
             // 
