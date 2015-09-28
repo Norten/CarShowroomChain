@@ -63,20 +63,20 @@ namespace CarShowroomChain
                 var result = dbModel.user_data.Find(user_id);
                 if (result != null)
                 {
-                    if (login == result.login && pass == result.password && user_id == result.id)
+                    if (login == result.login && pass == result.password)
                     {
                         result.password = newPass1;
                         dbModel.SaveChanges();
-                        this.Close();
+                        this.Close(); 
                     } 
                     else
                     {
-                        MessageBox.Show("Osoba zalogowana może zmienić hasło tylko sobie.");
+                        MessageBox.Show("Nieprawidłowy login i/lub hasło.\nOsoba zalogowana może zmienić hasło tylko sobie.");
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Błędny login lub hasło.");
+                    MessageBox.Show("Sprawdź połaczenie z internetem.");
                 }
             }
             else
