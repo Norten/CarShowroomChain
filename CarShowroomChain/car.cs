@@ -31,7 +31,7 @@ namespace CarShowroomChain
 
         public int id_body { get; set; }
 
-        public decimal cost { get; set; }
+        public string cost { get; set; }
 
         public int id_car_shop { get; set; }
 
