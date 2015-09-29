@@ -29,25 +29,17 @@
         private void InitializeComponent()
         {
             this.panelBackground = new System.Windows.Forms.Panel();
-            this.comboBoxSeries = new System.Windows.Forms.ComboBox();
             this.labelSeries = new System.Windows.Forms.Label();
             this.textBoxDiscount = new System.Windows.Forms.TextBox();
             this.labelDiscount = new System.Windows.Forms.Label();
-            this.comboBoxColour = new System.Windows.Forms.ComboBox();
-            this.comboBoxModel = new System.Windows.Forms.ComboBox();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonAccept = new System.Windows.Forms.Button();
             this.textBoxComment = new System.Windows.Forms.TextBox();
             this.labelComment = new System.Windows.Forms.Label();
-            this.textBoxPrice = new System.Windows.Forms.TextBox();
-            this.labelPrice = new System.Windows.Forms.Label();
-            this.buttonChooseAdditionalOptions = new System.Windows.Forms.Button();
-            this.labelAdditionalOptions = new System.Windows.Forms.Label();
+            this.textBoxCarPrice = new System.Windows.Forms.TextBox();
+            this.labelCarPrice = new System.Windows.Forms.Label();
             this.buttonChooseCar = new System.Windows.Forms.Button();
-            this.comboBoxCarBody = new System.Windows.Forms.ComboBox();
-            this.comboBoxGearBox = new System.Windows.Forms.ComboBox();
             this.labelCarBody = new System.Windows.Forms.Label();
-            this.comboBoxFuel = new System.Windows.Forms.ComboBox();
             this.textBoxEnginePower = new System.Windows.Forms.TextBox();
             this.textBoxEngineVolume = new System.Windows.Forms.TextBox();
             this.labelGearBox = new System.Windows.Forms.Label();
@@ -71,30 +63,38 @@
             this.labelSurname = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
             this.labelClient = new System.Windows.Forms.Label();
+            this.labelTotalPrice = new System.Windows.Forms.Label();
+            this.textBoxTotalPrice = new System.Windows.Forms.TextBox();
+            this.textBoxCarSeries = new System.Windows.Forms.TextBox();
+            this.textBoxCarModel = new System.Windows.Forms.TextBox();
+            this.textBoxCarColor = new System.Windows.Forms.TextBox();
+            this.textBoxCarFuel = new System.Windows.Forms.TextBox();
+            this.textBoxCarGearbox = new System.Windows.Forms.TextBox();
+            this.textBoxCarBody = new System.Windows.Forms.TextBox();
             this.panelBackground.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelBackground
             // 
-            this.panelBackground.Controls.Add(this.comboBoxSeries);
+            this.panelBackground.Controls.Add(this.textBoxCarBody);
+            this.panelBackground.Controls.Add(this.textBoxCarGearbox);
+            this.panelBackground.Controls.Add(this.textBoxCarFuel);
+            this.panelBackground.Controls.Add(this.textBoxCarColor);
+            this.panelBackground.Controls.Add(this.textBoxCarModel);
+            this.panelBackground.Controls.Add(this.textBoxCarSeries);
+            this.panelBackground.Controls.Add(this.textBoxTotalPrice);
+            this.panelBackground.Controls.Add(this.labelTotalPrice);
             this.panelBackground.Controls.Add(this.labelSeries);
             this.panelBackground.Controls.Add(this.textBoxDiscount);
             this.panelBackground.Controls.Add(this.labelDiscount);
-            this.panelBackground.Controls.Add(this.comboBoxColour);
-            this.panelBackground.Controls.Add(this.comboBoxModel);
             this.panelBackground.Controls.Add(this.buttonCancel);
             this.panelBackground.Controls.Add(this.buttonAccept);
             this.panelBackground.Controls.Add(this.textBoxComment);
             this.panelBackground.Controls.Add(this.labelComment);
-            this.panelBackground.Controls.Add(this.textBoxPrice);
-            this.panelBackground.Controls.Add(this.labelPrice);
-            this.panelBackground.Controls.Add(this.buttonChooseAdditionalOptions);
-            this.panelBackground.Controls.Add(this.labelAdditionalOptions);
+            this.panelBackground.Controls.Add(this.textBoxCarPrice);
+            this.panelBackground.Controls.Add(this.labelCarPrice);
             this.panelBackground.Controls.Add(this.buttonChooseCar);
-            this.panelBackground.Controls.Add(this.comboBoxCarBody);
-            this.panelBackground.Controls.Add(this.comboBoxGearBox);
             this.panelBackground.Controls.Add(this.labelCarBody);
-            this.panelBackground.Controls.Add(this.comboBoxFuel);
             this.panelBackground.Controls.Add(this.textBoxEnginePower);
             this.panelBackground.Controls.Add(this.textBoxEngineVolume);
             this.panelBackground.Controls.Add(this.labelGearBox);
@@ -125,19 +125,10 @@
             this.panelBackground.Size = new System.Drawing.Size(732, 753);
             this.panelBackground.TabIndex = 0;
             // 
-            // comboBoxSeries
-            // 
-            this.comboBoxSeries.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxSeries.Enabled = false;
-            this.comboBoxSeries.Location = new System.Drawing.Point(179, 307);
-            this.comboBoxSeries.Name = "comboBoxSeries";
-            this.comboBoxSeries.Size = new System.Drawing.Size(121, 24);
-            this.comboBoxSeries.TabIndex = 70;
-            // 
             // labelSeries
             // 
             this.labelSeries.AutoSize = true;
-            this.labelSeries.Location = new System.Drawing.Point(53, 310);
+            this.labelSeries.Location = new System.Drawing.Point(53, 240);
             this.labelSeries.Name = "labelSeries";
             this.labelSeries.Size = new System.Drawing.Size(41, 17);
             this.labelSeries.TabIndex = 69;
@@ -146,39 +137,23 @@
             // 
             // textBoxDiscount
             // 
-            this.textBoxDiscount.Location = new System.Drawing.Point(421, 482);
+            this.textBoxDiscount.Location = new System.Drawing.Point(163, 447);
             this.textBoxDiscount.MaxLength = 10;
             this.textBoxDiscount.Name = "textBoxDiscount";
             this.textBoxDiscount.Size = new System.Drawing.Size(100, 22);
             this.textBoxDiscount.TabIndex = 68;
+            this.textBoxDiscount.Text = "0";
+            this.textBoxDiscount.TextChanged += new System.EventHandler(this.textBoxDiscount_TextChanged);
             // 
             // labelDiscount
             // 
             this.labelDiscount.AutoSize = true;
-            this.labelDiscount.Location = new System.Drawing.Point(283, 485);
+            this.labelDiscount.Location = new System.Drawing.Point(25, 450);
             this.labelDiscount.Name = "labelDiscount";
             this.labelDiscount.Size = new System.Drawing.Size(132, 17);
             this.labelDiscount.TabIndex = 67;
             this.labelDiscount.Text = "Rabat (procentowy)";
             this.labelDiscount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // comboBoxColour
-            // 
-            this.comboBoxColour.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxColour.Enabled = false;
-            this.comboBoxColour.Location = new System.Drawing.Point(179, 377);
-            this.comboBoxColour.Name = "comboBoxColour";
-            this.comboBoxColour.Size = new System.Drawing.Size(121, 24);
-            this.comboBoxColour.TabIndex = 51;
-            // 
-            // comboBoxModel
-            // 
-            this.comboBoxModel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxModel.Enabled = false;
-            this.comboBoxModel.Location = new System.Drawing.Point(179, 342);
-            this.comboBoxModel.Name = "comboBoxModel";
-            this.comboBoxModel.Size = new System.Drawing.Size(121, 24);
-            this.comboBoxModel.TabIndex = 50;
             // 
             // buttonCancel
             // 
@@ -204,6 +179,7 @@
             this.buttonAccept.TabIndex = 65;
             this.buttonAccept.Text = "Akceptuj";
             this.buttonAccept.UseVisualStyleBackColor = true;
+            this.buttonAccept.Click += new System.EventHandler(this.buttonAccept_Click);
             // 
             // textBoxComment
             // 
@@ -228,52 +204,32 @@
             this.labelComment.Text = "Komentarz";
             this.labelComment.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBoxPrice
+            // textBoxCarPrice
             // 
-            this.textBoxPrice.Location = new System.Drawing.Point(133, 482);
-            this.textBoxPrice.MaxLength = 50;
-            this.textBoxPrice.Name = "textBoxPrice";
-            this.textBoxPrice.ReadOnly = true;
-            this.textBoxPrice.Size = new System.Drawing.Size(100, 22);
-            this.textBoxPrice.TabIndex = 62;
+            this.textBoxCarPrice.Location = new System.Drawing.Point(163, 412);
+            this.textBoxCarPrice.MaxLength = 50;
+            this.textBoxCarPrice.Name = "textBoxCarPrice";
+            this.textBoxCarPrice.ReadOnly = true;
+            this.textBoxCarPrice.Size = new System.Drawing.Size(100, 22);
+            this.textBoxCarPrice.TabIndex = 62;
+            this.textBoxCarPrice.Text = "0";
+            this.textBoxCarPrice.TextChanged += new System.EventHandler(this.textBoxCarPrice_TextChanged);
             // 
-            // labelPrice
+            // labelCarPrice
             // 
-            this.labelPrice.AutoSize = true;
-            this.labelPrice.Location = new System.Drawing.Point(25, 485);
-            this.labelPrice.Margin = new System.Windows.Forms.Padding(3);
-            this.labelPrice.Name = "labelPrice";
-            this.labelPrice.Size = new System.Drawing.Size(102, 17);
-            this.labelPrice.TabIndex = 61;
-            this.labelPrice.Text = "Cena całkowita";
-            this.labelPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // buttonChooseAdditionalOptions
-            // 
-            this.buttonChooseAdditionalOptions.AutoSize = true;
-            this.buttonChooseAdditionalOptions.Location = new System.Drawing.Point(195, 445);
-            this.buttonChooseAdditionalOptions.Name = "buttonChooseAdditionalOptions";
-            this.buttonChooseAdditionalOptions.Size = new System.Drawing.Size(75, 27);
-            this.buttonChooseAdditionalOptions.TabIndex = 60;
-            this.buttonChooseAdditionalOptions.Text = "Wybierz";
-            this.buttonChooseAdditionalOptions.UseVisualStyleBackColor = true;
-            this.buttonChooseAdditionalOptions.Click += new System.EventHandler(this.buttonChooseAdditionalOptions_Click);
-            // 
-            // labelAdditionalOptions
-            // 
-            this.labelAdditionalOptions.AutoSize = true;
-            this.labelAdditionalOptions.Location = new System.Drawing.Point(25, 450);
-            this.labelAdditionalOptions.Margin = new System.Windows.Forms.Padding(3);
-            this.labelAdditionalOptions.Name = "labelAdditionalOptions";
-            this.labelAdditionalOptions.Size = new System.Drawing.Size(164, 17);
-            this.labelAdditionalOptions.TabIndex = 59;
-            this.labelAdditionalOptions.Text = "Dodatkowe opcje i usługi";
-            this.labelAdditionalOptions.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelCarPrice.AutoSize = true;
+            this.labelCarPrice.Location = new System.Drawing.Point(25, 415);
+            this.labelCarPrice.Margin = new System.Windows.Forms.Padding(3);
+            this.labelCarPrice.Name = "labelCarPrice";
+            this.labelCarPrice.Size = new System.Drawing.Size(118, 17);
+            this.labelCarPrice.TabIndex = 61;
+            this.labelCarPrice.Text = "Cena samochodu";
+            this.labelCarPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonChooseCar
             // 
             this.buttonChooseCar.AutoSize = true;
-            this.buttonChooseCar.Location = new System.Drawing.Point(106, 270);
+            this.buttonChooseCar.Location = new System.Drawing.Point(106, 200);
             this.buttonChooseCar.Name = "buttonChooseCar";
             this.buttonChooseCar.Size = new System.Drawing.Size(138, 27);
             this.buttonChooseCar.TabIndex = 58;
@@ -281,65 +237,38 @@
             this.buttonChooseCar.UseVisualStyleBackColor = true;
             this.buttonChooseCar.Click += new System.EventHandler(this.buttonChooseCar_Click);
             // 
-            // comboBoxCarBody
-            // 
-            this.comboBoxCarBody.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxCarBody.Enabled = false;
-            this.comboBoxCarBody.Location = new System.Drawing.Point(522, 412);
-            this.comboBoxCarBody.Name = "comboBoxCarBody";
-            this.comboBoxCarBody.Size = new System.Drawing.Size(121, 24);
-            this.comboBoxCarBody.TabIndex = 57;
-            // 
-            // comboBoxGearBox
-            // 
-            this.comboBoxGearBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxGearBox.Enabled = false;
-            this.comboBoxGearBox.Location = new System.Drawing.Point(522, 377);
-            this.comboBoxGearBox.Name = "comboBoxGearBox";
-            this.comboBoxGearBox.Size = new System.Drawing.Size(121, 24);
-            this.comboBoxGearBox.TabIndex = 56;
-            // 
             // labelCarBody
             // 
             this.labelCarBody.AutoSize = true;
-            this.labelCarBody.Location = new System.Drawing.Point(406, 415);
+            this.labelCarBody.Location = new System.Drawing.Point(406, 345);
             this.labelCarBody.Name = "labelCarBody";
             this.labelCarBody.Size = new System.Drawing.Size(69, 17);
             this.labelCarBody.TabIndex = 55;
             this.labelCarBody.Text = "Nadwozie";
             this.labelCarBody.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // comboBoxFuel
-            // 
-            this.comboBoxFuel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxFuel.Enabled = false;
-            this.comboBoxFuel.Location = new System.Drawing.Point(522, 342);
-            this.comboBoxFuel.Name = "comboBoxFuel";
-            this.comboBoxFuel.Size = new System.Drawing.Size(121, 24);
-            this.comboBoxFuel.TabIndex = 54;
-            // 
             // textBoxEnginePower
             // 
-            this.textBoxEnginePower.Location = new System.Drawing.Point(522, 307);
+            this.textBoxEnginePower.Location = new System.Drawing.Point(522, 237);
             this.textBoxEnginePower.MaxLength = 50;
             this.textBoxEnginePower.Name = "textBoxEnginePower";
             this.textBoxEnginePower.ReadOnly = true;
-            this.textBoxEnginePower.Size = new System.Drawing.Size(100, 22);
+            this.textBoxEnginePower.Size = new System.Drawing.Size(121, 22);
             this.textBoxEnginePower.TabIndex = 53;
             // 
             // textBoxEngineVolume
             // 
-            this.textBoxEngineVolume.Location = new System.Drawing.Point(179, 412);
+            this.textBoxEngineVolume.Location = new System.Drawing.Point(179, 342);
             this.textBoxEngineVolume.MaxLength = 15;
             this.textBoxEngineVolume.Name = "textBoxEngineVolume";
             this.textBoxEngineVolume.ReadOnly = true;
-            this.textBoxEngineVolume.Size = new System.Drawing.Size(100, 22);
+            this.textBoxEngineVolume.Size = new System.Drawing.Size(121, 22);
             this.textBoxEngineVolume.TabIndex = 52;
             // 
             // labelGearBox
             // 
             this.labelGearBox.AutoSize = true;
-            this.labelGearBox.Location = new System.Drawing.Point(406, 380);
+            this.labelGearBox.Location = new System.Drawing.Point(406, 310);
             this.labelGearBox.Name = "labelGearBox";
             this.labelGearBox.Size = new System.Drawing.Size(110, 17);
             this.labelGearBox.TabIndex = 49;
@@ -349,7 +278,7 @@
             // labelFuel
             // 
             this.labelFuel.AutoSize = true;
-            this.labelFuel.Location = new System.Drawing.Point(406, 345);
+            this.labelFuel.Location = new System.Drawing.Point(406, 275);
             this.labelFuel.Name = "labelFuel";
             this.labelFuel.Size = new System.Drawing.Size(48, 17);
             this.labelFuel.TabIndex = 48;
@@ -359,7 +288,7 @@
             // labelEnginePower
             // 
             this.labelEnginePower.AutoSize = true;
-            this.labelEnginePower.Location = new System.Drawing.Point(406, 310);
+            this.labelEnginePower.Location = new System.Drawing.Point(406, 240);
             this.labelEnginePower.Name = "labelEnginePower";
             this.labelEnginePower.Size = new System.Drawing.Size(77, 17);
             this.labelEnginePower.TabIndex = 47;
@@ -369,7 +298,7 @@
             // labelEngineVolume
             // 
             this.labelEngineVolume.AutoSize = true;
-            this.labelEngineVolume.Location = new System.Drawing.Point(53, 415);
+            this.labelEngineVolume.Location = new System.Drawing.Point(53, 345);
             this.labelEngineVolume.Name = "labelEngineVolume";
             this.labelEngineVolume.Size = new System.Drawing.Size(120, 17);
             this.labelEngineVolume.TabIndex = 46;
@@ -379,7 +308,7 @@
             // labelColour
             // 
             this.labelColour.AutoSize = true;
-            this.labelColour.Location = new System.Drawing.Point(53, 380);
+            this.labelColour.Location = new System.Drawing.Point(53, 310);
             this.labelColour.Name = "labelColour";
             this.labelColour.Size = new System.Drawing.Size(41, 17);
             this.labelColour.TabIndex = 45;
@@ -389,7 +318,7 @@
             // labelModel
             // 
             this.labelModel.AutoSize = true;
-            this.labelModel.Location = new System.Drawing.Point(53, 345);
+            this.labelModel.Location = new System.Drawing.Point(53, 275);
             this.labelModel.Name = "labelModel";
             this.labelModel.Size = new System.Drawing.Size(46, 17);
             this.labelModel.TabIndex = 44;
@@ -399,7 +328,7 @@
             // labelCar
             // 
             this.labelCar.AutoSize = true;
-            this.labelCar.Location = new System.Drawing.Point(25, 275);
+            this.labelCar.Location = new System.Drawing.Point(25, 205);
             this.labelCar.Margin = new System.Windows.Forms.Padding(3);
             this.labelCar.Name = "labelCar";
             this.labelCar.Size = new System.Drawing.Size(75, 17);
@@ -409,7 +338,7 @@
             // 
             // dateTimePickerPurchaseDate
             // 
-            this.dateTimePickerPurchaseDate.Location = new System.Drawing.Point(119, 235);
+            this.dateTimePickerPurchaseDate.Location = new System.Drawing.Point(119, 165);
             this.dateTimePickerPurchaseDate.Name = "dateTimePickerPurchaseDate";
             this.dateTimePickerPurchaseDate.Size = new System.Drawing.Size(200, 22);
             this.dateTimePickerPurchaseDate.TabIndex = 42;
@@ -417,7 +346,7 @@
             // labelPurchaseDate
             // 
             this.labelPurchaseDate.AutoSize = true;
-            this.labelPurchaseDate.Location = new System.Drawing.Point(25, 240);
+            this.labelPurchaseDate.Location = new System.Drawing.Point(25, 170);
             this.labelPurchaseDate.Margin = new System.Windows.Forms.Padding(3);
             this.labelPurchaseDate.Name = "labelPurchaseDate";
             this.labelPurchaseDate.Size = new System.Drawing.Size(88, 17);
@@ -537,6 +466,72 @@
             this.labelClient.Text = "Klient";
             this.labelClient.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // labelTotalPrice
+            // 
+            this.labelTotalPrice.AutoSize = true;
+            this.labelTotalPrice.Location = new System.Drawing.Point(325, 450);
+            this.labelTotalPrice.Name = "labelTotalPrice";
+            this.labelTotalPrice.Size = new System.Drawing.Size(102, 17);
+            this.labelTotalPrice.TabIndex = 73;
+            this.labelTotalPrice.Text = "Cena całkowita";
+            // 
+            // textBoxTotalPrice
+            // 
+            this.textBoxTotalPrice.Location = new System.Drawing.Point(433, 447);
+            this.textBoxTotalPrice.Name = "textBoxTotalPrice";
+            this.textBoxTotalPrice.ReadOnly = true;
+            this.textBoxTotalPrice.Size = new System.Drawing.Size(100, 22);
+            this.textBoxTotalPrice.TabIndex = 74;
+            this.textBoxTotalPrice.Text = "0";
+            // 
+            // textBoxCarSeries
+            // 
+            this.textBoxCarSeries.Location = new System.Drawing.Point(179, 237);
+            this.textBoxCarSeries.Name = "textBoxCarSeries";
+            this.textBoxCarSeries.ReadOnly = true;
+            this.textBoxCarSeries.Size = new System.Drawing.Size(121, 22);
+            this.textBoxCarSeries.TabIndex = 75;
+            // 
+            // textBoxCarModel
+            // 
+            this.textBoxCarModel.Location = new System.Drawing.Point(179, 272);
+            this.textBoxCarModel.Name = "textBoxCarModel";
+            this.textBoxCarModel.ReadOnly = true;
+            this.textBoxCarModel.Size = new System.Drawing.Size(121, 22);
+            this.textBoxCarModel.TabIndex = 76;
+            // 
+            // textBoxCarColor
+            // 
+            this.textBoxCarColor.Location = new System.Drawing.Point(179, 307);
+            this.textBoxCarColor.Name = "textBoxCarColor";
+            this.textBoxCarColor.ReadOnly = true;
+            this.textBoxCarColor.Size = new System.Drawing.Size(121, 22);
+            this.textBoxCarColor.TabIndex = 77;
+            // 
+            // textBoxCarFuel
+            // 
+            this.textBoxCarFuel.Location = new System.Drawing.Point(522, 272);
+            this.textBoxCarFuel.Name = "textBoxCarFuel";
+            this.textBoxCarFuel.ReadOnly = true;
+            this.textBoxCarFuel.Size = new System.Drawing.Size(121, 22);
+            this.textBoxCarFuel.TabIndex = 78;
+            // 
+            // textBoxCarGearbox
+            // 
+            this.textBoxCarGearbox.Location = new System.Drawing.Point(522, 307);
+            this.textBoxCarGearbox.Name = "textBoxCarGearbox";
+            this.textBoxCarGearbox.ReadOnly = true;
+            this.textBoxCarGearbox.Size = new System.Drawing.Size(121, 22);
+            this.textBoxCarGearbox.TabIndex = 79;
+            // 
+            // textBoxCarBody
+            // 
+            this.textBoxCarBody.Location = new System.Drawing.Point(522, 342);
+            this.textBoxCarBody.Name = "textBoxCarBody";
+            this.textBoxCarBody.ReadOnly = true;
+            this.textBoxCarBody.Size = new System.Drawing.Size(121, 22);
+            this.textBoxCarBody.TabIndex = 80;
+            // 
             // FormNewCarOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -571,15 +566,10 @@
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.TextBox textBoxComment;
         private System.Windows.Forms.Label labelComment;
-        private System.Windows.Forms.TextBox textBoxPrice;
-        private System.Windows.Forms.Label labelPrice;
-        private System.Windows.Forms.Button buttonChooseAdditionalOptions;
-        private System.Windows.Forms.Label labelAdditionalOptions;
+        private System.Windows.Forms.TextBox textBoxCarPrice;
+        private System.Windows.Forms.Label labelCarPrice;
         private System.Windows.Forms.Button buttonChooseCar;
-        private System.Windows.Forms.ComboBox comboBoxCarBody;
-        private System.Windows.Forms.ComboBox comboBoxGearBox;
         private System.Windows.Forms.Label labelCarBody;
-        private System.Windows.Forms.ComboBox comboBoxFuel;
         private System.Windows.Forms.TextBox textBoxEnginePower;
         private System.Windows.Forms.TextBox textBoxEngineVolume;
         private System.Windows.Forms.Label labelGearBox;
@@ -593,9 +583,14 @@
         private System.Windows.Forms.Button buttonAccept;
         private System.Windows.Forms.TextBox textBoxDiscount;
         private System.Windows.Forms.Label labelDiscount;
-        private System.Windows.Forms.ComboBox comboBoxColour;
-        private System.Windows.Forms.ComboBox comboBoxModel;
-        private System.Windows.Forms.ComboBox comboBoxSeries;
         private System.Windows.Forms.Label labelSeries;
+        private System.Windows.Forms.TextBox textBoxTotalPrice;
+        private System.Windows.Forms.Label labelTotalPrice;
+        private System.Windows.Forms.TextBox textBoxCarBody;
+        private System.Windows.Forms.TextBox textBoxCarGearbox;
+        private System.Windows.Forms.TextBox textBoxCarFuel;
+        private System.Windows.Forms.TextBox textBoxCarColor;
+        private System.Windows.Forms.TextBox textBoxCarModel;
+        private System.Windows.Forms.TextBox textBoxCarSeries;
     }
 }
