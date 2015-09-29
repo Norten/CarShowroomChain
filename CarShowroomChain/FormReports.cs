@@ -24,7 +24,17 @@ namespace CarShowroomChain
 
         private void pictureBoxQuestionMark_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("");
+            MessageBox.Show("Wybierz z listy rozwijanej raport, kliknij 'Generuj raport' i zapisz wygenerowany raport w odpowiadającej Ci lokalizacji.");
+        }
+
+        private void buttonGenerateReport_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog dialog = new SaveFileDialog();
+            dialog.ShowDialog();
+            if (dialog.FileName != "")
+            {
+                //saveReport();
+            }
         }
     }
 }
