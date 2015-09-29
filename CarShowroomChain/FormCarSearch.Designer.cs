@@ -29,7 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCarSearch));
             this.panelBackground = new System.Windows.Forms.Panel();
+            this.maskedTextBoxPriceTo = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBoxPriceFrom = new System.Windows.Forms.MaskedTextBox();
             this.labelCashTo = new System.Windows.Forms.Label();
             this.labelCashFrom = new System.Windows.Forms.Label();
             this.comboBoxShop = new System.Windows.Forms.ComboBox();
@@ -67,16 +70,17 @@
             this.labelColor = new System.Windows.Forms.Label();
             this.labelModel = new System.Windows.Forms.Label();
             this.full_carTableAdapter = new CarShowroomChain.polsl_agatek_bdDataSet1TableAdapters.full_carTableAdapter();
-            this.maskedTextBoxPriceFrom = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBoxPriceTo = new System.Windows.Forms.MaskedTextBox();
+            this.pictureBoxQuestionMark = new System.Windows.Forms.PictureBox();
             this.panelBackground.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullcarBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.polsl_agatek_bdDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQuestionMark)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBackground
             // 
+            this.panelBackground.Controls.Add(this.pictureBoxQuestionMark);
             this.panelBackground.Controls.Add(this.maskedTextBoxPriceTo);
             this.panelBackground.Controls.Add(this.maskedTextBoxPriceFrom);
             this.panelBackground.Controls.Add(this.labelCashTo);
@@ -111,6 +115,33 @@
             this.panelBackground.Padding = new System.Windows.Forms.Padding(15, 16, 15, 16);
             this.panelBackground.Size = new System.Drawing.Size(550, 524);
             this.panelBackground.TabIndex = 0;
+            // 
+            // maskedTextBoxPriceTo
+            // 
+            this.maskedTextBoxPriceTo.AsciiOnly = true;
+            this.maskedTextBoxPriceTo.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.maskedTextBoxPriceTo.Location = new System.Drawing.Point(366, 108);
+            this.maskedTextBoxPriceTo.Mask = "999 999 999";
+            this.maskedTextBoxPriceTo.Name = "maskedTextBoxPriceTo";
+            this.maskedTextBoxPriceTo.PromptChar = ' ';
+            this.maskedTextBoxPriceTo.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.maskedTextBoxPriceTo.Size = new System.Drawing.Size(67, 20);
+            this.maskedTextBoxPriceTo.TabIndex = 54;
+            this.maskedTextBoxPriceTo.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.maskedTextBoxPriceTo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.maskedTextBoxPriceTo_MouseDown);
+            // 
+            // maskedTextBoxPriceFrom
+            // 
+            this.maskedTextBoxPriceFrom.AsciiOnly = true;
+            this.maskedTextBoxPriceFrom.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.maskedTextBoxPriceFrom.Location = new System.Drawing.Point(366, 79);
+            this.maskedTextBoxPriceFrom.Mask = "999 999 999";
+            this.maskedTextBoxPriceFrom.Name = "maskedTextBoxPriceFrom";
+            this.maskedTextBoxPriceFrom.PromptChar = ' ';
+            this.maskedTextBoxPriceFrom.Size = new System.Drawing.Size(67, 20);
+            this.maskedTextBoxPriceFrom.TabIndex = 52;
+            this.maskedTextBoxPriceFrom.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.maskedTextBoxPriceFrom.MouseDown += new System.Windows.Forms.MouseEventHandler(this.maskedTextBoxPriceFrom_MouseDown);
             // 
             // labelCashTo
             // 
@@ -473,32 +504,15 @@
             // 
             this.full_carTableAdapter.ClearBeforeFill = true;
             // 
-            // maskedTextBoxPriceFrom
+            // pictureBoxQuestionMark
             // 
-            this.maskedTextBoxPriceFrom.AsciiOnly = true;
-            this.maskedTextBoxPriceFrom.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            this.maskedTextBoxPriceFrom.Location = new System.Drawing.Point(366, 79);
-            this.maskedTextBoxPriceFrom.Mask = "999 999 999";
-            this.maskedTextBoxPriceFrom.Name = "maskedTextBoxPriceFrom";
-            this.maskedTextBoxPriceFrom.PromptChar = ' ';
-            this.maskedTextBoxPriceFrom.Size = new System.Drawing.Size(67, 20);
-            this.maskedTextBoxPriceFrom.TabIndex = 52;
-            this.maskedTextBoxPriceFrom.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            this.maskedTextBoxPriceFrom.MouseDown += new System.Windows.Forms.MouseEventHandler(this.maskedTextBoxPriceFrom_MouseDown);
-            // 
-            // maskedTextBoxPriceTo
-            // 
-            this.maskedTextBoxPriceTo.AsciiOnly = true;
-            this.maskedTextBoxPriceTo.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            this.maskedTextBoxPriceTo.Location = new System.Drawing.Point(366, 108);
-            this.maskedTextBoxPriceTo.Mask = "999 999 999";
-            this.maskedTextBoxPriceTo.Name = "maskedTextBoxPriceTo";
-            this.maskedTextBoxPriceTo.PromptChar = ' ';
-            this.maskedTextBoxPriceTo.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.maskedTextBoxPriceTo.Size = new System.Drawing.Size(67, 20);
-            this.maskedTextBoxPriceTo.TabIndex = 54;
-            this.maskedTextBoxPriceTo.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            this.maskedTextBoxPriceTo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.maskedTextBoxPriceTo_MouseDown);
+            this.pictureBoxQuestionMark.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxQuestionMark.BackgroundImage")));
+            this.pictureBoxQuestionMark.Location = new System.Drawing.Point(513, 12);
+            this.pictureBoxQuestionMark.Name = "pictureBoxQuestionMark";
+            this.pictureBoxQuestionMark.Size = new System.Drawing.Size(25, 24);
+            this.pictureBoxQuestionMark.TabIndex = 73;
+            this.pictureBoxQuestionMark.TabStop = false;
+            this.pictureBoxQuestionMark.Click += new System.EventHandler(this.pictureBoxQuestionMark_Click);
             // 
             // FormCarSearch
             // 
@@ -516,6 +530,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullcarBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.polsl_agatek_bdDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQuestionMark)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -563,5 +578,6 @@
         private System.Windows.Forms.Label labelCashFrom;
         private System.Windows.Forms.MaskedTextBox maskedTextBoxPriceFrom;
         private System.Windows.Forms.MaskedTextBox maskedTextBoxPriceTo;
+        private System.Windows.Forms.PictureBox pictureBoxQuestionMark;
     }
 }

@@ -194,6 +194,11 @@ namespace CarShowroomChain
             this.dataGridViewCar.DataSource = source;
         }
 
+        private void pictureBoxQuestionMark_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("W tabelce są wyświetlone wszystkie dostępne samochody.\nMożesz zawęzić wyniki wyszukiwania poprzez wybranie konkretnych opcji.\nAby ponownie wyświetlić wszystkie możliwe do wyboru samochody wyczyść wszystkie warunki i kliknij przycisk 'Filtruj'.\nGdy klikniesz na konkretny samochód w tabelce, możesz kliknąć w przycisk 'Wybierz'.");
+        }
+
 
 
     }

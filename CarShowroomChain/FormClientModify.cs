@@ -45,5 +45,10 @@ namespace CarShowroomChain {
                 this.Close();
             }
         }
+
+        private void pictureBoxQuestionMark_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Możesz zedytować wszystkie wyświetlone tu informacje,\npo kliknięciu w przycisk 'Akceptuj' wszystkie dane zostaną zapisane w bazie danych.");
+        }
     }
 }

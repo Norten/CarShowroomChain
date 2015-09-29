@@ -117,6 +117,27 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pictureBoxQuestionMark.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EwAACxMBAJqcGAAAAAd0SU1FB98JHRIJOGa9naAAAAM/SURBVEhLzZR7TI1xGMff95xTHRKZVlmxWBQR
+        ii7KberolBqO00WcdC4lR2vC6SZtmM2mqY3NHyRLrGKTzVibHcx/YiqXOq1hodZli4zo1Nfzvuc3GRty
+        +qPP9u599/6e5/nuufweblKRV1XPviYY88pV4rtRGeXfp1XldceuO92ZsOHko9ClaRzn7ySc1QbbbMZN
+        U7qGw4My7mNpwfyXisjn3ckx6NMkYCArEYMZKnzSb8O7TRG47evz5M4M1xzBB6LnOEBDGY/SwrAW5RpY
+        iwxAoQHWXA0GDSp8y0sHCnTAkUxYjUloWeaHngBfdK1YspG5/zstKgVwdK8YcNi0G6Ues5Dr5orGNcGi
+        gCh02IA+3Ra89fcBosPw5aDBh7n/neHzJ7QdO5S2QPTcCAnEIYkU+3gJqiKDBtrV0T/OcNSIakr+rkSC
+        R54e5SzE32lTKYqGCvRAcQZA5WkIX47rUilqpTJYMpIut6uifhLJwikSqXRwxFU3t1oW4s/cmzeXa90W
+        XdIYGoiHQYtgDlyAc96euCThUUXBHisjSZyVq1AHS6ICRvpvoiyLp7vkVKekskj/SnPHlIDQ1SEeAYv8
+        Kg9lRr1IVH7uyVQD+VrqRwas+3ciz8kRe0gkSyb7yLzGTzg9+NA289nmdUDJHhLQYYQG4StNVrHrNGh4
+        fjRNJh3Se83xNs72sjn9D80pcRcHD2hsJSrSo5dGWU/au3geqQ6Oj1sBPs3DnWfm/0dTSpw4rqIIDUO5
+        +yzk0zTlU7OFc2DcV/F3XmXvHJums4W4QHGv0bTVyeW9zMR+3ggiQiZUKkGkQhChTGodHfqYif28Vm9C
+        T8J69KsVGKF7c5FE6qQkMtP1EzOxD5i0vzRUJrcC4gYWqFu40L6GCyTJt4vv/mxNtnmx75nzPH+vxtm5
+        3+zicgcVNZKOhpviud10aNX172ndC3fjafBiQLkaiI0YHY6JrGEm9tOmV9EKoaazETbT/bhPPamf5vKB
+        mdjP89T4sXtSZgKtWpTKHEZLpjpPUK0Iy/aYU120+r8Yk2HZugFpvBQ6ufyaKVkvPxafwKwmgE5VrN4S
+        u/a4RuoUxX5xlbcmLhEbV1rYx6SE474DWpWytMj3QCQAAAAASUVORK5CYII=
+</value>
+  </data>
   <metadata name="clientBindingSource2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>678, 17</value>
   </metadata>

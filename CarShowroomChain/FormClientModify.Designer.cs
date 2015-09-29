@@ -23,6 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormClientModify));
             this.panelBackground = new System.Windows.Forms.Panel();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonAccept = new System.Windows.Forms.Button();
@@ -36,11 +37,14 @@
             this.labelAddress = new System.Windows.Forms.Label();
             this.labelSurname = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
+            this.pictureBoxQuestionMark = new System.Windows.Forms.PictureBox();
             this.panelBackground.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQuestionMark)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBackground
             // 
+            this.panelBackground.Controls.Add(this.pictureBoxQuestionMark);
             this.panelBackground.Controls.Add(this.buttonCancel);
             this.panelBackground.Controls.Add(this.buttonAccept);
             this.panelBackground.Controls.Add(this.textBoxEmail);
@@ -55,7 +59,7 @@
             this.panelBackground.Controls.Add(this.labelName);
             this.panelBackground.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelBackground.Location = new System.Drawing.Point(0, 0);
-            this.panelBackground.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelBackground.Margin = new System.Windows.Forms.Padding(2);
             this.panelBackground.Name = "panelBackground";
             this.panelBackground.Padding = new System.Windows.Forms.Padding(15, 16, 15, 16);
             this.panelBackground.Size = new System.Drawing.Size(513, 293);
@@ -89,8 +93,8 @@
             // 
             // textBoxEmail
             // 
-            this.textBoxEmail.Location = new System.Drawing.Point(375, 50);
-            this.textBoxEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxEmail.Location = new System.Drawing.Point(367, 50);
+            this.textBoxEmail.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxEmail.MaxLength = 250;
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(104, 20);
@@ -98,8 +102,8 @@
             // 
             // textBoxTelephoneNum
             // 
-            this.textBoxTelephoneNum.Location = new System.Drawing.Point(375, 21);
-            this.textBoxTelephoneNum.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxTelephoneNum.Location = new System.Drawing.Point(367, 21);
+            this.textBoxTelephoneNum.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxTelephoneNum.MaxLength = 20;
             this.textBoxTelephoneNum.Name = "textBoxTelephoneNum";
             this.textBoxTelephoneNum.Size = new System.Drawing.Size(104, 20);
@@ -108,7 +112,7 @@
             // textBoxAddress
             // 
             this.textBoxAddress.Location = new System.Drawing.Point(109, 86);
-            this.textBoxAddress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxAddress.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxAddress.MaxLength = 250;
             this.textBoxAddress.Multiline = true;
             this.textBoxAddress.Name = "textBoxAddress";
@@ -118,7 +122,7 @@
             // textBoxName
             // 
             this.textBoxName.Location = new System.Drawing.Point(109, 22);
-            this.textBoxName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxName.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxName.MaxLength = 250;
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(154, 20);
@@ -127,7 +131,7 @@
             // textBoxSurname
             // 
             this.textBoxSurname.Location = new System.Drawing.Point(109, 50);
-            this.textBoxSurname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSurname.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSurname.MaxLength = 250;
             this.textBoxSurname.Name = "textBoxSurname";
             this.textBoxSurname.Size = new System.Drawing.Size(154, 20);
@@ -188,19 +192,30 @@
             this.labelName.Text = "Imię";
             this.labelName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pictureBoxQuestionMark
+            // 
+            this.pictureBoxQuestionMark.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxQuestionMark.BackgroundImage")));
+            this.pictureBoxQuestionMark.Location = new System.Drawing.Point(476, 12);
+            this.pictureBoxQuestionMark.Name = "pictureBoxQuestionMark";
+            this.pictureBoxQuestionMark.Size = new System.Drawing.Size(25, 24);
+            this.pictureBoxQuestionMark.TabIndex = 74;
+            this.pictureBoxQuestionMark.TabStop = false;
+            this.pictureBoxQuestionMark.Click += new System.EventHandler(this.pictureBoxQuestionMark_Click);
+            // 
             // FormClientModify
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(513, 293);
             this.Controls.Add(this.panelBackground);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximumSize = new System.Drawing.Size(529, 332);
             this.MinimumSize = new System.Drawing.Size(529, 332);
             this.Name = "FormClientModify";
             this.Text = "Modyfikuj klienta";
             this.panelBackground.ResumeLayout(false);
             this.panelBackground.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQuestionMark)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -220,6 +235,7 @@
         private System.Windows.Forms.Label labelAddress;
         private System.Windows.Forms.Label labelSurname;
         private System.Windows.Forms.Label labelName;
+        private System.Windows.Forms.PictureBox pictureBoxQuestionMark;
 
     }
 }

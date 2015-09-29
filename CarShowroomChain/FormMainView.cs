@@ -58,5 +58,10 @@ namespace CarShowroomChain
             FormAccountManagement fAM = new FormAccountManagement();
             fAM.ShowDialog();
         }
+
+        private void pictureBoxQuestionMark_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Kliknij w którykolwiek przycisk z menu aby otworzyło Ci się nowe okienko z odpowiednimi opcjami.");
+        }
     }
 }

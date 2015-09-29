@@ -85,5 +85,15 @@ namespace CarShowroomChain
             }
 
         }
+
+        private void pictureBoxQuestionMarkPass_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Po kliknięciu w przycisk 'Dane osobowe' możesz sprawdzić czy Twoej dane są poprawne.\nPo kliknięciu w przycisk 'Dane logowania' możesz zmienić swoje hasło.");
+        }
+
+        private void pictureBoxQuestionMark2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Po kliknięciu w przycisk 'Dane osobowe' możesz sprawdzić czy Twoej dane są poprawne.\nPo kliknięciu w przycisk 'Dane logowania' możesz zmienić swoje hasło.");
+        }
     }
 }

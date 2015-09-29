@@ -56,5 +56,10 @@ namespace CarShowroomChain
                 this.buttonLogin_Click(new object(), new EventArgs());
         }
 
+        private void pictureBoxQuestionMark_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Wpisz poprawny login i hasło aby wejść do systemu.");
+        }
+
     }
 }

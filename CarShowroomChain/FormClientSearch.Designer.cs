@@ -29,7 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormClientSearch));
             this.panelBackground = new System.Windows.Forms.Panel();
+            this.labelFilterSurname = new System.Windows.Forms.Label();
+            this.labelFilterName = new System.Windows.Forms.Label();
             this.buttonFilter = new System.Windows.Forms.Button();
             this.textBoxSurname = new System.Windows.Forms.TextBox();
             this.textBoxName = new System.Windows.Forms.TextBox();
@@ -49,18 +52,19 @@
             this.clientBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.clientTableAdapter = new CarShowroomChain.polsl_agatek_bdDataSetTableAdapters.clientTableAdapter();
             this.clientBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.labelFilterName = new System.Windows.Forms.Label();
-            this.labelFilterSurname = new System.Windows.Forms.Label();
+            this.pictureBoxQuestionMark = new System.Windows.Forms.PictureBox();
             this.panelBackground.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClients)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.polsl_agatek_bdDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQuestionMark)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBackground
             // 
+            this.panelBackground.Controls.Add(this.pictureBoxQuestionMark);
             this.panelBackground.Controls.Add(this.labelFilterSurname);
             this.panelBackground.Controls.Add(this.labelFilterName);
             this.panelBackground.Controls.Add(this.buttonFilter);
@@ -73,17 +77,35 @@
             this.panelBackground.Controls.Add(this.dataGridViewClients);
             this.panelBackground.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelBackground.Location = new System.Drawing.Point(0, 0);
-            this.panelBackground.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelBackground.Margin = new System.Windows.Forms.Padding(2);
             this.panelBackground.Name = "panelBackground";
             this.panelBackground.Padding = new System.Windows.Forms.Padding(15, 16, 15, 16);
             this.panelBackground.Size = new System.Drawing.Size(678, 531);
             this.panelBackground.TabIndex = 0;
             // 
+            // labelFilterSurname
+            // 
+            this.labelFilterSurname.AutoSize = true;
+            this.labelFilterSurname.Location = new System.Drawing.Point(18, 58);
+            this.labelFilterSurname.Name = "labelFilterSurname";
+            this.labelFilterSurname.Size = new System.Drawing.Size(53, 13);
+            this.labelFilterSurname.TabIndex = 16;
+            this.labelFilterSurname.Text = "Nazwisko";
+            // 
+            // labelFilterName
+            // 
+            this.labelFilterName.AutoSize = true;
+            this.labelFilterName.Location = new System.Drawing.Point(18, 25);
+            this.labelFilterName.Name = "labelFilterName";
+            this.labelFilterName.Size = new System.Drawing.Size(26, 13);
+            this.labelFilterName.TabIndex = 15;
+            this.labelFilterName.Text = "Imię";
+            // 
             // buttonFilter
             // 
             this.buttonFilter.AutoSize = true;
             this.buttonFilter.Location = new System.Drawing.Point(168, 37);
-            this.buttonFilter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonFilter.Margin = new System.Windows.Forms.Padding(2);
             this.buttonFilter.Name = "buttonFilter";
             this.buttonFilter.Size = new System.Drawing.Size(56, 23);
             this.buttonFilter.TabIndex = 14;
@@ -94,7 +116,7 @@
             // textBoxSurname
             // 
             this.textBoxSurname.Location = new System.Drawing.Point(75, 55);
-            this.textBoxSurname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSurname.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSurname.Name = "textBoxSurname";
             this.textBoxSurname.Size = new System.Drawing.Size(76, 20);
             this.textBoxSurname.TabIndex = 13;
@@ -102,7 +124,7 @@
             // textBoxName
             // 
             this.textBoxName.Location = new System.Drawing.Point(75, 22);
-            this.textBoxName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxName.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(76, 20);
             this.textBoxName.TabIndex = 12;
@@ -253,23 +275,15 @@
             this.clientBindingSource1.DataMember = "client";
             this.clientBindingSource1.DataSource = this.polsl_agatek_bdDataSet;
             // 
-            // labelFilterName
+            // pictureBoxQuestionMark
             // 
-            this.labelFilterName.AutoSize = true;
-            this.labelFilterName.Location = new System.Drawing.Point(18, 25);
-            this.labelFilterName.Name = "labelFilterName";
-            this.labelFilterName.Size = new System.Drawing.Size(26, 13);
-            this.labelFilterName.TabIndex = 15;
-            this.labelFilterName.Text = "Imię";
-            // 
-            // labelFilterSurname
-            // 
-            this.labelFilterSurname.AutoSize = true;
-            this.labelFilterSurname.Location = new System.Drawing.Point(18, 58);
-            this.labelFilterSurname.Name = "labelFilterSurname";
-            this.labelFilterSurname.Size = new System.Drawing.Size(53, 13);
-            this.labelFilterSurname.TabIndex = 16;
-            this.labelFilterSurname.Text = "Nazwisko";
+            this.pictureBoxQuestionMark.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxQuestionMark.BackgroundImage")));
+            this.pictureBoxQuestionMark.Location = new System.Drawing.Point(641, 12);
+            this.pictureBoxQuestionMark.Name = "pictureBoxQuestionMark";
+            this.pictureBoxQuestionMark.Size = new System.Drawing.Size(25, 24);
+            this.pictureBoxQuestionMark.TabIndex = 75;
+            this.pictureBoxQuestionMark.TabStop = false;
+            this.pictureBoxQuestionMark.Click += new System.EventHandler(this.pictureBoxQuestionMark_Click);
             // 
             // FormClientSearch
             // 
@@ -277,7 +291,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(678, 531);
             this.Controls.Add(this.panelBackground);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(528, 413);
             this.Name = "FormClientSearch";
             this.Text = "Wyszukiwanie klientów";
@@ -289,6 +303,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.polsl_agatek_bdDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQuestionMark)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -317,5 +332,6 @@
         private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.Label labelFilterSurname;
         private System.Windows.Forms.Label labelFilterName;
+        private System.Windows.Forms.PictureBox pictureBoxQuestionMark;
     }
 }

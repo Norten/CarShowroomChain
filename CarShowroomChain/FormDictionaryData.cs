@@ -218,5 +218,10 @@ namespace CarShowroomChain
             dbModelSave.SaveChanges();
             this.Close();
         }
+
+        private void pictureBoxQuestionMark_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Kliknij na konkretną kategorię, a zobaczysz jakie są w niej wartości oraz będziesz mógł dodać nową daną słownikową do wybranej kategorii.\nPo kliknięciu przycisku 'Zapisz i wyjdź' wszystkie dane słownikowe jakie stworzyłeś zostaną zapisane do bazy danych.");
+        }
     }
 }

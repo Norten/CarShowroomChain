@@ -90,5 +90,10 @@ namespace CarShowroomChain
             source.DataSource = db;
             this.dataGridViewClients.DataSource = source;
         }
+
+        private void pictureBoxQuestionMark_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("W tabelce są wyświetlone wszyscy dostępni klienci.\nMożesz zawęzić wyniki wyszukiwania poprzez wybranie konkretnych opcji.\nAby ponownie wyświetlić wszystkich klientów wyczyść wszystkie warunki i kliknij przycisk 'Filtruj'.\nGdy klikniesz na konkretnego klienta w tabelce, możesz kliknąć w przycisk 'Wybierz' lub 'Modyfikuj'.\nGdy klikniesz w przycisk 'Dodaj nowego klienta' będziesz mógł dodac nowego klienta.");
+        }
     }
 }

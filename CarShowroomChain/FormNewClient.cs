@@ -37,5 +37,10 @@ namespace CarShowroomChain
             this.Close();
             
         }
+
+        private void pictureBoxQuestionMark_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Wypełnij wszystkie pola aby dodac nowego klienta do bazy danych.");
+        }
     }
 }

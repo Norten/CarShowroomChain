@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDictionaryData));
             this.panelBackground = new System.Windows.Forms.Panel();
             this.textBoxAddedCost = new System.Windows.Forms.TextBox();
             this.textBoxAddedValue = new System.Windows.Forms.TextBox();
@@ -49,14 +50,17 @@
             this.polslagatekbdDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dictbodyBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dict_bodyTableAdapter = new CarShowroomChain.polsl_agatek_bdDataSetTableAdapters.dict_bodyTableAdapter();
+            this.pictureBoxQuestionMark = new System.Windows.Forms.PictureBox();
             this.panelBackground.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.polsl_agatek_bdDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.polslagatekbdDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dictbodyBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQuestionMark)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBackground
             // 
+            this.panelBackground.Controls.Add(this.pictureBoxQuestionMark);
             this.panelBackground.Controls.Add(this.textBoxAddedCost);
             this.panelBackground.Controls.Add(this.textBoxAddedValue);
             this.panelBackground.Controls.Add(this.labelCost);
@@ -261,6 +265,16 @@
             // 
             this.dict_bodyTableAdapter.ClearBeforeFill = true;
             // 
+            // pictureBoxQuestionMark
+            // 
+            this.pictureBoxQuestionMark.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxQuestionMark.BackgroundImage")));
+            this.pictureBoxQuestionMark.Location = new System.Drawing.Point(504, 12);
+            this.pictureBoxQuestionMark.Name = "pictureBoxQuestionMark";
+            this.pictureBoxQuestionMark.Size = new System.Drawing.Size(25, 24);
+            this.pictureBoxQuestionMark.TabIndex = 76;
+            this.pictureBoxQuestionMark.TabStop = false;
+            this.pictureBoxQuestionMark.Click += new System.EventHandler(this.pictureBoxQuestionMark_Click);
+            // 
             // FormDictionaryData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -278,6 +292,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.polsl_agatek_bdDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.polslagatekbdDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dictbodyBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQuestionMark)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -304,5 +319,6 @@
         private System.Windows.Forms.ListBox listBoxCost;
         private System.Windows.Forms.TextBox textBoxAddedCost;
         private System.Windows.Forms.TextBox textBoxAddedValue;
+        private System.Windows.Forms.PictureBox pictureBoxQuestionMark;
     }
 }
