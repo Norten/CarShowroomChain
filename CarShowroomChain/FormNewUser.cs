@@ -16,11 +16,36 @@ namespace CarShowroomChain
         Dictionary<string, int>
             keyValCarShop = new Dictionary<string, int>(),
             keyValRole = new Dictionary<string, int>();
-        public FormNewUser()
+        int userId;
+        public FormNewUser(int userId = -1)
         {
             InitializeComponent();
+            this.userId = userId;
             this.dbModel = new DatabaseModel();
             this.LoadData();
+            if (this.userId != -1) {
+                var result = dbModel.user_data.Find(this.userId);
+                if (result != null) {
+                    this.textBoxLogin.Text = result.login;
+                    this.textBoxPassword.Text = result.password;
+                    this.textBoxName.Text = result.first_name;
+                    this.textBoxSurname.Text = result.last_name;
+                    this.textBoxAddress.Text = result.address;
+                    this.textBoxTelephoneNum.Text = result.phone;
+                    this.textBoxEmail.Text = result.email;
+                    this.comboBoxShowroomAssignment.SelectedIndex = this.comboBoxShowroomAssignment.FindStringExact(result.car_shop.name);
+                    foreach (var role in result.role) {
+                        if (role.name.Equals("administrator"))
+                            this.checkBoxAdministrator.Checked = true;
+                        else if (role.name.Equals("sprzedawca"))
+                            this.checkBoxSeller.Checked = true;
+                        else if (role.name.Equals("serwisant"))
+                            this.checkBoxTechnician.Checked = true;
+                        else if (role.name.Equals("kierownik salonu"))
+                            this.checkBoxShowroomManager.Checked = true;
+                    }
+                }
+            }
         }
 
         private void LoadData() {
@@ -40,17 +65,24 @@ namespace CarShowroomChain
 
         private void buttonAccept_Click(object sender, EventArgs e) {
             try {
-                var newUser = new user_data();
-                var login = this.textBoxLogin.Text;
-                var password = this.textBoxPassword.Text;
-                var firstName = this.textBoxName.Text;
-                var lastName = this.textBoxSurname.Text;
-                var address = this.textBoxAddress.Text;
-                var phone = this.textBoxTelephoneNum.Text;
-                var email = this.textBoxEmail.Text;
-                if (String.IsNullOrWhiteSpace(login) || String.IsNullOrWhiteSpace(password) ||
-                    String.IsNullOrWhiteSpace(firstName) || String.IsNullOrWhiteSpace(lastName) ||
-                    String.IsNullOrWhiteSpace(address)) {
+                user_data user;
+                if (this.userId == -1) {
+                    user = new user_data();
+                    user.is_active = 0;
+                } else {
+                    user = dbModel.user_data.Find(this.userId);
+                    user.role.Clear();
+                }
+                user.login = this.textBoxLogin.Text;
+                user.password = this.textBoxPassword.Text;
+                user.first_name = this.textBoxName.Text;
+                user.last_name = this.textBoxSurname.Text;
+                user.address = this.textBoxAddress.Text;
+                user.phone = this.textBoxTelephoneNum.Text;
+                user.email = this.textBoxEmail.Text;
+                if (String.IsNullOrWhiteSpace(user.login) || String.IsNullOrWhiteSpace(user.password) ||
+                    String.IsNullOrWhiteSpace(user.first_name) || String.IsNullOrWhiteSpace(user.last_name) ||
+                    String.IsNullOrWhiteSpace(user.address)) {
                     MessageBox.Show("Nie wszystkie wymagane dane zostały podane.\n" +
                                     "Wymagane dane:\n" +
                                     "Login\n" +
@@ -60,25 +92,18 @@ namespace CarShowroomChain
                                     "Adres\n");
                     return;
                 }
-                newUser.login = this.textBoxLogin.Text;
-                newUser.password = this.textBoxPassword.Text;
-                newUser.first_name = this.textBoxName.Text;
-                newUser.last_name = this.textBoxSurname.Text;
-                newUser.address = this.textBoxAddress.Text;
-                newUser.phone = this.textBoxTelephoneNum.Text;
-                newUser.email = this.textBoxEmail.Text;
-                newUser.id_car_shop = this.keyValCarShop[this.comboBoxShowroomAssignment.Text];
+                user.id_car_shop = this.keyValCarShop[this.comboBoxShowroomAssignment.Text];
                 var dictRole = dbModel.role.SqlQuery("SELECT * FROM role;").ToList();
                 if (this.checkBoxAdministrator.Checked)
-                    newUser.role.Add(dictRole[3]);
+                    user.role.Add(dictRole[3]);
                 if (this.checkBoxSeller.Checked)
-                    newUser.role.Add(dictRole[1]);
+                    user.role.Add(dictRole[1]);
                 if (this.checkBoxShowroomManager.Checked)
-                    newUser.role.Add(dictRole[0]);
+                    user.role.Add(dictRole[0]);
                 if (this.checkBoxTechnician.Checked)
-                    newUser.role.Add(dictRole[2]);
-                newUser.is_active = 0;
-                dbModel.user_data.Add(newUser);
+                    user.role.Add(dictRole[2]);
+                if (this.userId == -1)
+                    dbModel.user_data.Add(user);
                 dbModel.SaveChanges();
                 this.Close();
             } catch (Exception ex) {
