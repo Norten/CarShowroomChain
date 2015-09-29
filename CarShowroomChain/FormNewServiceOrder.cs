@@ -25,7 +25,7 @@ namespace CarShowroomChain
 
         private void buttonChooseAdditionalOptions_Click(object sender, EventArgs e)
         {
-            FormServiceOptions fSO = new FormServiceOptions();
+            FormServiceOptions fSO = new FormServiceOptions(this.SetServices);
             fSO.ShowDialog();
         }
 
@@ -40,6 +40,17 @@ namespace CarShowroomChain
             this.textBoxCity.Text = selectedClient.Cells[2].Value.ToString();
             this.textBoxTelephoneNum.Text = selectedClient.Cells[3].Value.ToString();
             this.textBoxEmail.Text = selectedClient.Cells[4].Value.ToString();
+        }
+
+        private void SetServices(string comment, UInt64 price) {
+            this.textBoxComment.Text += comment + ".\n\n";
+            this.AddPrice(price);
+        }
+
+        private void AddPrice(UInt64 price) {
+            var currentPrice = UInt64.Parse(this.textBoxPrice.Text);
+            currentPrice += price;
+            this.textBoxPrice.Text = currentPrice.ToString();
         }
     }
 }
