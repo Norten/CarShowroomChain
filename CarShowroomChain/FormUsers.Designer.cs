@@ -90,6 +90,7 @@
             this.buttonFilter.TabIndex = 38;
             this.buttonFilter.Text = "Filtruj";
             this.buttonFilter.UseVisualStyleBackColor = true;
+            this.buttonFilter.Click += new System.EventHandler(this.buttonFilter_Click);
             // 
             // buttonDismiss
             // 
@@ -102,6 +103,7 @@
             this.buttonDismiss.TabIndex = 37;
             this.buttonDismiss.Text = "Zwolnij";
             this.buttonDismiss.UseVisualStyleBackColor = true;
+            this.buttonDismiss.Click += new System.EventHandler(this.buttonDismiss_Click);
             // 
             // buttonHire
             // 
@@ -114,6 +116,7 @@
             this.buttonHire.TabIndex = 36;
             this.buttonHire.Text = "Zatrudnij";
             this.buttonHire.UseVisualStyleBackColor = true;
+            this.buttonHire.Click += new System.EventHandler(this.buttonHire_Click);
             // 
             // buttonModify
             // 
