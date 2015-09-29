@@ -43,14 +43,13 @@ namespace CarShowroomChain
         }
 
         private void SetServices(string comment, UInt64 price) {
+            if (this.textBoxComment.Text.Contains("Wybrane usługi/dodatki: ")) {
+                var beginIndex = this.textBoxComment.Text.IndexOf("Wybrane usługi/dodatki: ");
+                var endIndex = this.textBoxComment.Text.IndexOf("; .") + 3;
+                this.textBoxComment.Text = this.textBoxComment.Text.Remove(beginIndex, endIndex - beginIndex);
+            }
             this.textBoxComment.Text += comment + ".\n\n";
-            this.AddPrice(price);
-        }
-
-        private void AddPrice(UInt64 price) {
-            var currentPrice = UInt64.Parse(this.textBoxPrice.Text);
-            currentPrice += price;
-            this.textBoxPrice.Text = currentPrice.ToString();
+            this.textBoxServicesPrice.Text = price.ToString();
         }
     }
 }

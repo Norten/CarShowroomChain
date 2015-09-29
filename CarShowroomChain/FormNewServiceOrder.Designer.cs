@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panelBackground = new System.Windows.Forms.Panel();
+            this.textBoxServicesPrice = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.textBoxDiscount = new System.Windows.Forms.TextBox();
             this.dateTimePickerPurchaseDate = new System.Windows.Forms.DateTimePicker();
             this.labelDiscount = new System.Windows.Forms.Label();
@@ -40,8 +42,8 @@
             this.textBoxComment = new System.Windows.Forms.TextBox();
             this.textBoxTelephoneNum = new System.Windows.Forms.TextBox();
             this.labelComment = new System.Windows.Forms.Label();
-            this.textBoxPrice = new System.Windows.Forms.TextBox();
-            this.labelPrice = new System.Windows.Forms.Label();
+            this.textBoxCarPrice = new System.Windows.Forms.TextBox();
+            this.labelCarPrice = new System.Windows.Forms.Label();
             this.textBoxCity = new System.Windows.Forms.TextBox();
             this.buttonChooseAdditionalOptions = new System.Windows.Forms.Button();
             this.labelAdditionalOptions = new System.Windows.Forms.Label();
@@ -53,11 +55,17 @@
             this.labelSurname = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
             this.labelClient = new System.Windows.Forms.Label();
+            this.labelTotalPrice = new System.Windows.Forms.Label();
+            this.textBoxTotalPrice = new System.Windows.Forms.TextBox();
             this.panelBackground.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelBackground
             // 
+            this.panelBackground.Controls.Add(this.textBoxTotalPrice);
+            this.panelBackground.Controls.Add(this.labelTotalPrice);
+            this.panelBackground.Controls.Add(this.textBoxServicesPrice);
+            this.panelBackground.Controls.Add(this.label1);
             this.panelBackground.Controls.Add(this.textBoxDiscount);
             this.panelBackground.Controls.Add(this.dateTimePickerPurchaseDate);
             this.panelBackground.Controls.Add(this.labelDiscount);
@@ -69,8 +77,8 @@
             this.panelBackground.Controls.Add(this.textBoxComment);
             this.panelBackground.Controls.Add(this.textBoxTelephoneNum);
             this.panelBackground.Controls.Add(this.labelComment);
-            this.panelBackground.Controls.Add(this.textBoxPrice);
-            this.panelBackground.Controls.Add(this.labelPrice);
+            this.panelBackground.Controls.Add(this.textBoxCarPrice);
+            this.panelBackground.Controls.Add(this.labelCarPrice);
             this.panelBackground.Controls.Add(this.textBoxCity);
             this.panelBackground.Controls.Add(this.buttonChooseAdditionalOptions);
             this.panelBackground.Controls.Add(this.labelAdditionalOptions);
@@ -89,17 +97,36 @@
             this.panelBackground.Size = new System.Drawing.Size(671, 563);
             this.panelBackground.TabIndex = 0;
             // 
+            // textBoxServicesPrice
+            // 
+            this.textBoxServicesPrice.Location = new System.Drawing.Point(181, 272);
+            this.textBoxServicesPrice.Name = "textBoxServicesPrice";
+            this.textBoxServicesPrice.ReadOnly = true;
+            this.textBoxServicesPrice.Size = new System.Drawing.Size(100, 22);
+            this.textBoxServicesPrice.TabIndex = 80;
+            this.textBoxServicesPrice.Text = "0";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(25, 275);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(150, 17);
+            this.label1.TabIndex = 79;
+            this.label1.Text = "Cena usług i dodatków";
+            // 
             // textBoxDiscount
             // 
-            this.textBoxDiscount.Location = new System.Drawing.Point(421, 307);
-            this.textBoxDiscount.MaxLength = 10;
+            this.textBoxDiscount.Location = new System.Drawing.Point(181, 307);
+            this.textBoxDiscount.MaxLength = 2;
             this.textBoxDiscount.Name = "textBoxDiscount";
             this.textBoxDiscount.Size = new System.Drawing.Size(100, 22);
             this.textBoxDiscount.TabIndex = 78;
+            this.textBoxDiscount.Text = "0";
             // 
             // dateTimePickerPurchaseDate
             // 
-            this.dateTimePickerPurchaseDate.Location = new System.Drawing.Point(119, 235);
+            this.dateTimePickerPurchaseDate.Location = new System.Drawing.Point(119, 165);
             this.dateTimePickerPurchaseDate.Name = "dateTimePickerPurchaseDate";
             this.dateTimePickerPurchaseDate.Size = new System.Drawing.Size(200, 22);
             this.dateTimePickerPurchaseDate.TabIndex = 66;
@@ -107,7 +134,7 @@
             // labelDiscount
             // 
             this.labelDiscount.AutoSize = true;
-            this.labelDiscount.Location = new System.Drawing.Point(283, 310);
+            this.labelDiscount.Location = new System.Drawing.Point(25, 310);
             this.labelDiscount.Name = "labelDiscount";
             this.labelDiscount.Size = new System.Drawing.Size(132, 17);
             this.labelDiscount.TabIndex = 77;
@@ -117,7 +144,7 @@
             // labelPurchaseDate
             // 
             this.labelPurchaseDate.AutoSize = true;
-            this.labelPurchaseDate.Location = new System.Drawing.Point(25, 240);
+            this.labelPurchaseDate.Location = new System.Drawing.Point(25, 170);
             this.labelPurchaseDate.Margin = new System.Windows.Forms.Padding(3);
             this.labelPurchaseDate.Name = "labelPurchaseDate";
             this.labelPurchaseDate.Size = new System.Drawing.Size(88, 17);
@@ -200,26 +227,26 @@
             this.labelComment.Text = "Komentarz";
             this.labelComment.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBoxPrice
+            // textBoxCarPrice
             // 
-            this.textBoxPrice.Location = new System.Drawing.Point(133, 307);
-            this.textBoxPrice.MaxLength = 50;
-            this.textBoxPrice.Name = "textBoxPrice";
-            this.textBoxPrice.ReadOnly = true;
-            this.textBoxPrice.Size = new System.Drawing.Size(100, 22);
-            this.textBoxPrice.TabIndex = 72;
-            this.textBoxPrice.Text = "0";
+            this.textBoxCarPrice.Location = new System.Drawing.Point(181, 237);
+            this.textBoxCarPrice.MaxLength = 50;
+            this.textBoxCarPrice.Name = "textBoxCarPrice";
+            this.textBoxCarPrice.ReadOnly = true;
+            this.textBoxCarPrice.Size = new System.Drawing.Size(100, 22);
+            this.textBoxCarPrice.TabIndex = 72;
+            this.textBoxCarPrice.Text = "0";
             // 
-            // labelPrice
+            // labelCarPrice
             // 
-            this.labelPrice.AutoSize = true;
-            this.labelPrice.Location = new System.Drawing.Point(25, 310);
-            this.labelPrice.Margin = new System.Windows.Forms.Padding(3);
-            this.labelPrice.Name = "labelPrice";
-            this.labelPrice.Size = new System.Drawing.Size(102, 17);
-            this.labelPrice.TabIndex = 71;
-            this.labelPrice.Text = "Cena całkowita";
-            this.labelPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelCarPrice.AutoSize = true;
+            this.labelCarPrice.Location = new System.Drawing.Point(25, 240);
+            this.labelCarPrice.Margin = new System.Windows.Forms.Padding(3);
+            this.labelCarPrice.Name = "labelCarPrice";
+            this.labelCarPrice.Size = new System.Drawing.Size(118, 17);
+            this.labelCarPrice.TabIndex = 71;
+            this.labelCarPrice.Text = "Cena samochodu";
+            this.labelCarPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // textBoxCity
             // 
@@ -233,7 +260,7 @@
             // buttonChooseAdditionalOptions
             // 
             this.buttonChooseAdditionalOptions.AutoSize = true;
-            this.buttonChooseAdditionalOptions.Location = new System.Drawing.Point(195, 270);
+            this.buttonChooseAdditionalOptions.Location = new System.Drawing.Point(195, 200);
             this.buttonChooseAdditionalOptions.Name = "buttonChooseAdditionalOptions";
             this.buttonChooseAdditionalOptions.Size = new System.Drawing.Size(75, 27);
             this.buttonChooseAdditionalOptions.TabIndex = 70;
@@ -244,7 +271,7 @@
             // labelAdditionalOptions
             // 
             this.labelAdditionalOptions.AutoSize = true;
-            this.labelAdditionalOptions.Location = new System.Drawing.Point(25, 275);
+            this.labelAdditionalOptions.Location = new System.Drawing.Point(25, 205);
             this.labelAdditionalOptions.Margin = new System.Windows.Forms.Padding(3);
             this.labelAdditionalOptions.Name = "labelAdditionalOptions";
             this.labelAdditionalOptions.Size = new System.Drawing.Size(164, 17);
@@ -328,6 +355,24 @@
             this.labelClient.Text = "Klient";
             this.labelClient.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // labelTotalPrice
+            // 
+            this.labelTotalPrice.AutoSize = true;
+            this.labelTotalPrice.Location = new System.Drawing.Point(315, 310);
+            this.labelTotalPrice.Name = "labelTotalPrice";
+            this.labelTotalPrice.Size = new System.Drawing.Size(102, 17);
+            this.labelTotalPrice.TabIndex = 81;
+            this.labelTotalPrice.Text = "Cena całkowita";
+            // 
+            // textBoxTotalPrice
+            // 
+            this.textBoxTotalPrice.Location = new System.Drawing.Point(423, 307);
+            this.textBoxTotalPrice.Name = "textBoxTotalPrice";
+            this.textBoxTotalPrice.ReadOnly = true;
+            this.textBoxTotalPrice.Size = new System.Drawing.Size(100, 22);
+            this.textBoxTotalPrice.TabIndex = 82;
+            this.textBoxTotalPrice.Text = "0";
+            // 
             // FormNewServiceOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -366,9 +411,13 @@
         private System.Windows.Forms.Button buttonAccept;
         private System.Windows.Forms.TextBox textBoxComment;
         private System.Windows.Forms.Label labelComment;
-        private System.Windows.Forms.TextBox textBoxPrice;
-        private System.Windows.Forms.Label labelPrice;
+        private System.Windows.Forms.TextBox textBoxCarPrice;
+        private System.Windows.Forms.Label labelCarPrice;
         private System.Windows.Forms.Button buttonChooseAdditionalOptions;
         private System.Windows.Forms.Label labelAdditionalOptions;
+        private System.Windows.Forms.TextBox textBoxServicesPrice;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBoxTotalPrice;
+        private System.Windows.Forms.Label labelTotalPrice;
     }
 }
