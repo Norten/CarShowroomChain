@@ -51,5 +51,24 @@ namespace CarShowroomChain
             this.textBoxComment.Text += comment + ".\n\n";
             this.textBoxServicesPrice.Text = price.ToString();
         }
+
+        private void textBoxServicesPrice_TextChanged(object sender, EventArgs e) {
+            var price = UInt64.Parse(this.textBoxServicesPrice.Text);
+            var discount = Double.Parse(this.textBoxDiscount.Text)/100.0;
+            var totalPrice = (UInt64)(price * (1 - discount));
+            this.textBoxTotalPrice.Text = totalPrice.ToString();
+        }
+
+        private void textBoxDiscount_TextChanged(object sender, EventArgs e) {
+            if(!String.IsNullOrWhiteSpace(this.textBoxDiscount.Text)){
+                UInt64 val;
+                if (UInt64.TryParse(this.textBoxDiscount.Text, out val))
+                    this.textBoxServicesPrice_TextChanged(new object(), new EventArgs());
+                else {
+                    this.textBoxDiscount.Text = this.textBoxDiscount.Text.Remove(this.textBoxDiscount.Text.Length - 1);
+                }
+                    
+            }
+        }
     }
 }

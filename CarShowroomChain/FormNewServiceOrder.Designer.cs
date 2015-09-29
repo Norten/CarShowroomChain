@@ -42,8 +42,6 @@
             this.textBoxComment = new System.Windows.Forms.TextBox();
             this.textBoxTelephoneNum = new System.Windows.Forms.TextBox();
             this.labelComment = new System.Windows.Forms.Label();
-            this.textBoxCarPrice = new System.Windows.Forms.TextBox();
-            this.labelCarPrice = new System.Windows.Forms.Label();
             this.textBoxCity = new System.Windows.Forms.TextBox();
             this.buttonChooseAdditionalOptions = new System.Windows.Forms.Button();
             this.labelAdditionalOptions = new System.Windows.Forms.Label();
@@ -77,8 +75,6 @@
             this.panelBackground.Controls.Add(this.textBoxComment);
             this.panelBackground.Controls.Add(this.textBoxTelephoneNum);
             this.panelBackground.Controls.Add(this.labelComment);
-            this.panelBackground.Controls.Add(this.textBoxCarPrice);
-            this.panelBackground.Controls.Add(this.labelCarPrice);
             this.panelBackground.Controls.Add(this.textBoxCity);
             this.panelBackground.Controls.Add(this.buttonChooseAdditionalOptions);
             this.panelBackground.Controls.Add(this.labelAdditionalOptions);
@@ -105,6 +101,7 @@
             this.textBoxServicesPrice.Size = new System.Drawing.Size(100, 22);
             this.textBoxServicesPrice.TabIndex = 80;
             this.textBoxServicesPrice.Text = "0";
+            this.textBoxServicesPrice.TextChanged += new System.EventHandler(this.textBoxServicesPrice_TextChanged);
             // 
             // label1
             // 
@@ -123,6 +120,7 @@
             this.textBoxDiscount.Size = new System.Drawing.Size(100, 22);
             this.textBoxDiscount.TabIndex = 78;
             this.textBoxDiscount.Text = "0";
+            this.textBoxDiscount.TextChanged += new System.EventHandler(this.textBoxDiscount_TextChanged);
             // 
             // dateTimePickerPurchaseDate
             // 
@@ -226,27 +224,6 @@
             this.labelComment.TabIndex = 73;
             this.labelComment.Text = "Komentarz";
             this.labelComment.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // textBoxCarPrice
-            // 
-            this.textBoxCarPrice.Location = new System.Drawing.Point(181, 237);
-            this.textBoxCarPrice.MaxLength = 50;
-            this.textBoxCarPrice.Name = "textBoxCarPrice";
-            this.textBoxCarPrice.ReadOnly = true;
-            this.textBoxCarPrice.Size = new System.Drawing.Size(100, 22);
-            this.textBoxCarPrice.TabIndex = 72;
-            this.textBoxCarPrice.Text = "0";
-            // 
-            // labelCarPrice
-            // 
-            this.labelCarPrice.AutoSize = true;
-            this.labelCarPrice.Location = new System.Drawing.Point(25, 240);
-            this.labelCarPrice.Margin = new System.Windows.Forms.Padding(3);
-            this.labelCarPrice.Name = "labelCarPrice";
-            this.labelCarPrice.Size = new System.Drawing.Size(118, 17);
-            this.labelCarPrice.TabIndex = 71;
-            this.labelCarPrice.Text = "Cena samochodu";
-            this.labelCarPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // textBoxCity
             // 
@@ -411,8 +388,6 @@
         private System.Windows.Forms.Button buttonAccept;
         private System.Windows.Forms.TextBox textBoxComment;
         private System.Windows.Forms.Label labelComment;
-        private System.Windows.Forms.TextBox textBoxCarPrice;
-        private System.Windows.Forms.Label labelCarPrice;
         private System.Windows.Forms.Button buttonChooseAdditionalOptions;
         private System.Windows.Forms.Label labelAdditionalOptions;
         private System.Windows.Forms.TextBox textBoxServicesPrice;
