@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panelBackground = new System.Windows.Forms.Panel();
+            this.labelCashTo = new System.Windows.Forms.Label();
+            this.labelCashFrom = new System.Windows.Forms.Label();
             this.comboBoxShop = new System.Windows.Forms.ComboBox();
             this.labelShop = new System.Windows.Forms.Label();
             this.comboBoxEngine = new System.Windows.Forms.ComboBox();
@@ -41,6 +43,17 @@
             this.buttonChoose = new System.Windows.Forms.Button();
             this.buttonFilter = new System.Windows.Forms.Button();
             this.dataGridViewCar = new System.Windows.Forms.DataGridView();
+            this.modelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.seriesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.engineDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gearboxDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fuelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bodyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fullcarBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.polsl_agatek_bdDataSet1 = new CarShowroomChain.polsl_agatek_bdDataSet1();
             this.textBoxPriceTo = new System.Windows.Forms.TextBox();
             this.labelPriceTo = new System.Windows.Forms.Label();
             this.textBoxPriceFrom = new System.Windows.Forms.TextBox();
@@ -55,27 +68,17 @@
             this.labelEngine = new System.Windows.Forms.Label();
             this.labelColor = new System.Windows.Forms.Label();
             this.labelModel = new System.Windows.Forms.Label();
-            this.polsl_agatek_bdDataSet1 = new CarShowroomChain.polsl_agatek_bdDataSet1();
-            this.fullcarBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.full_carTableAdapter = new CarShowroomChain.polsl_agatek_bdDataSet1TableAdapters.full_carTableAdapter();
-            this.modelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.seriesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.engineDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gearboxDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fuelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bodyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelBackground.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.polsl_agatek_bdDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullcarBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.polsl_agatek_bdDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBackground
             // 
+            this.panelBackground.Controls.Add(this.labelCashTo);
+            this.panelBackground.Controls.Add(this.labelCashFrom);
             this.panelBackground.Controls.Add(this.comboBoxShop);
             this.panelBackground.Controls.Add(this.labelShop);
             this.panelBackground.Controls.Add(this.comboBoxEngine);
@@ -109,10 +112,32 @@
             this.panelBackground.Size = new System.Drawing.Size(550, 524);
             this.panelBackground.TabIndex = 0;
             // 
+            // labelCashTo
+            // 
+            this.labelCashTo.AutoSize = true;
+            this.labelCashTo.Location = new System.Drawing.Point(514, 111);
+            this.labelCashTo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelCashTo.Name = "labelCashTo";
+            this.labelCashTo.Size = new System.Drawing.Size(28, 13);
+            this.labelCashTo.TabIndex = 51;
+            this.labelCashTo.Text = "PLN";
+            this.labelCashTo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelCashFrom
+            // 
+            this.labelCashFrom.AutoSize = true;
+            this.labelCashFrom.Location = new System.Drawing.Point(514, 83);
+            this.labelCashFrom.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelCashFrom.Name = "labelCashFrom";
+            this.labelCashFrom.Size = new System.Drawing.Size(28, 13);
+            this.labelCashFrom.TabIndex = 50;
+            this.labelCashFrom.Text = "PLN";
+            this.labelCashFrom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // comboBoxShop
             // 
             this.comboBoxShop.FormattingEnabled = true;
-            this.comboBoxShop.Location = new System.Drawing.Point(380, 136);
+            this.comboBoxShop.Location = new System.Drawing.Point(366, 136);
             this.comboBoxShop.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxShop.Name = "comboBoxShop";
             this.comboBoxShop.Size = new System.Drawing.Size(140, 21);
@@ -121,7 +146,7 @@
             // labelShop
             // 
             this.labelShop.AutoSize = true;
-            this.labelShop.Location = new System.Drawing.Point(286, 139);
+            this.labelShop.Location = new System.Drawing.Point(272, 139);
             this.labelShop.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelShop.Name = "labelShop";
             this.labelShop.Size = new System.Drawing.Size(34, 13);
@@ -233,7 +258,6 @@
             this.fuelDataGridViewTextBoxColumn,
             this.bodyDataGridViewTextBoxColumn,
             this.costDataGridViewTextBoxColumn,
-            this.nameDataGridViewTextBoxColumn,
             this.idDataGridViewTextBoxColumn});
             this.dataGridViewCar.DataSource = this.fullcarBindingSource;
             this.dataGridViewCar.Location = new System.Drawing.Point(17, 215);
@@ -245,164 +269,6 @@
             this.dataGridViewCar.Size = new System.Drawing.Size(515, 231);
             this.dataGridViewCar.TabIndex = 34;
             this.dataGridViewCar.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCar_CellClick);
-            // 
-            // textBoxPriceTo
-            // 
-            this.textBoxPriceTo.Location = new System.Drawing.Point(380, 108);
-            this.textBoxPriceTo.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxPriceTo.MaxLength = 50;
-            this.textBoxPriceTo.Name = "textBoxPriceTo";
-            this.textBoxPriceTo.Size = new System.Drawing.Size(140, 20);
-            this.textBoxPriceTo.TabIndex = 33;
-            // 
-            // labelPriceTo
-            // 
-            this.labelPriceTo.AutoSize = true;
-            this.labelPriceTo.Location = new System.Drawing.Point(357, 111);
-            this.labelPriceTo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelPriceTo.Name = "labelPriceTo";
-            this.labelPriceTo.Size = new System.Drawing.Size(19, 13);
-            this.labelPriceTo.TabIndex = 32;
-            this.labelPriceTo.Text = "do";
-            this.labelPriceTo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // textBoxPriceFrom
-            // 
-            this.textBoxPriceFrom.Location = new System.Drawing.Point(380, 80);
-            this.textBoxPriceFrom.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxPriceFrom.MaxLength = 50;
-            this.textBoxPriceFrom.Name = "textBoxPriceFrom";
-            this.textBoxPriceFrom.Size = new System.Drawing.Size(140, 20);
-            this.textBoxPriceFrom.TabIndex = 31;
-            // 
-            // labelPriceFrom
-            // 
-            this.labelPriceFrom.AutoSize = true;
-            this.labelPriceFrom.Location = new System.Drawing.Point(357, 82);
-            this.labelPriceFrom.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelPriceFrom.Name = "labelPriceFrom";
-            this.labelPriceFrom.Size = new System.Drawing.Size(19, 13);
-            this.labelPriceFrom.TabIndex = 30;
-            this.labelPriceFrom.Text = "od";
-            this.labelPriceFrom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // comboBoxCarBody
-            // 
-            this.comboBoxCarBody.FormattingEnabled = true;
-            this.comboBoxCarBody.Location = new System.Drawing.Point(380, 50);
-            this.comboBoxCarBody.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxCarBody.Name = "comboBoxCarBody";
-            this.comboBoxCarBody.Size = new System.Drawing.Size(140, 21);
-            this.comboBoxCarBody.TabIndex = 29;
-            // 
-            // comboBoxGearbox
-            // 
-            this.comboBoxGearbox.FormattingEnabled = true;
-            this.comboBoxGearbox.Location = new System.Drawing.Point(113, 136);
-            this.comboBoxGearbox.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxGearbox.Name = "comboBoxGearbox";
-            this.comboBoxGearbox.Size = new System.Drawing.Size(140, 21);
-            this.comboBoxGearbox.TabIndex = 28;
-            // 
-            // labelPrice
-            // 
-            this.labelPrice.AutoSize = true;
-            this.labelPrice.Location = new System.Drawing.Point(286, 82);
-            this.labelPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelPrice.Name = "labelPrice";
-            this.labelPrice.Size = new System.Drawing.Size(32, 13);
-            this.labelPrice.TabIndex = 27;
-            this.labelPrice.Text = "Cena";
-            this.labelPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelCarBody
-            // 
-            this.labelCarBody.AutoSize = true;
-            this.labelCarBody.Location = new System.Drawing.Point(286, 53);
-            this.labelCarBody.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelCarBody.Name = "labelCarBody";
-            this.labelCarBody.Size = new System.Drawing.Size(54, 13);
-            this.labelCarBody.TabIndex = 26;
-            this.labelCarBody.Text = "Nadwozie";
-            this.labelCarBody.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // comboBoxFuel
-            // 
-            this.comboBoxFuel.FormattingEnabled = true;
-            this.comboBoxFuel.Location = new System.Drawing.Point(380, 21);
-            this.comboBoxFuel.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxFuel.Name = "comboBoxFuel";
-            this.comboBoxFuel.Size = new System.Drawing.Size(140, 21);
-            this.comboBoxFuel.TabIndex = 25;
-            // 
-            // labelGearbox
-            // 
-            this.labelGearbox.AutoSize = true;
-            this.labelGearbox.Location = new System.Drawing.Point(19, 138);
-            this.labelGearbox.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelGearbox.Name = "labelGearbox";
-            this.labelGearbox.Size = new System.Drawing.Size(84, 13);
-            this.labelGearbox.TabIndex = 20;
-            this.labelGearbox.Text = "Skrzynia biegów";
-            this.labelGearbox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelFuel
-            // 
-            this.labelFuel.AutoSize = true;
-            this.labelFuel.Location = new System.Drawing.Point(286, 24);
-            this.labelFuel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelFuel.Name = "labelFuel";
-            this.labelFuel.Size = new System.Drawing.Size(38, 13);
-            this.labelFuel.TabIndex = 19;
-            this.labelFuel.Text = "Paliwo";
-            this.labelFuel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelEngine
-            // 
-            this.labelEngine.AutoSize = true;
-            this.labelEngine.Location = new System.Drawing.Point(19, 111);
-            this.labelEngine.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelEngine.Name = "labelEngine";
-            this.labelEngine.Size = new System.Drawing.Size(32, 13);
-            this.labelEngine.TabIndex = 17;
-            this.labelEngine.Text = "Silnik";
-            this.labelEngine.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelColor
-            // 
-            this.labelColor.AutoSize = true;
-            this.labelColor.Location = new System.Drawing.Point(19, 81);
-            this.labelColor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelColor.Name = "labelColor";
-            this.labelColor.Size = new System.Drawing.Size(31, 13);
-            this.labelColor.TabIndex = 16;
-            this.labelColor.Text = "Kolor";
-            this.labelColor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelModel
-            // 
-            this.labelModel.AutoSize = true;
-            this.labelModel.Location = new System.Drawing.Point(19, 24);
-            this.labelModel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelModel.Name = "labelModel";
-            this.labelModel.Size = new System.Drawing.Size(36, 13);
-            this.labelModel.TabIndex = 15;
-            this.labelModel.Text = "Model";
-            this.labelModel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // polsl_agatek_bdDataSet1
-            // 
-            this.polsl_agatek_bdDataSet1.DataSetName = "polsl_agatek_bdDataSet1";
-            this.polsl_agatek_bdDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // fullcarBindingSource
-            // 
-            this.fullcarBindingSource.DataMember = "full_car";
-            this.fullcarBindingSource.DataSource = this.polsl_agatek_bdDataSet1;
-            // 
-            // full_carTableAdapter
-            // 
-            this.full_carTableAdapter.ClearBeforeFill = true;
             // 
             // modelDataGridViewTextBoxColumn
             // 
@@ -460,19 +326,170 @@
             this.costDataGridViewTextBoxColumn.Name = "costDataGridViewTextBoxColumn";
             this.costDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "shop";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Sklep";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
             this.idDataGridViewTextBoxColumn.HeaderText = "Numer identyfikacyjny";
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fullcarBindingSource
+            // 
+            this.fullcarBindingSource.DataMember = "full_car";
+            this.fullcarBindingSource.DataSource = this.polsl_agatek_bdDataSet1;
+            // 
+            // polsl_agatek_bdDataSet1
+            // 
+            this.polsl_agatek_bdDataSet1.DataSetName = "polsl_agatek_bdDataSet1";
+            this.polsl_agatek_bdDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // textBoxPriceTo
+            // 
+            this.textBoxPriceTo.Location = new System.Drawing.Point(366, 108);
+            this.textBoxPriceTo.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxPriceTo.MaxLength = 50;
+            this.textBoxPriceTo.Name = "textBoxPriceTo";
+            this.textBoxPriceTo.Size = new System.Drawing.Size(140, 20);
+            this.textBoxPriceTo.TabIndex = 33;
+            // 
+            // labelPriceTo
+            // 
+            this.labelPriceTo.AutoSize = true;
+            this.labelPriceTo.Location = new System.Drawing.Point(343, 111);
+            this.labelPriceTo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelPriceTo.Name = "labelPriceTo";
+            this.labelPriceTo.Size = new System.Drawing.Size(19, 13);
+            this.labelPriceTo.TabIndex = 32;
+            this.labelPriceTo.Text = "do";
+            this.labelPriceTo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBoxPriceFrom
+            // 
+            this.textBoxPriceFrom.Location = new System.Drawing.Point(366, 80);
+            this.textBoxPriceFrom.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxPriceFrom.MaxLength = 50;
+            this.textBoxPriceFrom.Name = "textBoxPriceFrom";
+            this.textBoxPriceFrom.Size = new System.Drawing.Size(140, 20);
+            this.textBoxPriceFrom.TabIndex = 31;
+            // 
+            // labelPriceFrom
+            // 
+            this.labelPriceFrom.AutoSize = true;
+            this.labelPriceFrom.Location = new System.Drawing.Point(343, 82);
+            this.labelPriceFrom.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelPriceFrom.Name = "labelPriceFrom";
+            this.labelPriceFrom.Size = new System.Drawing.Size(19, 13);
+            this.labelPriceFrom.TabIndex = 30;
+            this.labelPriceFrom.Text = "od";
+            this.labelPriceFrom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // comboBoxCarBody
+            // 
+            this.comboBoxCarBody.FormattingEnabled = true;
+            this.comboBoxCarBody.Location = new System.Drawing.Point(366, 50);
+            this.comboBoxCarBody.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxCarBody.Name = "comboBoxCarBody";
+            this.comboBoxCarBody.Size = new System.Drawing.Size(140, 21);
+            this.comboBoxCarBody.TabIndex = 29;
+            // 
+            // comboBoxGearbox
+            // 
+            this.comboBoxGearbox.FormattingEnabled = true;
+            this.comboBoxGearbox.Location = new System.Drawing.Point(113, 136);
+            this.comboBoxGearbox.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxGearbox.Name = "comboBoxGearbox";
+            this.comboBoxGearbox.Size = new System.Drawing.Size(140, 21);
+            this.comboBoxGearbox.TabIndex = 28;
+            // 
+            // labelPrice
+            // 
+            this.labelPrice.AutoSize = true;
+            this.labelPrice.Location = new System.Drawing.Point(272, 82);
+            this.labelPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelPrice.Name = "labelPrice";
+            this.labelPrice.Size = new System.Drawing.Size(32, 13);
+            this.labelPrice.TabIndex = 27;
+            this.labelPrice.Text = "Cena";
+            this.labelPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelCarBody
+            // 
+            this.labelCarBody.AutoSize = true;
+            this.labelCarBody.Location = new System.Drawing.Point(272, 53);
+            this.labelCarBody.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelCarBody.Name = "labelCarBody";
+            this.labelCarBody.Size = new System.Drawing.Size(54, 13);
+            this.labelCarBody.TabIndex = 26;
+            this.labelCarBody.Text = "Nadwozie";
+            this.labelCarBody.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // comboBoxFuel
+            // 
+            this.comboBoxFuel.FormattingEnabled = true;
+            this.comboBoxFuel.Location = new System.Drawing.Point(366, 21);
+            this.comboBoxFuel.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxFuel.Name = "comboBoxFuel";
+            this.comboBoxFuel.Size = new System.Drawing.Size(140, 21);
+            this.comboBoxFuel.TabIndex = 25;
+            // 
+            // labelGearbox
+            // 
+            this.labelGearbox.AutoSize = true;
+            this.labelGearbox.Location = new System.Drawing.Point(19, 138);
+            this.labelGearbox.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelGearbox.Name = "labelGearbox";
+            this.labelGearbox.Size = new System.Drawing.Size(84, 13);
+            this.labelGearbox.TabIndex = 20;
+            this.labelGearbox.Text = "Skrzynia biegów";
+            this.labelGearbox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelFuel
+            // 
+            this.labelFuel.AutoSize = true;
+            this.labelFuel.Location = new System.Drawing.Point(272, 24);
+            this.labelFuel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelFuel.Name = "labelFuel";
+            this.labelFuel.Size = new System.Drawing.Size(38, 13);
+            this.labelFuel.TabIndex = 19;
+            this.labelFuel.Text = "Paliwo";
+            this.labelFuel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelEngine
+            // 
+            this.labelEngine.AutoSize = true;
+            this.labelEngine.Location = new System.Drawing.Point(19, 111);
+            this.labelEngine.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelEngine.Name = "labelEngine";
+            this.labelEngine.Size = new System.Drawing.Size(32, 13);
+            this.labelEngine.TabIndex = 17;
+            this.labelEngine.Text = "Silnik";
+            this.labelEngine.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelColor
+            // 
+            this.labelColor.AutoSize = true;
+            this.labelColor.Location = new System.Drawing.Point(19, 81);
+            this.labelColor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelColor.Name = "labelColor";
+            this.labelColor.Size = new System.Drawing.Size(31, 13);
+            this.labelColor.TabIndex = 16;
+            this.labelColor.Text = "Kolor";
+            this.labelColor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelModel
+            // 
+            this.labelModel.AutoSize = true;
+            this.labelModel.Location = new System.Drawing.Point(19, 24);
+            this.labelModel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelModel.Name = "labelModel";
+            this.labelModel.Size = new System.Drawing.Size(36, 13);
+            this.labelModel.TabIndex = 15;
+            this.labelModel.Text = "Model";
+            this.labelModel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // full_carTableAdapter
+            // 
+            this.full_carTableAdapter.ClearBeforeFill = true;
             // 
             // FormCarSearch
             // 
@@ -488,8 +505,8 @@
             this.panelBackground.ResumeLayout(false);
             this.panelBackground.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.polsl_agatek_bdDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullcarBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.polsl_agatek_bdDataSet1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -535,5 +552,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn costDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label labelCashTo;
+        private System.Windows.Forms.Label labelCashFrom;
     }
 }
