@@ -25,9 +25,8 @@ namespace CarShowroomChain
 
         public int userId { get; set; }
 
-        private UserSingleton()
-        {
-            //user_id = 0;
-        }
+        public int userRole { get; set; }
+
+        private UserSingleton() { }
     }
 }
