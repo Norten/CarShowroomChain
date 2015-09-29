@@ -30,12 +30,12 @@
         {
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.textBoxTelephoneNum = new System.Windows.Forms.TextBox();
-            this.textBoxCity = new System.Windows.Forms.TextBox();
+            this.textBoxAddress = new System.Windows.Forms.TextBox();
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.textBoxSurname = new System.Windows.Forms.TextBox();
             this.labelEmail = new System.Windows.Forms.Label();
             this.labelTelephoneNum = new System.Windows.Forms.Label();
-            this.labelCity = new System.Windows.Forms.Label();
+            this.labelAddress = new System.Windows.Forms.Label();
             this.labelSurname = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
@@ -73,14 +73,14 @@
             this.textBoxTelephoneNum.Size = new System.Drawing.Size(100, 22);
             this.textBoxTelephoneNum.TabIndex = 38;
             // 
-            // textBoxCity
+            // textBoxAddress
             // 
-            this.textBoxCity.Location = new System.Drawing.Point(507, 62);
-            this.textBoxCity.MaxLength = 50;
-            this.textBoxCity.Multiline = true;
-            this.textBoxCity.Name = "textBoxCity";
-            this.textBoxCity.Size = new System.Drawing.Size(100, 57);
-            this.textBoxCity.TabIndex = 35;
+            this.textBoxAddress.Location = new System.Drawing.Point(507, 62);
+            this.textBoxAddress.MaxLength = 50;
+            this.textBoxAddress.Multiline = true;
+            this.textBoxAddress.Name = "textBoxAddress";
+            this.textBoxAddress.Size = new System.Drawing.Size(100, 57);
+            this.textBoxAddress.TabIndex = 35;
             // 
             // textBoxName
             // 
@@ -118,15 +118,15 @@
             this.labelTelephoneNum.Text = "Nr telefonu";
             this.labelTelephoneNum.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelCity
+            // labelAddress
             // 
-            this.labelCity.AutoSize = true;
-            this.labelCity.Location = new System.Drawing.Point(365, 65);
-            this.labelCity.Name = "labelCity";
-            this.labelCity.Size = new System.Drawing.Size(45, 17);
-            this.labelCity.TabIndex = 25;
-            this.labelCity.Text = "Adres";
-            this.labelCity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelAddress.AutoSize = true;
+            this.labelAddress.Location = new System.Drawing.Point(365, 65);
+            this.labelAddress.Name = "labelAddress";
+            this.labelAddress.Size = new System.Drawing.Size(45, 17);
+            this.labelAddress.TabIndex = 25;
+            this.labelAddress.Text = "Adres";
+            this.labelAddress.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelSurname
             // 
@@ -186,12 +186,12 @@
             this.panelBackground.Controls.Add(this.labelPersonalData);
             this.panelBackground.Controls.Add(this.textBoxEmail);
             this.panelBackground.Controls.Add(this.textBoxTelephoneNum);
-            this.panelBackground.Controls.Add(this.textBoxCity);
+            this.panelBackground.Controls.Add(this.textBoxAddress);
             this.panelBackground.Controls.Add(this.textBoxName);
             this.panelBackground.Controls.Add(this.textBoxSurname);
             this.panelBackground.Controls.Add(this.labelEmail);
             this.panelBackground.Controls.Add(this.labelTelephoneNum);
-            this.panelBackground.Controls.Add(this.labelCity);
+            this.panelBackground.Controls.Add(this.labelAddress);
             this.panelBackground.Controls.Add(this.labelSurname);
             this.panelBackground.Controls.Add(this.labelName);
             this.panelBackground.Controls.Add(this.textBoxPassword);
@@ -229,9 +229,11 @@
             this.buttonAccept.TabIndex = 44;
             this.buttonAccept.Text = "Akceptuj";
             this.buttonAccept.UseVisualStyleBackColor = true;
+            this.buttonAccept.Click += new System.EventHandler(this.buttonAccept_Click);
             // 
             // comboBoxShowroomAssignment
             // 
+            this.comboBoxShowroomAssignment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxShowroomAssignment.FormattingEnabled = true;
             this.comboBoxShowroomAssignment.Location = new System.Drawing.Point(482, 303);
             this.comboBoxShowroomAssignment.Name = "comboBoxShowroomAssignment";
@@ -349,12 +351,12 @@
 
         private System.Windows.Forms.TextBox textBoxEmail;
         private System.Windows.Forms.TextBox textBoxTelephoneNum;
-        private System.Windows.Forms.TextBox textBoxCity;
+        private System.Windows.Forms.TextBox textBoxAddress;
         private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.TextBox textBoxSurname;
         private System.Windows.Forms.Label labelEmail;
         private System.Windows.Forms.Label labelTelephoneNum;
-        private System.Windows.Forms.Label labelCity;
+        private System.Windows.Forms.Label labelAddress;
         private System.Windows.Forms.Label labelSurname;
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.TextBox textBoxPassword;
