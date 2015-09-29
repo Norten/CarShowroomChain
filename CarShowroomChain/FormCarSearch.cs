@@ -12,7 +12,6 @@ namespace CarShowroomChain
 {
     public partial class FormCarSearch : Form
     {
-        DatabaseModel dbModel = new DatabaseModel();
         DataGridViewRow row;
         Action<DataGridViewRow> SelectCar;
         public FormCarSearch(Action<DataGridViewRow> SelectCar = null)
@@ -23,6 +22,7 @@ namespace CarShowroomChain
         }
         public void loadData ()
         {
+            DatabaseModel dbModel = new DatabaseModel();
             var dictBody = dbModel.dict_body.SqlQuery("SELECT * FROM dict_body;").ToList();
             var dictColor = dbModel.dict_color.SqlQuery("SELECT * FROM dict_color;").ToList();
             var dictEngine = dbModel.dict_engine.SqlQuery("SELECT * FROM dict_engine;").ToList();
@@ -39,6 +39,14 @@ namespace CarShowroomChain
             var listSeries = new List<string>();
             var listModel = new List<string>();
             var listShop = new List<string>();
+            listBody.Add("");
+            listColor.Add("");
+            listEngine.Add("");
+            listFuel.Add("");
+            listGearbox.Add("");
+            listSeries.Add("");
+            listModel.Add("");
+            listShop.Add("");
             foreach (dict_body item in dictBody) { listBody.Add(item.body); }
             foreach (dict_color item in dictColor) { listColor.Add(item.color); }
             foreach (dict_engine item in dictEngine) { listEngine.Add(item.engine); }
@@ -90,8 +98,19 @@ namespace CarShowroomChain
                 MessageBox.Show("Musisz najpierw wybrać samochód.");
         }
 
+        private void maskedTextBoxPriceFrom_MouseDown(object sender, MouseEventArgs e)
+        {
+            maskedTextBoxPriceFrom.SelectionStart = 0;
+        }
+
+        private void maskedTextBoxPriceTo_MouseDown(object sender, MouseEventArgs e)
+        {
+            maskedTextBoxPriceTo.SelectionStart = 0;
+        }
+
         private void buttonFilter_Click(object sender, EventArgs e)
         {
+            var dbModel = new DatabaseModel();
             var model = this.comboBoxModel.Text;
             var series = this.comboBoxSeries.Text;
             var color = this.comboBoxColor.Text;
@@ -99,27 +118,83 @@ namespace CarShowroomChain
             var gearbox = this.comboBoxGearbox.Text;
             var fuel = this.comboBoxFuel.Text;
             var body = this.comboBoxCarBody.Text;
-            var priceFrom = this.textBoxPriceFrom.Text;
-            var priceTo = this.textBoxPriceTo.Text;
+            var priceF = this.maskedTextBoxPriceFrom.Text;
+            var priceT = this.maskedTextBoxPriceTo.Text;
+            var priceFrom = 0; 
+            Int32.TryParse(priceF, out priceFrom);
+            var priceTo = 0; 
+            Int32.TryParse(priceT, out priceTo);
             var shop = this.comboBoxShop.Text;
-            /*
-            var name = this.textBoxName.Text;
-            var surname = this.textBoxSurname.Text;
-            var dbModel = new DatabaseModel();
+            var next = false;
             string wherePart = " WHERE";
-            if (!String.IsNullOrWhiteSpace(name))
-                wherePart += " first_name like '" + name + "'";
-            if (!String.IsNullOrWhiteSpace(name) && !String.IsNullOrWhiteSpace(surname))
-                wherePart += " AND";
-            if (!String.IsNullOrWhiteSpace(surname))
-                wherePart += " last_name like '" + surname + "'";
+            if (!String.IsNullOrWhiteSpace(model))
+            {
+                wherePart += " model like '" + model + "'";
+                next = true;
+            }
+            if (!String.IsNullOrWhiteSpace(series)) 
+            {
+                if (next) wherePart += " AND";
+                wherePart += " series like '" + series + "'";
+                next = true;
+            }  
+            if (!String.IsNullOrWhiteSpace(color))
+            {
+                if (next) wherePart += " AND";
+                wherePart += " color like '" + color + "'";
+                next = true;
+            } 
+            if (!String.IsNullOrWhiteSpace(engine))
+            {
+                if (next) wherePart += " AND";
+                wherePart += " engine like '" + engine + "'";
+                next = true;
+            }
+            if (!String.IsNullOrWhiteSpace(gearbox))
+            {
+                if (next) wherePart += " AND";
+                wherePart += " gearbox like '" + gearbox + "'";
+                next = true;
+            }
+            if (!String.IsNullOrWhiteSpace(fuel))
+            {
+                if (next) wherePart += " AND";
+                wherePart += " fuel like '" + fuel + "'";
+                next = true;
+            }
+            if (!String.IsNullOrWhiteSpace(body))
+            {
+                if (next) wherePart += " AND";
+                wherePart += " body like '" + body + "'";
+                next = true;
+            }
+            if (!String.IsNullOrWhiteSpace(priceF))
+            {
+                if (next) wherePart += " AND";
+                wherePart += " cost > " + priceFrom;
+                next = true;
+            }
+            if (!String.IsNullOrWhiteSpace(priceT))
+            {
+                if (next) wherePart += " AND";
+                wherePart += " cost > " + priceTo;
+                next = true;
+            }
+            if (!String.IsNullOrWhiteSpace(shop))
+            {
+                if (next) wherePart += " AND";
+                wherePart += " name like '" + shop + "'";
+                next = true;
+            }
             if (wherePart.Equals(" WHERE"))
                 wherePart = "";
-            var db = dbModel.client.SqlQuery("SELECT * FROM client" + wherePart + ";").ToList();
+            var db = dbModel.full_car.SqlQuery("SELECT * FROM full_car" + wherePart + ";").ToList();
             var source = new BindingSource();
             source.DataSource = db;
-            this.dataGridViewClients.DataSource = source;*/
+            this.dataGridViewCar.DataSource = source;
         }
+
+
 
     }
 }
