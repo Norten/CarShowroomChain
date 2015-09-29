@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panelBackground = new System.Windows.Forms.Panel();
             this.buttonFilter = new System.Windows.Forms.Button();
             this.buttonDismiss = new System.Windows.Forms.Button();
@@ -35,22 +36,31 @@
             this.buttonModify = new System.Windows.Forms.Button();
             this.buttonNewUser = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ColumnLogin = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnPassword = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnSurname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnPhoneNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnIsActive = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.textBoxSurname = new System.Windows.Forms.TextBox();
             this.textBoxIDNum = new System.Windows.Forms.TextBox();
             this.labelIDNum = new System.Windows.Forms.Label();
             this.labelSurname = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
+            this.polsl_agatek_bdDataSet = new CarShowroomChain.polsl_agatek_bdDataSet();
+            this.userdataBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.user_dataTableAdapter = new CarShowroomChain.polsl_agatek_bdDataSetTableAdapters.user_dataTableAdapter();
+            this.userdataBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.loginDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idcarshopDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.isactiveDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelBackground.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.polsl_agatek_bdDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userdataBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userdataBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBackground
@@ -139,71 +149,26 @@
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColumnLogin,
-            this.ColumnPassword,
-            this.ColumnName,
-            this.ColumnSurname,
-            this.ColumnEmail,
-            this.ColumnAddress,
-            this.ColumnPhoneNum,
-            this.ColumnIsActive});
+            this.idDataGridViewTextBoxColumn,
+            this.loginDataGridViewTextBoxColumn,
+            this.passwordDataGridViewTextBoxColumn,
+            this.firstnameDataGridViewTextBoxColumn,
+            this.lastnameDataGridViewTextBoxColumn,
+            this.addressDataGridViewTextBoxColumn,
+            this.phoneDataGridViewTextBoxColumn,
+            this.emailDataGridViewTextBoxColumn,
+            this.idcarshopDataGridViewTextBoxColumn,
+            this.isactiveDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.userdataBindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(23, 160);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 3, 3, 75);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(586, 309);
             this.dataGridView1.TabIndex = 33;
-            // 
-            // ColumnLogin
-            // 
-            this.ColumnLogin.HeaderText = "Login";
-            this.ColumnLogin.Name = "ColumnLogin";
-            this.ColumnLogin.ReadOnly = true;
-            // 
-            // ColumnPassword
-            // 
-            this.ColumnPassword.HeaderText = "Password";
-            this.ColumnPassword.Name = "ColumnPassword";
-            this.ColumnPassword.ReadOnly = true;
-            this.ColumnPassword.Visible = false;
-            // 
-            // ColumnName
-            // 
-            this.ColumnName.HeaderText = "Imie";
-            this.ColumnName.Name = "ColumnName";
-            this.ColumnName.ReadOnly = true;
-            // 
-            // ColumnSurname
-            // 
-            this.ColumnSurname.HeaderText = "Nazwisko";
-            this.ColumnSurname.Name = "ColumnSurname";
-            this.ColumnSurname.ReadOnly = true;
-            // 
-            // ColumnEmail
-            // 
-            this.ColumnEmail.HeaderText = "E-mail";
-            this.ColumnEmail.Name = "ColumnEmail";
-            this.ColumnEmail.ReadOnly = true;
-            // 
-            // ColumnAddress
-            // 
-            this.ColumnAddress.HeaderText = "Adres";
-            this.ColumnAddress.Name = "ColumnAddress";
-            this.ColumnAddress.ReadOnly = true;
-            // 
-            // ColumnPhoneNum
-            // 
-            this.ColumnPhoneNum.HeaderText = "Nr telefonu";
-            this.ColumnPhoneNum.Name = "ColumnPhoneNum";
-            this.ColumnPhoneNum.ReadOnly = true;
-            // 
-            // ColumnIsActive
-            // 
-            this.ColumnIsActive.HeaderText = "Aktywność";
-            this.ColumnIsActive.Name = "ColumnIsActive";
-            this.ColumnIsActive.ReadOnly = true;
             // 
             // textBoxName
             // 
@@ -259,6 +224,86 @@
             this.labelName.Text = "Imię";
             this.labelName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // polsl_agatek_bdDataSet
+            // 
+            this.polsl_agatek_bdDataSet.DataSetName = "polsl_agatek_bdDataSet";
+            this.polsl_agatek_bdDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // userdataBindingSource
+            // 
+            this.userdataBindingSource.DataMember = "user_data";
+            this.userdataBindingSource.DataSource = this.polsl_agatek_bdDataSet;
+            // 
+            // user_dataTableAdapter
+            // 
+            this.user_dataTableAdapter.ClearBeforeFill = true;
+            // 
+            // userdataBindingSource1
+            // 
+            this.userdataBindingSource1.DataMember = "user_data";
+            this.userdataBindingSource1.DataSource = this.polsl_agatek_bdDataSet;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            // 
+            // loginDataGridViewTextBoxColumn
+            // 
+            this.loginDataGridViewTextBoxColumn.DataPropertyName = "login";
+            this.loginDataGridViewTextBoxColumn.HeaderText = "Login";
+            this.loginDataGridViewTextBoxColumn.Name = "loginDataGridViewTextBoxColumn";
+            // 
+            // passwordDataGridViewTextBoxColumn
+            // 
+            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "password";
+            this.passwordDataGridViewTextBoxColumn.HeaderText = "password";
+            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
+            this.passwordDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // firstnameDataGridViewTextBoxColumn
+            // 
+            this.firstnameDataGridViewTextBoxColumn.DataPropertyName = "first_name";
+            this.firstnameDataGridViewTextBoxColumn.HeaderText = "Imię";
+            this.firstnameDataGridViewTextBoxColumn.Name = "firstnameDataGridViewTextBoxColumn";
+            // 
+            // lastnameDataGridViewTextBoxColumn
+            // 
+            this.lastnameDataGridViewTextBoxColumn.DataPropertyName = "last_name";
+            this.lastnameDataGridViewTextBoxColumn.HeaderText = "Nazwisko";
+            this.lastnameDataGridViewTextBoxColumn.Name = "lastnameDataGridViewTextBoxColumn";
+            // 
+            // addressDataGridViewTextBoxColumn
+            // 
+            this.addressDataGridViewTextBoxColumn.DataPropertyName = "address";
+            this.addressDataGridViewTextBoxColumn.HeaderText = "Adres";
+            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            // 
+            // phoneDataGridViewTextBoxColumn
+            // 
+            this.phoneDataGridViewTextBoxColumn.DataPropertyName = "phone";
+            this.phoneDataGridViewTextBoxColumn.HeaderText = "Nr telefonu";
+            this.phoneDataGridViewTextBoxColumn.Name = "phoneDataGridViewTextBoxColumn";
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            // 
+            // idcarshopDataGridViewTextBoxColumn
+            // 
+            this.idcarshopDataGridViewTextBoxColumn.DataPropertyName = "id_car_shop";
+            this.idcarshopDataGridViewTextBoxColumn.HeaderText = "Przynależność do salonu";
+            this.idcarshopDataGridViewTextBoxColumn.Name = "idcarshopDataGridViewTextBoxColumn";
+            // 
+            // isactiveDataGridViewTextBoxColumn
+            // 
+            this.isactiveDataGridViewTextBoxColumn.DataPropertyName = "is_active";
+            this.isactiveDataGridViewTextBoxColumn.HeaderText = "Aktywność";
+            this.isactiveDataGridViewTextBoxColumn.Name = "isactiveDataGridViewTextBoxColumn";
+            // 
             // FormUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -268,9 +313,13 @@
             this.MinimumSize = new System.Drawing.Size(650, 600);
             this.Name = "FormUsers";
             this.Text = "Użytkownicy";
+            this.Load += new System.EventHandler(this.FormUsers_Load);
             this.panelBackground.ResumeLayout(false);
             this.panelBackground.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.polsl_agatek_bdDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userdataBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userdataBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -285,18 +334,24 @@
         private System.Windows.Forms.Label labelSurname;
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnLogin;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPassword;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSurname;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnEmail;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnAddress;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPhoneNum;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnIsActive;
         private System.Windows.Forms.Button buttonDismiss;
         private System.Windows.Forms.Button buttonHire;
         private System.Windows.Forms.Button buttonModify;
         private System.Windows.Forms.Button buttonNewUser;
         private System.Windows.Forms.Button buttonFilter;
+        private polsl_agatek_bdDataSet polsl_agatek_bdDataSet;
+        private System.Windows.Forms.BindingSource userdataBindingSource;
+        private polsl_agatek_bdDataSetTableAdapters.user_dataTableAdapter user_dataTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn loginDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn firstnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phoneDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idcarshopDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn isactiveDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource userdataBindingSource1;
     }
 }

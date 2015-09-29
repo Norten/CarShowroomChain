@@ -22,5 +22,11 @@ namespace CarShowroomChain
             FormNewUser fNU = new FormNewUser();
             fNU.ShowDialog();
         }
+
+        private void FormUsers_Load(object sender, EventArgs e) {
+            // TODO: This line of code loads data into the 'polsl_agatek_bdDataSet.user_data' table. You can move, or remove it, as needed.
+            this.user_dataTableAdapter.Fill(this.polsl_agatek_bdDataSet.user_data);
+
+        }
     }
 }
