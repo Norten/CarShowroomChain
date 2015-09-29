@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNewServiceOrder));
             this.panelBackground = new System.Windows.Forms.Panel();
             this.textBoxTotalPrice = new System.Windows.Forms.TextBox();
             this.labelTotalPrice = new System.Windows.Forms.Label();
@@ -55,11 +56,14 @@
             this.labelSurname = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
             this.labelClient = new System.Windows.Forms.Label();
+            this.pictureBoxQuestionMark = new System.Windows.Forms.PictureBox();
             this.panelBackground.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQuestionMark)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBackground
             // 
+            this.panelBackground.Controls.Add(this.pictureBoxQuestionMark);
             this.panelBackground.Controls.Add(this.textBoxTotalPrice);
             this.panelBackground.Controls.Add(this.labelTotalPrice);
             this.panelBackground.Controls.Add(this.textBoxServicesPrice);
@@ -351,6 +355,17 @@
             this.labelClient.Text = "Klient";
             this.labelClient.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pictureBoxQuestionMark
+            // 
+            this.pictureBoxQuestionMark.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxQuestionMark.BackgroundImage")));
+            this.pictureBoxQuestionMark.Location = new System.Drawing.Point(625, 13);
+            this.pictureBoxQuestionMark.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBoxQuestionMark.Name = "pictureBoxQuestionMark";
+            this.pictureBoxQuestionMark.Size = new System.Drawing.Size(33, 30);
+            this.pictureBoxQuestionMark.TabIndex = 83;
+            this.pictureBoxQuestionMark.TabStop = false;
+            this.pictureBoxQuestionMark.Click += new System.EventHandler(this.pictureBoxQuestionMark_Click);
+            // 
             // FormNewServiceOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -362,6 +377,7 @@
             this.Text = "Nowa zamówienie usługi";
             this.panelBackground.ResumeLayout(false);
             this.panelBackground.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQuestionMark)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -395,5 +411,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxTotalPrice;
         private System.Windows.Forms.Label labelTotalPrice;
+        private System.Windows.Forms.PictureBox pictureBoxQuestionMark;
     }
 }

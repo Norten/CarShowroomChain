@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUsers));
             this.panelBackground = new System.Windows.Forms.Panel();
             this.buttonFilter = new System.Windows.Forms.Button();
             this.buttonDismiss = new System.Windows.Forms.Button();
@@ -54,15 +55,18 @@
             this.labelName = new System.Windows.Forms.Label();
             this.userdataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.user_dataTableAdapter = new CarShowroomChain.polsl_agatek_bdDataSetTableAdapters.user_dataTableAdapter();
+            this.pictureBoxQuestionMark = new System.Windows.Forms.PictureBox();
             this.panelBackground.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userdataBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.polsl_agatek_bdDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userdataBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQuestionMark)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBackground
             // 
+            this.panelBackground.Controls.Add(this.pictureBoxQuestionMark);
             this.panelBackground.Controls.Add(this.buttonFilter);
             this.panelBackground.Controls.Add(this.buttonDismiss);
             this.panelBackground.Controls.Add(this.buttonHire);
@@ -302,6 +306,17 @@
             // 
             this.user_dataTableAdapter.ClearBeforeFill = true;
             // 
+            // pictureBoxQuestionMark
+            // 
+            this.pictureBoxQuestionMark.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxQuestionMark.BackgroundImage")));
+            this.pictureBoxQuestionMark.Location = new System.Drawing.Point(586, 13);
+            this.pictureBoxQuestionMark.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBoxQuestionMark.Name = "pictureBoxQuestionMark";
+            this.pictureBoxQuestionMark.Size = new System.Drawing.Size(33, 30);
+            this.pictureBoxQuestionMark.TabIndex = 78;
+            this.pictureBoxQuestionMark.TabStop = false;
+            this.pictureBoxQuestionMark.Click += new System.EventHandler(this.pictureBoxQuestionMark_Click);
+            // 
             // FormUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -318,6 +333,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.userdataBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.polsl_agatek_bdDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userdataBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQuestionMark)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -349,5 +365,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idcarshopDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn isactiveDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource userdataBindingSource1;
+        private System.Windows.Forms.PictureBox pictureBoxQuestionMark;
     }
 }

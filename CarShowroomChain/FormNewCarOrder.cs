@@ -97,8 +97,8 @@ namespace CarShowroomChain
             if (this.client != null && this.car != null) {
                 var dbModel = new DatabaseModel();
                 var newReservation = new reservation();
-                newReservation.date_reservation = DateTime.Now;
-                newReservation.date_reservation_expired = DateTime.Now.AddDays(14);
+                newReservation.date_reservation = this.dateTimePickerPurchaseDate.Value;
+                newReservation.date_reservation_expired = this.dateTimePickerPurchaseDate.Value.AddDays(14);
                 newReservation.id_user = UserSingleton.Instance.userId;
                 newReservation.id_client = (int)this.client.Cells["idDataGridViewTextBoxColumn"].Value;
                 newReservation.id_car = (int)this.car.Cells["idDataGridViewTextBoxColumn"].Value;
@@ -108,6 +108,13 @@ namespace CarShowroomChain
                 MessageBox.Show("Musisz najpierw wybrać klienta oraz samochód.");
             }
             
+        }
+
+        private void pictureBoxQuestionMark_Click(object sender, EventArgs e) {
+            MessageBox.Show("Wybierz klienta poprzez wciśnięcie przycisku \"Wybierz klienta\"\n" +
+                "Określ date zakupu\n" +
+                "Wybierz samochód poprzez wciśnięcie przycisku \"Wybierz samochód\"\n" +
+                "Można podać wartość procentową rabatu oraz komentarz");
         }
     }
 }

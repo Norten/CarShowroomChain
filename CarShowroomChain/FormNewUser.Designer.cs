@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNewUser));
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.textBoxTelephoneNum = new System.Windows.Forms.TextBox();
             this.textBoxAddress = new System.Windows.Forms.TextBox();
@@ -53,8 +54,10 @@
             this.checkBoxAdministrator = new System.Windows.Forms.CheckBox();
             this.labelPersonalData = new System.Windows.Forms.Label();
             this.labelLogin = new System.Windows.Forms.Label();
+            this.pictureBoxQuestionMark = new System.Windows.Forms.PictureBox();
             this.panelBackground.SuspendLayout();
             this.groupBoxUserRoles.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQuestionMark)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxEmail
@@ -178,6 +181,7 @@
             // 
             // panelBackground
             // 
+            this.panelBackground.Controls.Add(this.pictureBoxQuestionMark);
             this.panelBackground.Controls.Add(this.buttonCancel);
             this.panelBackground.Controls.Add(this.buttonAccept);
             this.panelBackground.Controls.Add(this.comboBoxShowroomAssignment);
@@ -330,6 +334,17 @@
             this.labelLogin.Text = "Login";
             this.labelLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pictureBoxQuestionMark
+            // 
+            this.pictureBoxQuestionMark.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxQuestionMark.BackgroundImage")));
+            this.pictureBoxQuestionMark.Location = new System.Drawing.Point(586, 13);
+            this.pictureBoxQuestionMark.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBoxQuestionMark.Name = "pictureBoxQuestionMark";
+            this.pictureBoxQuestionMark.Size = new System.Drawing.Size(33, 30);
+            this.pictureBoxQuestionMark.TabIndex = 78;
+            this.pictureBoxQuestionMark.TabStop = false;
+            this.pictureBoxQuestionMark.Click += new System.EventHandler(this.pictureBoxQuestionMark_Click);
+            // 
             // FormNewUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -343,6 +358,7 @@
             this.panelBackground.PerformLayout();
             this.groupBoxUserRoles.ResumeLayout(false);
             this.groupBoxUserRoles.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQuestionMark)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -374,5 +390,6 @@
         private System.Windows.Forms.Label labelPersonalData;
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.Button buttonAccept;
+        private System.Windows.Forms.PictureBox pictureBoxQuestionMark;
     }
 }

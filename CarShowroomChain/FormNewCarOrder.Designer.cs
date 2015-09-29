@@ -28,7 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNewCarOrder));
             this.panelBackground = new System.Windows.Forms.Panel();
+            this.textBoxCarBody = new System.Windows.Forms.TextBox();
+            this.textBoxCarGearbox = new System.Windows.Forms.TextBox();
+            this.textBoxCarFuel = new System.Windows.Forms.TextBox();
+            this.textBoxCarColor = new System.Windows.Forms.TextBox();
+            this.textBoxCarModel = new System.Windows.Forms.TextBox();
+            this.textBoxCarSeries = new System.Windows.Forms.TextBox();
+            this.textBoxTotalPrice = new System.Windows.Forms.TextBox();
+            this.labelTotalPrice = new System.Windows.Forms.Label();
             this.labelSeries = new System.Windows.Forms.Label();
             this.textBoxDiscount = new System.Windows.Forms.TextBox();
             this.labelDiscount = new System.Windows.Forms.Label();
@@ -63,19 +72,14 @@
             this.labelSurname = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
             this.labelClient = new System.Windows.Forms.Label();
-            this.labelTotalPrice = new System.Windows.Forms.Label();
-            this.textBoxTotalPrice = new System.Windows.Forms.TextBox();
-            this.textBoxCarSeries = new System.Windows.Forms.TextBox();
-            this.textBoxCarModel = new System.Windows.Forms.TextBox();
-            this.textBoxCarColor = new System.Windows.Forms.TextBox();
-            this.textBoxCarFuel = new System.Windows.Forms.TextBox();
-            this.textBoxCarGearbox = new System.Windows.Forms.TextBox();
-            this.textBoxCarBody = new System.Windows.Forms.TextBox();
+            this.pictureBoxQuestionMark = new System.Windows.Forms.PictureBox();
             this.panelBackground.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQuestionMark)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBackground
             // 
+            this.panelBackground.Controls.Add(this.pictureBoxQuestionMark);
             this.panelBackground.Controls.Add(this.textBoxCarBody);
             this.panelBackground.Controls.Add(this.textBoxCarGearbox);
             this.panelBackground.Controls.Add(this.textBoxCarFuel);
@@ -124,6 +128,72 @@
             this.panelBackground.Padding = new System.Windows.Forms.Padding(20);
             this.panelBackground.Size = new System.Drawing.Size(732, 753);
             this.panelBackground.TabIndex = 0;
+            // 
+            // textBoxCarBody
+            // 
+            this.textBoxCarBody.Location = new System.Drawing.Point(522, 342);
+            this.textBoxCarBody.Name = "textBoxCarBody";
+            this.textBoxCarBody.ReadOnly = true;
+            this.textBoxCarBody.Size = new System.Drawing.Size(121, 22);
+            this.textBoxCarBody.TabIndex = 80;
+            // 
+            // textBoxCarGearbox
+            // 
+            this.textBoxCarGearbox.Location = new System.Drawing.Point(522, 307);
+            this.textBoxCarGearbox.Name = "textBoxCarGearbox";
+            this.textBoxCarGearbox.ReadOnly = true;
+            this.textBoxCarGearbox.Size = new System.Drawing.Size(121, 22);
+            this.textBoxCarGearbox.TabIndex = 79;
+            // 
+            // textBoxCarFuel
+            // 
+            this.textBoxCarFuel.Location = new System.Drawing.Point(522, 272);
+            this.textBoxCarFuel.Name = "textBoxCarFuel";
+            this.textBoxCarFuel.ReadOnly = true;
+            this.textBoxCarFuel.Size = new System.Drawing.Size(121, 22);
+            this.textBoxCarFuel.TabIndex = 78;
+            // 
+            // textBoxCarColor
+            // 
+            this.textBoxCarColor.Location = new System.Drawing.Point(179, 307);
+            this.textBoxCarColor.Name = "textBoxCarColor";
+            this.textBoxCarColor.ReadOnly = true;
+            this.textBoxCarColor.Size = new System.Drawing.Size(121, 22);
+            this.textBoxCarColor.TabIndex = 77;
+            // 
+            // textBoxCarModel
+            // 
+            this.textBoxCarModel.Location = new System.Drawing.Point(179, 272);
+            this.textBoxCarModel.Name = "textBoxCarModel";
+            this.textBoxCarModel.ReadOnly = true;
+            this.textBoxCarModel.Size = new System.Drawing.Size(121, 22);
+            this.textBoxCarModel.TabIndex = 76;
+            // 
+            // textBoxCarSeries
+            // 
+            this.textBoxCarSeries.Location = new System.Drawing.Point(179, 237);
+            this.textBoxCarSeries.Name = "textBoxCarSeries";
+            this.textBoxCarSeries.ReadOnly = true;
+            this.textBoxCarSeries.Size = new System.Drawing.Size(121, 22);
+            this.textBoxCarSeries.TabIndex = 75;
+            // 
+            // textBoxTotalPrice
+            // 
+            this.textBoxTotalPrice.Location = new System.Drawing.Point(433, 447);
+            this.textBoxTotalPrice.Name = "textBoxTotalPrice";
+            this.textBoxTotalPrice.ReadOnly = true;
+            this.textBoxTotalPrice.Size = new System.Drawing.Size(100, 22);
+            this.textBoxTotalPrice.TabIndex = 74;
+            this.textBoxTotalPrice.Text = "0";
+            // 
+            // labelTotalPrice
+            // 
+            this.labelTotalPrice.AutoSize = true;
+            this.labelTotalPrice.Location = new System.Drawing.Point(325, 450);
+            this.labelTotalPrice.Name = "labelTotalPrice";
+            this.labelTotalPrice.Size = new System.Drawing.Size(102, 17);
+            this.labelTotalPrice.TabIndex = 73;
+            this.labelTotalPrice.Text = "Cena całkowita";
             // 
             // labelSeries
             // 
@@ -466,71 +536,16 @@
             this.labelClient.Text = "Klient";
             this.labelClient.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelTotalPrice
+            // pictureBoxQuestionMark
             // 
-            this.labelTotalPrice.AutoSize = true;
-            this.labelTotalPrice.Location = new System.Drawing.Point(325, 450);
-            this.labelTotalPrice.Name = "labelTotalPrice";
-            this.labelTotalPrice.Size = new System.Drawing.Size(102, 17);
-            this.labelTotalPrice.TabIndex = 73;
-            this.labelTotalPrice.Text = "Cena całkowita";
-            // 
-            // textBoxTotalPrice
-            // 
-            this.textBoxTotalPrice.Location = new System.Drawing.Point(433, 447);
-            this.textBoxTotalPrice.Name = "textBoxTotalPrice";
-            this.textBoxTotalPrice.ReadOnly = true;
-            this.textBoxTotalPrice.Size = new System.Drawing.Size(100, 22);
-            this.textBoxTotalPrice.TabIndex = 74;
-            this.textBoxTotalPrice.Text = "0";
-            // 
-            // textBoxCarSeries
-            // 
-            this.textBoxCarSeries.Location = new System.Drawing.Point(179, 237);
-            this.textBoxCarSeries.Name = "textBoxCarSeries";
-            this.textBoxCarSeries.ReadOnly = true;
-            this.textBoxCarSeries.Size = new System.Drawing.Size(121, 22);
-            this.textBoxCarSeries.TabIndex = 75;
-            // 
-            // textBoxCarModel
-            // 
-            this.textBoxCarModel.Location = new System.Drawing.Point(179, 272);
-            this.textBoxCarModel.Name = "textBoxCarModel";
-            this.textBoxCarModel.ReadOnly = true;
-            this.textBoxCarModel.Size = new System.Drawing.Size(121, 22);
-            this.textBoxCarModel.TabIndex = 76;
-            // 
-            // textBoxCarColor
-            // 
-            this.textBoxCarColor.Location = new System.Drawing.Point(179, 307);
-            this.textBoxCarColor.Name = "textBoxCarColor";
-            this.textBoxCarColor.ReadOnly = true;
-            this.textBoxCarColor.Size = new System.Drawing.Size(121, 22);
-            this.textBoxCarColor.TabIndex = 77;
-            // 
-            // textBoxCarFuel
-            // 
-            this.textBoxCarFuel.Location = new System.Drawing.Point(522, 272);
-            this.textBoxCarFuel.Name = "textBoxCarFuel";
-            this.textBoxCarFuel.ReadOnly = true;
-            this.textBoxCarFuel.Size = new System.Drawing.Size(121, 22);
-            this.textBoxCarFuel.TabIndex = 78;
-            // 
-            // textBoxCarGearbox
-            // 
-            this.textBoxCarGearbox.Location = new System.Drawing.Point(522, 307);
-            this.textBoxCarGearbox.Name = "textBoxCarGearbox";
-            this.textBoxCarGearbox.ReadOnly = true;
-            this.textBoxCarGearbox.Size = new System.Drawing.Size(121, 22);
-            this.textBoxCarGearbox.TabIndex = 79;
-            // 
-            // textBoxCarBody
-            // 
-            this.textBoxCarBody.Location = new System.Drawing.Point(522, 342);
-            this.textBoxCarBody.Name = "textBoxCarBody";
-            this.textBoxCarBody.ReadOnly = true;
-            this.textBoxCarBody.Size = new System.Drawing.Size(121, 22);
-            this.textBoxCarBody.TabIndex = 80;
+            this.pictureBoxQuestionMark.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxQuestionMark.BackgroundImage")));
+            this.pictureBoxQuestionMark.Location = new System.Drawing.Point(686, 13);
+            this.pictureBoxQuestionMark.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBoxQuestionMark.Name = "pictureBoxQuestionMark";
+            this.pictureBoxQuestionMark.Size = new System.Drawing.Size(33, 30);
+            this.pictureBoxQuestionMark.TabIndex = 78;
+            this.pictureBoxQuestionMark.TabStop = false;
+            this.pictureBoxQuestionMark.Click += new System.EventHandler(this.pictureBoxQuestionMark_Click);
             // 
             // FormNewCarOrder
             // 
@@ -543,6 +558,7 @@
             this.Text = "Nowe zamówienie samochodu";
             this.panelBackground.ResumeLayout(false);
             this.panelBackground.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQuestionMark)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -592,5 +608,6 @@
         private System.Windows.Forms.TextBox textBoxCarColor;
         private System.Windows.Forms.TextBox textBoxCarModel;
         private System.Windows.Forms.TextBox textBoxCarSeries;
+        private System.Windows.Forms.PictureBox pictureBoxQuestionMark;
     }
 }

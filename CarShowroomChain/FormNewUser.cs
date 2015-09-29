@@ -112,5 +112,16 @@ namespace CarShowroomChain
             }
             
         }
+
+        private void pictureBoxQuestionMark_Click(object sender, EventArgs e) {
+            MessageBox.Show("Wprowadź dane nowego użytkownika.\n" +
+                "Wymagane dane:\n" +
+                "Login\n" +
+                "Hasło\n" +
+                "Imię\n" +
+                "Nazwisko\n" +
+                "Adres\n" +
+                "Możesz zdefiniować kilka ról nowego użytkownika");
+        }
     }
 }

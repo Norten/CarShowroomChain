@@ -28,7 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormServiceOptions));
             this.panelBackground = new System.Windows.Forms.Panel();
+            this.labelPriceChoosen = new System.Windows.Forms.Label();
+            this.listBoxPriceChoosen = new System.Windows.Forms.ListBox();
+            this.labelPriceAvailable = new System.Windows.Forms.Label();
+            this.listBoxPriceAvailable = new System.Windows.Forms.ListBox();
             this.labelChoosen = new System.Windows.Forms.Label();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonAccept = new System.Windows.Forms.Button();
@@ -37,15 +42,14 @@
             this.buttonChoose = new System.Windows.Forms.Button();
             this.labelAvailableOptions = new System.Windows.Forms.Label();
             this.listBoxAvailableOptions = new System.Windows.Forms.ListBox();
-            this.listBoxPriceAvailable = new System.Windows.Forms.ListBox();
-            this.labelPriceAvailable = new System.Windows.Forms.Label();
-            this.listBoxPriceChoosen = new System.Windows.Forms.ListBox();
-            this.labelPriceChoosen = new System.Windows.Forms.Label();
+            this.pictureBoxQuestionMark = new System.Windows.Forms.PictureBox();
             this.panelBackground.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQuestionMark)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBackground
             // 
+            this.panelBackground.Controls.Add(this.pictureBoxQuestionMark);
             this.panelBackground.Controls.Add(this.labelPriceChoosen);
             this.panelBackground.Controls.Add(this.listBoxPriceChoosen);
             this.panelBackground.Controls.Add(this.labelPriceAvailable);
@@ -64,6 +68,45 @@
             this.panelBackground.Padding = new System.Windows.Forms.Padding(20);
             this.panelBackground.Size = new System.Drawing.Size(795, 566);
             this.panelBackground.TabIndex = 0;
+            // 
+            // labelPriceChoosen
+            // 
+            this.labelPriceChoosen.AutoSize = true;
+            this.labelPriceChoosen.Location = new System.Drawing.Point(658, 30);
+            this.labelPriceChoosen.Name = "labelPriceChoosen";
+            this.labelPriceChoosen.Size = new System.Drawing.Size(45, 17);
+            this.labelPriceChoosen.TabIndex = 11;
+            this.labelPriceChoosen.Text = "Cena:";
+            // 
+            // listBoxPriceChoosen
+            // 
+            this.listBoxPriceChoosen.FormattingEnabled = true;
+            this.listBoxPriceChoosen.ItemHeight = 16;
+            this.listBoxPriceChoosen.Location = new System.Drawing.Point(661, 53);
+            this.listBoxPriceChoosen.Margin = new System.Windows.Forms.Padding(3, 3, 25, 3);
+            this.listBoxPriceChoosen.Name = "listBoxPriceChoosen";
+            this.listBoxPriceChoosen.Size = new System.Drawing.Size(111, 324);
+            this.listBoxPriceChoosen.TabIndex = 10;
+            this.listBoxPriceChoosen.SelectedIndexChanged += new System.EventHandler(this.listBoxPriceChoosen_SelectedIndexChanged);
+            // 
+            // labelPriceAvailable
+            // 
+            this.labelPriceAvailable.AutoSize = true;
+            this.labelPriceAvailable.Location = new System.Drawing.Point(243, 30);
+            this.labelPriceAvailable.Name = "labelPriceAvailable";
+            this.labelPriceAvailable.Size = new System.Drawing.Size(45, 17);
+            this.labelPriceAvailable.TabIndex = 9;
+            this.labelPriceAvailable.Text = "Cena:";
+            // 
+            // listBoxPriceAvailable
+            // 
+            this.listBoxPriceAvailable.FormattingEnabled = true;
+            this.listBoxPriceAvailable.ItemHeight = 16;
+            this.listBoxPriceAvailable.Location = new System.Drawing.Point(246, 53);
+            this.listBoxPriceAvailable.Name = "listBoxPriceAvailable";
+            this.listBoxPriceAvailable.Size = new System.Drawing.Size(107, 324);
+            this.listBoxPriceAvailable.TabIndex = 8;
+            this.listBoxPriceAvailable.SelectedIndexChanged += new System.EventHandler(this.listBoxPriceAvailable_SelectedIndexChanged);
             // 
             // labelChoosen
             // 
@@ -158,44 +201,16 @@
             this.listBoxAvailableOptions.TabIndex = 0;
             this.listBoxAvailableOptions.SelectedIndexChanged += new System.EventHandler(this.listBoxAvailableOptions_SelectedIndexChanged);
             // 
-            // listBoxPriceAvailable
+            // pictureBoxQuestionMark
             // 
-            this.listBoxPriceAvailable.FormattingEnabled = true;
-            this.listBoxPriceAvailable.ItemHeight = 16;
-            this.listBoxPriceAvailable.Location = new System.Drawing.Point(246, 53);
-            this.listBoxPriceAvailable.Name = "listBoxPriceAvailable";
-            this.listBoxPriceAvailable.Size = new System.Drawing.Size(107, 324);
-            this.listBoxPriceAvailable.TabIndex = 8;
-            this.listBoxPriceAvailable.SelectedIndexChanged += new System.EventHandler(this.listBoxPriceAvailable_SelectedIndexChanged);
-            // 
-            // labelPriceAvailable
-            // 
-            this.labelPriceAvailable.AutoSize = true;
-            this.labelPriceAvailable.Location = new System.Drawing.Point(243, 30);
-            this.labelPriceAvailable.Name = "labelPriceAvailable";
-            this.labelPriceAvailable.Size = new System.Drawing.Size(45, 17);
-            this.labelPriceAvailable.TabIndex = 9;
-            this.labelPriceAvailable.Text = "Cena:";
-            // 
-            // listBoxPriceChoosen
-            // 
-            this.listBoxPriceChoosen.FormattingEnabled = true;
-            this.listBoxPriceChoosen.ItemHeight = 16;
-            this.listBoxPriceChoosen.Location = new System.Drawing.Point(661, 53);
-            this.listBoxPriceChoosen.Margin = new System.Windows.Forms.Padding(3, 3, 25, 3);
-            this.listBoxPriceChoosen.Name = "listBoxPriceChoosen";
-            this.listBoxPriceChoosen.Size = new System.Drawing.Size(111, 324);
-            this.listBoxPriceChoosen.TabIndex = 10;
-            this.listBoxPriceChoosen.SelectedIndexChanged += new System.EventHandler(this.listBoxPriceChoosen_SelectedIndexChanged);
-            // 
-            // labelPriceChoosen
-            // 
-            this.labelPriceChoosen.AutoSize = true;
-            this.labelPriceChoosen.Location = new System.Drawing.Point(658, 30);
-            this.labelPriceChoosen.Name = "labelPriceChoosen";
-            this.labelPriceChoosen.Size = new System.Drawing.Size(45, 17);
-            this.labelPriceChoosen.TabIndex = 11;
-            this.labelPriceChoosen.Text = "Cena:";
+            this.pictureBoxQuestionMark.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxQuestionMark.BackgroundImage")));
+            this.pictureBoxQuestionMark.Location = new System.Drawing.Point(749, 13);
+            this.pictureBoxQuestionMark.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBoxQuestionMark.Name = "pictureBoxQuestionMark";
+            this.pictureBoxQuestionMark.Size = new System.Drawing.Size(33, 30);
+            this.pictureBoxQuestionMark.TabIndex = 78;
+            this.pictureBoxQuestionMark.TabStop = false;
+            this.pictureBoxQuestionMark.Click += new System.EventHandler(this.pictureBoxQuestionMark_Click);
             // 
             // FormServiceOptions
             // 
@@ -209,6 +224,7 @@
             this.Load += new System.EventHandler(this.FormServiceOptions_Load);
             this.panelBackground.ResumeLayout(false);
             this.panelBackground.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQuestionMark)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -228,5 +244,6 @@
         private System.Windows.Forms.ListBox listBoxPriceChoosen;
         private System.Windows.Forms.Label labelPriceAvailable;
         private System.Windows.Forms.ListBox listBoxPriceAvailable;
+        private System.Windows.Forms.PictureBox pictureBoxQuestionMark;
     }
 }

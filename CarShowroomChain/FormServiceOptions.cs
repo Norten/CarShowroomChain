@@ -85,5 +85,13 @@ namespace CarShowroomChain
             this.SetServices(this.listBoxChoosen.Items, price);
             this.Close();
         }
+
+        private void pictureBoxQuestionMark_Click(object sender, EventArgs e) {
+            MessageBox.Show("Po lewej stronie znajdują się opcje dostępne w ofercie.\n" +
+                "Aby wybrać usługi i/lub dodatki musisz wybrać interesujący element oraz kliknąć przycisk" + 
+                "\"Wybierz\".\n" +
+                "Po prawej stronie znajdują się wybrane dodatki/usługi. Elementy te również można" +
+                "usunąć poprzez wybranie odpowiedniego elementu i wciśnięcie przycisku \"Usuń\".");
+        }
     }
 }

@@ -28,5 +28,11 @@ namespace CarShowroomChain
             FormNewServiceOrder fNSO = new FormNewServiceOrder();
             fNSO.ShowDialog();
         }
+
+        private void FormOrders_Load(object sender, EventArgs e) {
+            // TODO: This line of code loads data into the 'polsl_agatek_bdDataSet.reservation' table. You can move, or remove it, as needed.
+            this.reservationTableAdapter.Fill(this.polsl_agatek_bdDataSet.reservation);
+
+        }
     }
 }

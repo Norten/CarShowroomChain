@@ -80,8 +80,8 @@ namespace CarShowroomChain
             foreach (var service in this.selectedServices) {
                 var order = new client_order();
                 var serv = dbModel.dict_service.SqlQuery("SELECT * FROM dict_service WHERE name like '" + service.ToString() + "';").ToList();
-                order.date_order = DateTime.Now;
-                order.date_done = DateTime.Now;
+                order.date_order = this.dateTimePickerPurchaseDate.Value;
+                order.date_done = this.dateTimePickerPurchaseDate.Value;
                 order.id_client = (int)this.client.Cells["idDataGridViewTextBoxColumn"].Value;
                 order.id_service = (int)serv[0].id;
                 order.id_user = UserSingleton.Instance.userId;
@@ -93,6 +93,13 @@ namespace CarShowroomChain
                 dbModel.SaveChanges();
             }
             this.Close();
+        }
+
+        private void pictureBoxQuestionMark_Click(object sender, EventArgs e) {
+            MessageBox.Show("Wybierz klienta poprzez wciśnięcie przycisku \"Wybierz klienta\"\n" +
+                "Określ date zakupu\n" +
+                "Wybierz usługi poprzez wciśnięcie przycisku \"Wybierz\" przy opisie Dodatkowe opcje i usługi\n" +
+                "Można podać wartość procentową rabatu oraz komentarz");
         }
     }
 }

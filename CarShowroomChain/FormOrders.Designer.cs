@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panelBackground = new System.Windows.Forms.Panel();
             this.buttonNewServiceOrder = new System.Windows.Forms.Button();
             this.buttonFilter = new System.Windows.Forms.Button();
@@ -36,14 +37,6 @@
             this.buttonRealize = new System.Windows.Forms.Button();
             this.buttonNewCarOrder = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ColumnClientName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnClientSurname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnIDNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnCar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBoxIDNumber = new System.Windows.Forms.TextBox();
-            this.labelIDNumber = new System.Windows.Forms.Label();
             this.textBoxSurname = new System.Windows.Forms.TextBox();
             this.labelSurname = new System.Windows.Forms.Label();
             this.textBoxName = new System.Windows.Forms.TextBox();
@@ -54,8 +47,19 @@
             this.dateTimePickerFrom = new System.Windows.Forms.DateTimePicker();
             this.labelDateFrom = new System.Windows.Forms.Label();
             this.labelHistory = new System.Windows.Forms.Label();
+            this.polsl_agatek_bdDataSet = new CarShowroomChain.polsl_agatek_bdDataSet();
+            this.reservationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reservationTableAdapter = new CarShowroomChain.polsl_agatek_bdDataSetTableAdapters.reservationTableAdapter();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datereservationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datereservationexpiredDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idcarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idclientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iduserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelBackground.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.polsl_agatek_bdDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reservationBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBackground
@@ -67,8 +71,6 @@
             this.panelBackground.Controls.Add(this.buttonRealize);
             this.panelBackground.Controls.Add(this.buttonNewCarOrder);
             this.panelBackground.Controls.Add(this.dataGridView1);
-            this.panelBackground.Controls.Add(this.textBoxIDNumber);
-            this.panelBackground.Controls.Add(this.labelIDNumber);
             this.panelBackground.Controls.Add(this.textBoxSurname);
             this.panelBackground.Controls.Add(this.labelSurname);
             this.panelBackground.Controls.Add(this.textBoxName);
@@ -163,74 +165,22 @@
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColumnClientName,
-            this.ColumnClientSurname,
-            this.ColumnIDNum,
-            this.ColumnDate,
-            this.ColumnPrice,
-            this.ColumnCar});
+            this.idDataGridViewTextBoxColumn,
+            this.datereservationDataGridViewTextBoxColumn,
+            this.datereservationexpiredDataGridViewTextBoxColumn,
+            this.idcarDataGridViewTextBoxColumn,
+            this.idclientDataGridViewTextBoxColumn,
+            this.iduserDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.reservationBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(23, 265);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 3, 3, 75);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(642, 254);
             this.dataGridView1.TabIndex = 13;
-            // 
-            // ColumnClientName
-            // 
-            this.ColumnClientName.HeaderText = "Imie";
-            this.ColumnClientName.Name = "ColumnClientName";
-            this.ColumnClientName.ReadOnly = true;
-            // 
-            // ColumnClientSurname
-            // 
-            this.ColumnClientSurname.HeaderText = "Nazwisko";
-            this.ColumnClientSurname.Name = "ColumnClientSurname";
-            this.ColumnClientSurname.ReadOnly = true;
-            // 
-            // ColumnIDNum
-            // 
-            this.ColumnIDNum.HeaderText = "Nr dowodu osobistego";
-            this.ColumnIDNum.Name = "ColumnIDNum";
-            this.ColumnIDNum.ReadOnly = true;
-            // 
-            // ColumnDate
-            // 
-            this.ColumnDate.HeaderText = "Data zakupu";
-            this.ColumnDate.Name = "ColumnDate";
-            this.ColumnDate.ReadOnly = true;
-            // 
-            // ColumnPrice
-            // 
-            this.ColumnPrice.HeaderText = "Cena";
-            this.ColumnPrice.Name = "ColumnPrice";
-            this.ColumnPrice.ReadOnly = true;
-            // 
-            // ColumnCar
-            // 
-            this.ColumnCar.HeaderText = "Zakupiony samochód";
-            this.ColumnCar.Name = "ColumnCar";
-            this.ColumnCar.ReadOnly = true;
-            // 
-            // textBoxIDNumber
-            // 
-            this.textBoxIDNumber.Location = new System.Drawing.Point(212, 202);
-            this.textBoxIDNumber.MaxLength = 9;
-            this.textBoxIDNumber.Name = "textBoxIDNumber";
-            this.textBoxIDNumber.Size = new System.Drawing.Size(100, 22);
-            this.textBoxIDNumber.TabIndex = 12;
-            // 
-            // labelIDNumber
-            // 
-            this.labelIDNumber.AutoSize = true;
-            this.labelIDNumber.Location = new System.Drawing.Point(57, 205);
-            this.labelIDNumber.Name = "labelIDNumber";
-            this.labelIDNumber.Size = new System.Drawing.Size(149, 17);
-            this.labelIDNumber.TabIndex = 11;
-            this.labelIDNumber.Text = "Nr dowodu osobistego";
-            this.labelIDNumber.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // textBoxSurname
             // 
@@ -321,6 +271,56 @@
             this.labelHistory.Text = "Historia";
             this.labelHistory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // polsl_agatek_bdDataSet
+            // 
+            this.polsl_agatek_bdDataSet.DataSetName = "polsl_agatek_bdDataSet";
+            this.polsl_agatek_bdDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // reservationBindingSource
+            // 
+            this.reservationBindingSource.DataMember = "reservation";
+            this.reservationBindingSource.DataSource = this.polsl_agatek_bdDataSet;
+            // 
+            // reservationTableAdapter
+            // 
+            this.reservationTableAdapter.ClearBeforeFill = true;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            // 
+            // datereservationDataGridViewTextBoxColumn
+            // 
+            this.datereservationDataGridViewTextBoxColumn.DataPropertyName = "date_reservation";
+            this.datereservationDataGridViewTextBoxColumn.HeaderText = "Data rezerwacji";
+            this.datereservationDataGridViewTextBoxColumn.Name = "datereservationDataGridViewTextBoxColumn";
+            // 
+            // datereservationexpiredDataGridViewTextBoxColumn
+            // 
+            this.datereservationexpiredDataGridViewTextBoxColumn.DataPropertyName = "date_reservation_expired";
+            this.datereservationexpiredDataGridViewTextBoxColumn.HeaderText = "Data wygaśnięcia rezerwacji";
+            this.datereservationexpiredDataGridViewTextBoxColumn.Name = "datereservationexpiredDataGridViewTextBoxColumn";
+            // 
+            // idcarDataGridViewTextBoxColumn
+            // 
+            this.idcarDataGridViewTextBoxColumn.DataPropertyName = "id_car";
+            this.idcarDataGridViewTextBoxColumn.HeaderText = "Id samochodu";
+            this.idcarDataGridViewTextBoxColumn.Name = "idcarDataGridViewTextBoxColumn";
+            // 
+            // idclientDataGridViewTextBoxColumn
+            // 
+            this.idclientDataGridViewTextBoxColumn.DataPropertyName = "id_client";
+            this.idclientDataGridViewTextBoxColumn.HeaderText = "Id klienta";
+            this.idclientDataGridViewTextBoxColumn.Name = "idclientDataGridViewTextBoxColumn";
+            // 
+            // iduserDataGridViewTextBoxColumn
+            // 
+            this.iduserDataGridViewTextBoxColumn.DataPropertyName = "id_user";
+            this.iduserDataGridViewTextBoxColumn.HeaderText = "Id użytkownika";
+            this.iduserDataGridViewTextBoxColumn.Name = "iduserDataGridViewTextBoxColumn";
+            // 
             // FormOrders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -330,9 +330,12 @@
             this.MinimumSize = new System.Drawing.Size(700, 650);
             this.Name = "FormOrders";
             this.Text = "Zamówienia";
+            this.Load += new System.EventHandler(this.FormOrders_Load);
             this.panelBackground.ResumeLayout(false);
             this.panelBackground.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.polsl_agatek_bdDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reservationBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -347,14 +350,6 @@
         private System.Windows.Forms.Label labelDateFrom;
         private System.Windows.Forms.Label labelHistory;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnClientName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnClientSurname;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnIDNum;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPrice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCar;
-        private System.Windows.Forms.TextBox textBoxIDNumber;
-        private System.Windows.Forms.Label labelIDNumber;
         private System.Windows.Forms.TextBox textBoxSurname;
         private System.Windows.Forms.Label labelSurname;
         private System.Windows.Forms.TextBox textBoxName;
@@ -365,5 +360,14 @@
         private System.Windows.Forms.Button buttonNewCarOrder;
         private System.Windows.Forms.Button buttonFilter;
         private System.Windows.Forms.Button buttonNewServiceOrder;
+        private polsl_agatek_bdDataSet polsl_agatek_bdDataSet;
+        private System.Windows.Forms.BindingSource reservationBindingSource;
+        private polsl_agatek_bdDataSetTableAdapters.reservationTableAdapter reservationTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn datereservationDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn datereservationexpiredDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idcarDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idclientDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iduserDataGridViewTextBoxColumn;
     }
 }

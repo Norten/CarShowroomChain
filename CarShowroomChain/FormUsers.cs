@@ -83,5 +83,15 @@ namespace CarShowroomChain
             source.DataSource = db;
             this.dataGridViewUsers.DataSource = source;
         }
+
+        private void pictureBoxQuestionMark_Click(object sender, EventArgs e) {
+            MessageBox.Show("W tabelce są wyświetleni wszyscy użytkownicy systemu.\n" + 
+                "Możesz zawęzić wyniki wyszukiwania poprzez wybranie konkretnych opcji.\n" + 
+                "Aby ponownie wyświetlić wszystkich użytkowników wyczyść wszystkie warunki " + 
+                "i kliknij przycisk 'Filtruj'.\n" + 
+                "Gdy klikniesz na konkretnego użytkownika w tabelce, możesz kliknąć w przycisk 'Modyfikuj'.\n" + 
+                "Gdy klikniesz w przycisk 'Dodaj nowego użytkownika' będziesz mógł dodac nowego użytkownika." +
+                "Możesz także zatrudnić lub zwolnić pracownika (zwolniony użytkownik, nie będzie miał dostępu do systemu.");
+        }
     }
 }
