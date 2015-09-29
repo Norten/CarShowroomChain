@@ -31,7 +31,7 @@ namespace CarShowroomChain
 
         private void buttonChooseAdditionalOptions_Click(object sender, EventArgs e)
         {
-            FormServiceOptions fSO = new FormServiceOptions();
+            FormServiceOptions fSO = new FormServiceOptions(this.SetServices);
             fSO.ShowDialog();
         }
 
@@ -57,6 +57,10 @@ namespace CarShowroomChain
             this.comboBoxFuel.SelectedIndex = this.comboBoxFuel.FindStringExact(selectedCar.Cells[5].Value.ToString());
             this.comboBoxGearBox.SelectedIndex = this.comboBoxGearBox.FindStringExact(selectedCar.Cells[6].Value.ToString());
             this.comboBoxCarBody.SelectedIndex = this.comboBoxCarBody.FindStringExact(selectedCar.Cells[7].Value.ToString());
+        }
+
+        private void SetServices(string comment, UInt64 price) {
+
         }
     }
 }

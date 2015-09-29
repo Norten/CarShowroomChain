@@ -208,6 +208,7 @@
             this.textBoxPrice.ReadOnly = true;
             this.textBoxPrice.Size = new System.Drawing.Size(100, 22);
             this.textBoxPrice.TabIndex = 72;
+            this.textBoxPrice.Text = "0";
             // 
             // labelPrice
             // 
