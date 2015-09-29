@@ -37,6 +37,8 @@
             this.buttonRealize = new System.Windows.Forms.Button();
             this.buttonNewCarOrder = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.reservationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.polsl_agatek_bdDataSet = new CarShowroomChain.polsl_agatek_bdDataSet();
             this.textBoxSurname = new System.Windows.Forms.TextBox();
             this.labelSurname = new System.Windows.Forms.Label();
             this.textBoxName = new System.Windows.Forms.TextBox();
@@ -47,19 +49,24 @@
             this.dateTimePickerFrom = new System.Windows.Forms.DateTimePicker();
             this.labelDateFrom = new System.Windows.Forms.Label();
             this.labelHistory = new System.Windows.Forms.Label();
-            this.polsl_agatek_bdDataSet = new CarShowroomChain.polsl_agatek_bdDataSet();
-            this.reservationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reservationTableAdapter = new CarShowroomChain.polsl_agatek_bdDataSetTableAdapters.reservationTableAdapter();
+            this.polsl_agatek_bdDataSet3 = new CarShowroomChain.polsl_agatek_bdDataSet3();
+            this.fullreservationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.full_reservationTableAdapter = new CarShowroomChain.polsl_agatek_bdDataSet3TableAdapters.full_reservationTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datereservationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datereservationexpiredDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idcarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idclientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iduserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.modelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.seriesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelBackground.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.polsl_agatek_bdDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reservationBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.polsl_agatek_bdDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.polsl_agatek_bdDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fullreservationBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBackground
@@ -83,18 +90,20 @@
             this.panelBackground.Controls.Add(this.labelHistory);
             this.panelBackground.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelBackground.Location = new System.Drawing.Point(0, 0);
+            this.panelBackground.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelBackground.Name = "panelBackground";
-            this.panelBackground.Padding = new System.Windows.Forms.Padding(20);
-            this.panelBackground.Size = new System.Drawing.Size(688, 603);
+            this.panelBackground.Padding = new System.Windows.Forms.Padding(15, 16, 15, 16);
+            this.panelBackground.Size = new System.Drawing.Size(516, 496);
             this.panelBackground.TabIndex = 0;
             // 
             // buttonNewServiceOrder
             // 
             this.buttonNewServiceOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonNewServiceOrder.AutoSize = true;
-            this.buttonNewServiceOrder.Location = new System.Drawing.Point(36, 537);
+            this.buttonNewServiceOrder.Location = new System.Drawing.Point(20, 441);
+            this.buttonNewServiceOrder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonNewServiceOrder.Name = "buttonNewServiceOrder";
-            this.buttonNewServiceOrder.Size = new System.Drawing.Size(171, 27);
+            this.buttonNewServiceOrder.Size = new System.Drawing.Size(135, 23);
             this.buttonNewServiceOrder.TabIndex = 37;
             this.buttonNewServiceOrder.Text = "Nowe zamówienie usługi";
             this.buttonNewServiceOrder.UseVisualStyleBackColor = true;
@@ -104,9 +113,10 @@
             // 
             this.buttonFilter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonFilter.AutoSize = true;
-            this.buttonFilter.Location = new System.Drawing.Point(590, 205);
+            this.buttonFilter.Location = new System.Drawing.Point(442, 167);
+            this.buttonFilter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonFilter.Name = "buttonFilter";
-            this.buttonFilter.Size = new System.Drawing.Size(75, 27);
+            this.buttonFilter.Size = new System.Drawing.Size(56, 23);
             this.buttonFilter.TabIndex = 36;
             this.buttonFilter.Text = "Filtruj";
             this.buttonFilter.UseVisualStyleBackColor = true;
@@ -115,10 +125,10 @@
             // 
             this.buttonCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCancel.AutoSize = true;
-            this.buttonCancel.Location = new System.Drawing.Point(590, 537);
-            this.buttonCancel.Margin = new System.Windows.Forms.Padding(3, 3, 3, 30);
+            this.buttonCancel.Location = new System.Drawing.Point(442, 441);
+            this.buttonCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 24);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(75, 27);
+            this.buttonCancel.Size = new System.Drawing.Size(56, 23);
             this.buttonCancel.TabIndex = 17;
             this.buttonCancel.Text = "Wycofaj";
             this.buttonCancel.UseVisualStyleBackColor = true;
@@ -127,10 +137,10 @@
             // 
             this.buttonModify.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonModify.AutoSize = true;
-            this.buttonModify.Location = new System.Drawing.Point(507, 537);
-            this.buttonModify.Margin = new System.Windows.Forms.Padding(3, 3, 3, 30);
+            this.buttonModify.Location = new System.Drawing.Point(376, 441);
+            this.buttonModify.Margin = new System.Windows.Forms.Padding(2, 2, 2, 24);
             this.buttonModify.Name = "buttonModify";
-            this.buttonModify.Size = new System.Drawing.Size(77, 27);
+            this.buttonModify.Size = new System.Drawing.Size(62, 23);
             this.buttonModify.TabIndex = 16;
             this.buttonModify.Text = "Modyfikuj";
             this.buttonModify.UseVisualStyleBackColor = true;
@@ -139,10 +149,10 @@
             // 
             this.buttonRealize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonRealize.AutoSize = true;
-            this.buttonRealize.Location = new System.Drawing.Point(426, 537);
-            this.buttonRealize.Margin = new System.Windows.Forms.Padding(3, 3, 3, 30);
+            this.buttonRealize.Location = new System.Drawing.Point(320, 441);
+            this.buttonRealize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 24);
             this.buttonRealize.Name = "buttonRealize";
-            this.buttonRealize.Size = new System.Drawing.Size(75, 27);
+            this.buttonRealize.Size = new System.Drawing.Size(56, 23);
             this.buttonRealize.TabIndex = 15;
             this.buttonRealize.Text = "Realizuj";
             this.buttonRealize.UseVisualStyleBackColor = true;
@@ -151,10 +161,10 @@
             // 
             this.buttonNewCarOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonNewCarOrder.AutoSize = true;
-            this.buttonNewCarOrder.Location = new System.Drawing.Point(213, 537);
-            this.buttonNewCarOrder.Margin = new System.Windows.Forms.Padding(3, 3, 3, 30);
+            this.buttonNewCarOrder.Location = new System.Drawing.Point(154, 441);
+            this.buttonNewCarOrder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 24);
             this.buttonNewCarOrder.Name = "buttonNewCarOrder";
-            this.buttonNewCarOrder.Size = new System.Drawing.Size(207, 27);
+            this.buttonNewCarOrder.Size = new System.Drawing.Size(161, 23);
             this.buttonNewCarOrder.TabIndex = 14;
             this.buttonNewCarOrder.Text = "Nowe zamówienie samochodu";
             this.buttonNewCarOrder.UseVisualStyleBackColor = true;
@@ -162,6 +172,8 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -171,49 +183,66 @@
             this.idDataGridViewTextBoxColumn,
             this.datereservationDataGridViewTextBoxColumn,
             this.datereservationexpiredDataGridViewTextBoxColumn,
-            this.idcarDataGridViewTextBoxColumn,
-            this.idclientDataGridViewTextBoxColumn,
-            this.iduserDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.reservationBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(23, 265);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 3, 3, 75);
+            this.firstnameDataGridViewTextBoxColumn,
+            this.lastnameDataGridViewTextBoxColumn,
+            this.modelDataGridViewTextBoxColumn,
+            this.seriesDataGridViewTextBoxColumn,
+            this.colorDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.fullreservationBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(17, 215);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 61);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(642, 254);
+            this.dataGridView1.Size = new System.Drawing.Size(482, 212);
             this.dataGridView1.TabIndex = 13;
+            // 
+            // reservationBindingSource
+            // 
+            this.reservationBindingSource.DataMember = "reservation";
+            this.reservationBindingSource.DataSource = this.polsl_agatek_bdDataSet;
+            // 
+            // polsl_agatek_bdDataSet
+            // 
+            this.polsl_agatek_bdDataSet.DataSetName = "polsl_agatek_bdDataSet";
+            this.polsl_agatek_bdDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // textBoxSurname
             // 
-            this.textBoxSurname.Location = new System.Drawing.Point(212, 167);
+            this.textBoxSurname.Location = new System.Drawing.Point(159, 136);
+            this.textBoxSurname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxSurname.MaxLength = 50;
             this.textBoxSurname.Name = "textBoxSurname";
-            this.textBoxSurname.Size = new System.Drawing.Size(100, 22);
+            this.textBoxSurname.Size = new System.Drawing.Size(76, 20);
             this.textBoxSurname.TabIndex = 10;
             // 
             // labelSurname
             // 
             this.labelSurname.AutoSize = true;
-            this.labelSurname.Location = new System.Drawing.Point(57, 170);
+            this.labelSurname.Location = new System.Drawing.Point(43, 138);
+            this.labelSurname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelSurname.Name = "labelSurname";
-            this.labelSurname.Size = new System.Drawing.Size(67, 17);
+            this.labelSurname.Size = new System.Drawing.Size(53, 13);
             this.labelSurname.TabIndex = 9;
             this.labelSurname.Text = "Nazwisko";
             this.labelSurname.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // textBoxName
             // 
-            this.textBoxName.Location = new System.Drawing.Point(212, 132);
+            this.textBoxName.Location = new System.Drawing.Point(159, 107);
+            this.textBoxName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxName.MaxLength = 30;
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(100, 22);
+            this.textBoxName.Size = new System.Drawing.Size(76, 20);
             this.textBoxName.TabIndex = 8;
             // 
             // labelName
             // 
             this.labelName.AutoSize = true;
-            this.labelName.Location = new System.Drawing.Point(57, 135);
+            this.labelName.Location = new System.Drawing.Point(43, 110);
+            this.labelName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(33, 17);
+            this.labelName.Size = new System.Drawing.Size(26, 13);
             this.labelName.TabIndex = 7;
             this.labelName.Text = "Imię";
             this.labelName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -221,42 +250,47 @@
             // labelClient
             // 
             this.labelClient.AutoSize = true;
-            this.labelClient.Location = new System.Drawing.Point(25, 100);
+            this.labelClient.Location = new System.Drawing.Point(19, 81);
+            this.labelClient.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelClient.Name = "labelClient";
-            this.labelClient.Size = new System.Drawing.Size(43, 17);
+            this.labelClient.Size = new System.Drawing.Size(33, 13);
             this.labelClient.TabIndex = 6;
             this.labelClient.Text = "Klient";
             this.labelClient.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(323, 60);
+            this.dateTimePicker1.Location = new System.Drawing.Point(242, 49);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(151, 20);
             this.dateTimePicker1.TabIndex = 5;
             // 
             // labelDateTo
             // 
             this.labelDateTo.AutoSize = true;
-            this.labelDateTo.Location = new System.Drawing.Point(293, 65);
+            this.labelDateTo.Location = new System.Drawing.Point(220, 53);
+            this.labelDateTo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDateTo.Name = "labelDateTo";
-            this.labelDateTo.Size = new System.Drawing.Size(24, 17);
+            this.labelDateTo.Size = new System.Drawing.Size(19, 13);
             this.labelDateTo.TabIndex = 4;
             this.labelDateTo.Text = "do";
             // 
             // dateTimePickerFrom
             // 
-            this.dateTimePickerFrom.Location = new System.Drawing.Point(87, 60);
+            this.dateTimePickerFrom.Location = new System.Drawing.Point(65, 49);
+            this.dateTimePickerFrom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTimePickerFrom.Name = "dateTimePickerFrom";
-            this.dateTimePickerFrom.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePickerFrom.Size = new System.Drawing.Size(151, 20);
             this.dateTimePickerFrom.TabIndex = 3;
             // 
             // labelDateFrom
             // 
             this.labelDateFrom.AutoSize = true;
-            this.labelDateFrom.Location = new System.Drawing.Point(57, 65);
+            this.labelDateFrom.Location = new System.Drawing.Point(43, 53);
+            this.labelDateFrom.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDateFrom.Name = "labelDateFrom";
-            this.labelDateFrom.Size = new System.Drawing.Size(24, 17);
+            this.labelDateFrom.Size = new System.Drawing.Size(19, 13);
             this.labelDateFrom.TabIndex = 1;
             this.labelDateFrom.Text = "od";
             this.labelDateFrom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -264,78 +298,106 @@
             // labelHistory
             // 
             this.labelHistory.AutoSize = true;
-            this.labelHistory.Location = new System.Drawing.Point(25, 30);
+            this.labelHistory.Location = new System.Drawing.Point(19, 24);
+            this.labelHistory.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelHistory.Name = "labelHistory";
-            this.labelHistory.Size = new System.Drawing.Size(56, 17);
+            this.labelHistory.Size = new System.Drawing.Size(42, 13);
             this.labelHistory.TabIndex = 0;
             this.labelHistory.Text = "Historia";
             this.labelHistory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // polsl_agatek_bdDataSet
-            // 
-            this.polsl_agatek_bdDataSet.DataSetName = "polsl_agatek_bdDataSet";
-            this.polsl_agatek_bdDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // reservationBindingSource
-            // 
-            this.reservationBindingSource.DataMember = "reservation";
-            this.reservationBindingSource.DataSource = this.polsl_agatek_bdDataSet;
             // 
             // reservationTableAdapter
             // 
             this.reservationTableAdapter.ClearBeforeFill = true;
             // 
+            // polsl_agatek_bdDataSet3
+            // 
+            this.polsl_agatek_bdDataSet3.DataSetName = "polsl_agatek_bdDataSet3";
+            this.polsl_agatek_bdDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // fullreservationBindingSource
+            // 
+            this.fullreservationBindingSource.DataMember = "full_reservation";
+            this.fullreservationBindingSource.DataSource = this.polsl_agatek_bdDataSet3;
+            // 
+            // full_reservationTableAdapter
+            // 
+            this.full_reservationTableAdapter.ClearBeforeFill = true;
+            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // datereservationDataGridViewTextBoxColumn
             // 
             this.datereservationDataGridViewTextBoxColumn.DataPropertyName = "date_reservation";
-            this.datereservationDataGridViewTextBoxColumn.HeaderText = "Data rezerwacji";
+            this.datereservationDataGridViewTextBoxColumn.HeaderText = "date_reservation";
             this.datereservationDataGridViewTextBoxColumn.Name = "datereservationDataGridViewTextBoxColumn";
+            this.datereservationDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // datereservationexpiredDataGridViewTextBoxColumn
             // 
             this.datereservationexpiredDataGridViewTextBoxColumn.DataPropertyName = "date_reservation_expired";
-            this.datereservationexpiredDataGridViewTextBoxColumn.HeaderText = "Data wygaśnięcia rezerwacji";
+            this.datereservationexpiredDataGridViewTextBoxColumn.HeaderText = "date_reservation_expired";
             this.datereservationexpiredDataGridViewTextBoxColumn.Name = "datereservationexpiredDataGridViewTextBoxColumn";
+            this.datereservationexpiredDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // idcarDataGridViewTextBoxColumn
+            // firstnameDataGridViewTextBoxColumn
             // 
-            this.idcarDataGridViewTextBoxColumn.DataPropertyName = "id_car";
-            this.idcarDataGridViewTextBoxColumn.HeaderText = "Id samochodu";
-            this.idcarDataGridViewTextBoxColumn.Name = "idcarDataGridViewTextBoxColumn";
+            this.firstnameDataGridViewTextBoxColumn.DataPropertyName = "first_name";
+            this.firstnameDataGridViewTextBoxColumn.HeaderText = "first_name";
+            this.firstnameDataGridViewTextBoxColumn.Name = "firstnameDataGridViewTextBoxColumn";
+            this.firstnameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // idclientDataGridViewTextBoxColumn
+            // lastnameDataGridViewTextBoxColumn
             // 
-            this.idclientDataGridViewTextBoxColumn.DataPropertyName = "id_client";
-            this.idclientDataGridViewTextBoxColumn.HeaderText = "Id klienta";
-            this.idclientDataGridViewTextBoxColumn.Name = "idclientDataGridViewTextBoxColumn";
+            this.lastnameDataGridViewTextBoxColumn.DataPropertyName = "last_name";
+            this.lastnameDataGridViewTextBoxColumn.HeaderText = "last_name";
+            this.lastnameDataGridViewTextBoxColumn.Name = "lastnameDataGridViewTextBoxColumn";
+            this.lastnameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // iduserDataGridViewTextBoxColumn
+            // modelDataGridViewTextBoxColumn
             // 
-            this.iduserDataGridViewTextBoxColumn.DataPropertyName = "id_user";
-            this.iduserDataGridViewTextBoxColumn.HeaderText = "Id użytkownika";
-            this.iduserDataGridViewTextBoxColumn.Name = "iduserDataGridViewTextBoxColumn";
+            this.modelDataGridViewTextBoxColumn.DataPropertyName = "model";
+            this.modelDataGridViewTextBoxColumn.HeaderText = "model";
+            this.modelDataGridViewTextBoxColumn.Name = "modelDataGridViewTextBoxColumn";
+            this.modelDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // seriesDataGridViewTextBoxColumn
+            // 
+            this.seriesDataGridViewTextBoxColumn.DataPropertyName = "series";
+            this.seriesDataGridViewTextBoxColumn.HeaderText = "series";
+            this.seriesDataGridViewTextBoxColumn.Name = "seriesDataGridViewTextBoxColumn";
+            this.seriesDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // colorDataGridViewTextBoxColumn
+            // 
+            this.colorDataGridViewTextBoxColumn.DataPropertyName = "color";
+            this.colorDataGridViewTextBoxColumn.HeaderText = "color";
+            this.colorDataGridViewTextBoxColumn.Name = "colorDataGridViewTextBoxColumn";
+            this.colorDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // FormOrders
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(688, 603);
+            this.ClientSize = new System.Drawing.Size(516, 496);
             this.Controls.Add(this.panelBackground);
-            this.MinimumSize = new System.Drawing.Size(700, 650);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MinimumSize = new System.Drawing.Size(529, 535);
             this.Name = "FormOrders";
             this.Text = "Zamówienia";
             this.Load += new System.EventHandler(this.FormOrders_Load);
             this.panelBackground.ResumeLayout(false);
             this.panelBackground.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.polsl_agatek_bdDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reservationBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.polsl_agatek_bdDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.polsl_agatek_bdDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fullreservationBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -363,11 +425,16 @@
         private polsl_agatek_bdDataSet polsl_agatek_bdDataSet;
         private System.Windows.Forms.BindingSource reservationBindingSource;
         private polsl_agatek_bdDataSetTableAdapters.reservationTableAdapter reservationTableAdapter;
+        private polsl_agatek_bdDataSet3 polsl_agatek_bdDataSet3;
+        private System.Windows.Forms.BindingSource fullreservationBindingSource;
+        private polsl_agatek_bdDataSet3TableAdapters.full_reservationTableAdapter full_reservationTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn datereservationDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn datereservationexpiredDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idcarDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idclientDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iduserDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn firstnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn modelDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn seriesDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colorDataGridViewTextBoxColumn;
     }
 }
