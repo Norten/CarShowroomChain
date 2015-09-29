@@ -14,7 +14,6 @@ namespace CarShowroomChain
             car = new HashSet<car>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int id { get; set; }
 
         [Required]

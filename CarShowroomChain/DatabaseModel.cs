@@ -28,9 +28,14 @@ namespace CarShowroomChain
         public virtual DbSet<reservation> reservation { get; set; }
         public virtual DbSet<role> role { get; set; }
         public virtual DbSet<user_data> user_data { get; set; }
+        public virtual DbSet<full_car> full_car { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<car>()
+                .Property(e => e.cost)
+                .IsUnicode(false);
+
             modelBuilder.Entity<car>()
                 .HasMany(e => e.car_sell)
                 .WithRequired(e => e.car)
@@ -184,6 +189,10 @@ namespace CarShowroomChain
                 .IsUnicode(false);
 
             modelBuilder.Entity<dict_service>()
+                .Property(e => e.cost)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<dict_service>()
                 .HasMany(e => e.client_order)
                 .WithRequired(e => e.dict_service)
                 .HasForeignKey(e => e.id_service)
@@ -253,6 +262,42 @@ namespace CarShowroomChain
                 .HasMany(e => e.role)
                 .WithMany(e => e.user_data)
                 .Map(m => m.ToTable("user_role").MapLeftKey("id_user").MapRightKey("id_role"));
+
+            modelBuilder.Entity<full_car>()
+                .Property(e => e.model)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<full_car>()
+                .Property(e => e.series)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<full_car>()
+                .Property(e => e.color)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<full_car>()
+                .Property(e => e.engine)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<full_car>()
+                .Property(e => e.gearbox)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<full_car>()
+                .Property(e => e.fuel)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<full_car>()
+                .Property(e => e.body)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<full_car>()
+                .Property(e => e.cost)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<full_car>()
+                .Property(e => e.name)
+                .IsUnicode(false);
         }
     }
 }

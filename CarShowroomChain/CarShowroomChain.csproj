@@ -177,6 +177,7 @@
     <Compile Include="FormUsers.Designer.cs">
       <DependentUpon>FormUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="full_car.cs" />
     <Compile Include="model.cs" />
     <Compile Include="polsl_agatek_bdDataSet.Designer.cs">
       <AutoGen>True</AutoGen>

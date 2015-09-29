@@ -14,13 +14,14 @@ namespace CarShowroomChain
             client_order = new HashSet<client_order>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int id { get; set; }
 
         [Required]
         [StringLength(250)]
         public string name { get; set; }
 
+        [Required]
+        [StringLength(10)]
         public string cost { get; set; }
 
         public virtual ICollection<client_order> client_order { get; set; }
