@@ -12,8 +12,8 @@ namespace CarShowroomChain
 {
     public partial class FormServiceOptions : Form
     {
-        Action<string, UInt64> SetServices;
-        public FormServiceOptions(Action<string, UInt64> SetServices)
+        Action<ListBox.ObjectCollection, decimal> SetServices;
+        public FormServiceOptions(Action<ListBox.ObjectCollection, decimal> SetServices)
         {
             InitializeComponent();
             this.SetServices = SetServices;
@@ -76,13 +76,13 @@ namespace CarShowroomChain
         }
 
         private void buttonAccept_Click(object sender, EventArgs e) {
-            UInt64 price = 0;
+            decimal price = 0;
             foreach (string servicePrice in this.listBoxPriceChoosen.Items)
-                price += UInt64.Parse(servicePrice);
+                price += Decimal.Parse(servicePrice);
             var comment = "Wybrane usługi/dodatki: ";
             for (int i=0; i<this.listBoxChoosen.Items.Count && i<this.listBoxPriceChoosen.Items.Count; ++i)
                 comment += this.listBoxChoosen.Items[i] + ", cena: " + this.listBoxPriceChoosen.Items[i] + "; ";
-            this.SetServices(comment, price);
+            this.SetServices(this.listBoxChoosen.Items, price);
             this.Close();
         }
     }

@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panelBackground = new System.Windows.Forms.Panel();
+            this.textBoxTotalPrice = new System.Windows.Forms.TextBox();
+            this.labelTotalPrice = new System.Windows.Forms.Label();
             this.textBoxServicesPrice = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxDiscount = new System.Windows.Forms.TextBox();
@@ -53,8 +55,6 @@
             this.labelSurname = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
             this.labelClient = new System.Windows.Forms.Label();
-            this.labelTotalPrice = new System.Windows.Forms.Label();
-            this.textBoxTotalPrice = new System.Windows.Forms.TextBox();
             this.panelBackground.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -92,6 +92,24 @@
             this.panelBackground.Padding = new System.Windows.Forms.Padding(0, 0, 20, 20);
             this.panelBackground.Size = new System.Drawing.Size(671, 563);
             this.panelBackground.TabIndex = 0;
+            // 
+            // textBoxTotalPrice
+            // 
+            this.textBoxTotalPrice.Location = new System.Drawing.Point(423, 307);
+            this.textBoxTotalPrice.Name = "textBoxTotalPrice";
+            this.textBoxTotalPrice.ReadOnly = true;
+            this.textBoxTotalPrice.Size = new System.Drawing.Size(100, 22);
+            this.textBoxTotalPrice.TabIndex = 82;
+            this.textBoxTotalPrice.Text = "0";
+            // 
+            // labelTotalPrice
+            // 
+            this.labelTotalPrice.AutoSize = true;
+            this.labelTotalPrice.Location = new System.Drawing.Point(315, 310);
+            this.labelTotalPrice.Name = "labelTotalPrice";
+            this.labelTotalPrice.Size = new System.Drawing.Size(102, 17);
+            this.labelTotalPrice.TabIndex = 81;
+            this.labelTotalPrice.Text = "Cena całkowita";
             // 
             // textBoxServicesPrice
             // 
@@ -185,6 +203,7 @@
             this.buttonAccept.TabIndex = 75;
             this.buttonAccept.Text = "Akceptuj";
             this.buttonAccept.UseVisualStyleBackColor = true;
+            this.buttonAccept.Click += new System.EventHandler(this.buttonAccept_Click);
             // 
             // textBoxEmail
             // 
@@ -331,24 +350,6 @@
             this.labelClient.TabIndex = 43;
             this.labelClient.Text = "Klient";
             this.labelClient.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelTotalPrice
-            // 
-            this.labelTotalPrice.AutoSize = true;
-            this.labelTotalPrice.Location = new System.Drawing.Point(315, 310);
-            this.labelTotalPrice.Name = "labelTotalPrice";
-            this.labelTotalPrice.Size = new System.Drawing.Size(102, 17);
-            this.labelTotalPrice.TabIndex = 81;
-            this.labelTotalPrice.Text = "Cena całkowita";
-            // 
-            // textBoxTotalPrice
-            // 
-            this.textBoxTotalPrice.Location = new System.Drawing.Point(423, 307);
-            this.textBoxTotalPrice.Name = "textBoxTotalPrice";
-            this.textBoxTotalPrice.ReadOnly = true;
-            this.textBoxTotalPrice.Size = new System.Drawing.Size(100, 22);
-            this.textBoxTotalPrice.TabIndex = 82;
-            this.textBoxTotalPrice.Text = "0";
             // 
             // FormNewServiceOrder
             // 

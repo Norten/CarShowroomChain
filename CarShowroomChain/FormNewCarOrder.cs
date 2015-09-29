@@ -31,12 +31,6 @@ namespace CarShowroomChain
             fCS.ShowDialog();
         }
 
-        private void buttonChooseAdditionalOptions_Click(object sender, EventArgs e)
-        {
-            FormServiceOptions fSO = new FormServiceOptions(this.SetServices);
-            fSO.ShowDialog();
-        }
-
         private void buttonCancel_Click(object sender, EventArgs e)
         {
             this.Close();
