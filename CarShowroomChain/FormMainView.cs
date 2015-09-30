@@ -15,6 +15,14 @@ namespace CarShowroomChain
         public FormMainView()
         {
             InitializeComponent();
+            //if (UserSingleton.Instance.userRole != 4) {
+            //    this.button1.Hide();
+            //    this.button5.Hide();
+            //}
+            //if (UserSingleton.Instance.userRole != 4 && UserSingleton.Instance.userRole != 1) {
+            //    this.button2.Hide();
+            //    this.button4.Hide();
+            //}
         }
 
         private void button1_Click(object sender, EventArgs e)

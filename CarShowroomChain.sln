@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarShowroomChain", "CarShowroomChain\CarShowroomChain.csproj", "{62F919EC-2759-45F9-BAD1-0A364FED5A86}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "CarShowroomChainSetup", "CarShowroomChainSetup\CarShowroomChainSetup.vdproj", "{AAC771BB-6427-4BA9-A6DF-FB5706EF8B16}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{62F919EC-2759-45F9-BAD1-0A364FED5A86}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62F919EC-2759-45F9-BAD1-0A364FED5A86}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62F919EC-2759-45F9-BAD1-0A364FED5A86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAC771BB-6427-4BA9-A6DF-FB5706EF8B16}.Debug|Any CPU.ActiveCfg = Debug
+		{AAC771BB-6427-4BA9-A6DF-FB5706EF8B16}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

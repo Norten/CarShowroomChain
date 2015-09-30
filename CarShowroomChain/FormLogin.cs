@@ -35,6 +35,17 @@ namespace CarShowroomChain
                 if (resultLogin.is_active == 1)
                 {
                     UserSingleton.Instance.userId = resultLogin.id;
+                    //var userRoles = dbModel.user_data.Find(resultLogin.id).role;
+                    //foreach (var userRole in userRoles) {
+                    //    if (userRole.name.Equals("administrator")) {
+                    //        UserSingleton.Instance.userRole = userRole.id;
+                    //        break;
+                    //    } else if (userRole.name.Equals("kierownik salonu") && UserSingleton.Instance.userRole != 4) {
+                    //        UserSingleton.Instance.userRole = userRole.id;
+                    //    } else if (UserSingleton.Instance.userRole != 1 && UserSingleton.Instance.userRole != 4) {
+                    //        UserSingleton.Instance.userRole = userRole.id;
+                    //    }
+                    //}
                     FormMainView fmv = new FormMainView();
                     this.Hide();
                     fmv.ShowDialog();
