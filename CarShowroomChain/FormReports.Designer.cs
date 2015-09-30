@@ -33,7 +33,7 @@
             this.pictureBoxQuestionMark = new System.Windows.Forms.PictureBox();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonGenerateReport = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxReport = new System.Windows.Forms.ComboBox();
             this.labelChooseReport = new System.Windows.Forms.Label();
             this.panelBackground.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQuestionMark)).BeginInit();
@@ -44,7 +44,7 @@
             this.panelBackground.Controls.Add(this.pictureBoxQuestionMark);
             this.panelBackground.Controls.Add(this.buttonCancel);
             this.panelBackground.Controls.Add(this.buttonGenerateReport);
-            this.panelBackground.Controls.Add(this.comboBox1);
+            this.panelBackground.Controls.Add(this.comboBoxReport);
             this.panelBackground.Controls.Add(this.labelChooseReport);
             this.panelBackground.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelBackground.Location = new System.Drawing.Point(0, 0);
@@ -90,21 +90,18 @@
             this.buttonGenerateReport.UseVisualStyleBackColor = true;
             this.buttonGenerateReport.Click += new System.EventHandler(this.buttonGenerateReport_Click);
             // 
-            // comboBox1
+            // comboBoxReport
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBoxReport.FormattingEnabled = true;
+            this.comboBoxReport.Items.AddRange(new object[] {
             "Ranking salonów",
             "Realizowane zamówienia",
-            "Historia zamówień klienta",
-            "Historia zamówień klienta - samochody kupione",
-            "Historia zamówień klienta - samochody zarejestrowane",
-            "Historia zamówień klienta - usługi wykupione"});
-            this.comboBox1.Location = new System.Drawing.Point(17, 94);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(341, 21);
-            this.comboBox1.TabIndex = 2;
+            "Historia zamówień klienta"});
+            this.comboBoxReport.Location = new System.Drawing.Point(17, 94);
+            this.comboBoxReport.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxReport.Name = "comboBoxReport";
+            this.comboBoxReport.Size = new System.Drawing.Size(341, 21);
+            this.comboBoxReport.TabIndex = 2;
             // 
             // labelChooseReport
             // 
@@ -139,7 +136,7 @@
         private System.Windows.Forms.Panel panelBackground;
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.Button buttonGenerateReport;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxReport;
         private System.Windows.Forms.Label labelChooseReport;
         private System.Windows.Forms.PictureBox pictureBoxQuestionMark;
     }
