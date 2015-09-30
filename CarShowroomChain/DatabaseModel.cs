@@ -29,6 +29,12 @@ namespace CarShowroomChain
         public virtual DbSet<role> role { get; set; }
         public virtual DbSet<user_data> user_data { get; set; }
         public virtual DbSet<full_car> full_car { get; set; }
+        public virtual DbSet<client_order_history_car_res> client_order_history_car_res { get; set; }
+        public virtual DbSet<client_order_history_car_sell> client_order_history_car_sell { get; set; }
+        public virtual DbSet<client_order_history_service> client_order_history_service { get; set; }
+        public virtual DbSet<full_reservation> full_reservation { get; set; }
+        public virtual DbSet<orders_in_progres> orders_in_progres { get; set; }
+        public virtual DbSet<salon_ranking> salon_ranking { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -297,6 +303,210 @@ namespace CarShowroomChain
 
             modelBuilder.Entity<full_car>()
                 .Property(e => e.name)
+                .IsUnicode(false);
+
+modelBuilder.Entity<client_order_history_car_res>()
+                .Property(e => e.first_name)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<client_order_history_car_res>()
+                .Property(e => e.last_name)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<client_order_history_car_res>()
+                .Property(e => e.address)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<client_order_history_car_res>()
+                .Property(e => e.phone)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<client_order_history_car_res>()
+                .Property(e => e.email)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<client_order_history_car_res>()
+                .Property(e => e.cost)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<client_order_history_car_res>()
+                .Property(e => e.car_model)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<client_order_history_car_res>()
+                .Property(e => e.car_color)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<client_order_history_car_sell>()
+                .Property(e => e.first_name)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<client_order_history_car_sell>()
+                .Property(e => e.last_name)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<client_order_history_car_sell>()
+                .Property(e => e.address)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<client_order_history_car_sell>()
+                .Property(e => e.phone)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<client_order_history_car_sell>()
+                .Property(e => e.email)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<client_order_history_car_sell>()
+                .Property(e => e.cost)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<client_order_history_car_sell>()
+                .Property(e => e.car_model)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<client_order_history_car_sell>()
+                .Property(e => e.car_color)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<client_order_history_service>()
+                .Property(e => e.first_name)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<client_order_history_service>()
+                .Property(e => e.last_name)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<client_order_history_service>()
+                .Property(e => e.address)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<client_order_history_service>()
+                .Property(e => e.phone)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<client_order_history_service>()
+                .Property(e => e.email)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<client_order_history_service>()
+                .Property(e => e.cost)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<client_order_history_service>()
+                .Property(e => e.service)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<client_order_history_service>()
+                .Property(e => e.comment)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<full_reservation>()
+                .Property(e => e.first_name)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<full_reservation>()
+                .Property(e => e.last_name)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<full_reservation>()
+                .Property(e => e.model)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<full_reservation>()
+                .Property(e => e.series)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<full_reservation>()
+                .Property(e => e.color)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<orders_in_progres>()
+                .Property(e => e.car_model)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<orders_in_progres>()
+                .Property(e => e.car_color)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<orders_in_progres>()
+                .Property(e => e.car_engine)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<orders_in_progres>()
+                .Property(e => e.car_gearbox)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<orders_in_progres>()
+                .Property(e => e.car_fuel)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<orders_in_progres>()
+                .Property(e => e.car_body)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<orders_in_progres>()
+                .Property(e => e.car_cost)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<orders_in_progres>()
+                .Property(e => e.shop_address_with_car)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<orders_in_progres>()
+                .Property(e => e.client_first_name)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<orders_in_progres>()
+                .Property(e => e.client_last_name)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<orders_in_progres>()
+                .Property(e => e.client_address)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<orders_in_progres>()
+                .Property(e => e.client_phone)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<orders_in_progres>()
+                .Property(e => e.client_email)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<orders_in_progres>()
+                .Property(e => e.user_first_name)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<orders_in_progres>()
+                .Property(e => e.user_last_name)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<orders_in_progres>()
+                .Property(e => e.user_phone)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<orders_in_progres>()
+                .Property(e => e.user_email)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<orders_in_progres>()
+                .Property(e => e.shop_address_with_seller)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<salon_ranking>()
+                .Property(e => e.name)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<salon_ranking>()
+                .Property(e => e.address)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<salon_ranking>()
+                .Property(e => e.phone)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<salon_ranking>()
+                .Property(e => e.www)
                 .IsUnicode(false);
         }
     }

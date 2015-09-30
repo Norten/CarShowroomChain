@@ -20,9 +20,9 @@ namespace CarShowroomChain {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("polsl_agatek_bdDataSet3")]
+    [global::System.Xml.Serialization.XmlRootAttribute("polsl_agatek_bdDataSet2")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class polsl_agatek_bdDataSet3 : global::System.Data.DataSet {
+    public partial class polsl_agatek_bdDataSet2 : global::System.Data.DataSet {
         
         private client_order_history_car_resDataTable tableclient_order_history_car_res;
         
@@ -40,7 +40,7 @@ namespace CarShowroomChain {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public polsl_agatek_bdDataSet3() {
+        public polsl_agatek_bdDataSet2() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -51,7 +51,7 @@ namespace CarShowroomChain {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected polsl_agatek_bdDataSet3(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected polsl_agatek_bdDataSet2(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -202,7 +202,7 @@ namespace CarShowroomChain {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            polsl_agatek_bdDataSet3 cln = ((polsl_agatek_bdDataSet3)(base.Clone()));
+            polsl_agatek_bdDataSet2 cln = ((polsl_agatek_bdDataSet2)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -319,9 +319,9 @@ namespace CarShowroomChain {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "polsl_agatek_bdDataSet3";
+            this.DataSetName = "polsl_agatek_bdDataSet2";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/polsl_agatek_bdDataSet3.xsd";
+            this.Namespace = "http://tempuri.org/polsl_agatek_bdDataSet21.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableclient_order_history_car_res = new client_order_history_car_resDataTable();
@@ -385,7 +385,7 @@ namespace CarShowroomChain {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            polsl_agatek_bdDataSet3 ds = new polsl_agatek_bdDataSet3();
+            polsl_agatek_bdDataSet2 ds = new polsl_agatek_bdDataSet2();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -805,7 +805,7 @@ namespace CarShowroomChain {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                polsl_agatek_bdDataSet3 ds = new polsl_agatek_bdDataSet3();
+                polsl_agatek_bdDataSet2 ds = new polsl_agatek_bdDataSet2();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1222,7 +1222,7 @@ namespace CarShowroomChain {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                polsl_agatek_bdDataSet3 ds = new polsl_agatek_bdDataSet3();
+                polsl_agatek_bdDataSet2 ds = new polsl_agatek_bdDataSet2();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1638,7 +1638,7 @@ namespace CarShowroomChain {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                polsl_agatek_bdDataSet3 ds = new polsl_agatek_bdDataSet3();
+                polsl_agatek_bdDataSet2 ds = new polsl_agatek_bdDataSet2();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2009,7 +2009,7 @@ namespace CarShowroomChain {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                polsl_agatek_bdDataSet3 ds = new polsl_agatek_bdDataSet3();
+                polsl_agatek_bdDataSet2 ds = new polsl_agatek_bdDataSet2();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2620,7 +2620,7 @@ namespace CarShowroomChain {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                polsl_agatek_bdDataSet3 ds = new polsl_agatek_bdDataSet3();
+                polsl_agatek_bdDataSet2 ds = new polsl_agatek_bdDataSet2();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2932,7 +2932,7 @@ namespace CarShowroomChain {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                polsl_agatek_bdDataSet3 ds = new polsl_agatek_bdDataSet3();
+                polsl_agatek_bdDataSet2 ds = new polsl_agatek_bdDataSet2();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -4222,7 +4222,7 @@ namespace CarShowroomChain {
         }
     }
 }
-namespace CarShowroomChain.polsl_agatek_bdDataSet3TableAdapters {
+namespace CarShowroomChain.polsl_agatek_bdDataSet2TableAdapters {
     
     
     /// <summary>
@@ -4364,7 +4364,7 @@ namespace CarShowroomChain.polsl_agatek_bdDataSet3TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::MySql.Data.MySqlClient.MySqlConnection();
-            this._connection.ConnectionString = global::CarShowroomChain.Properties.Settings.Default.polsl_agatek_bdConnectionString;
+            this._connection.ConnectionString = global::CarShowroomChain.Properties.Settings.Default.polsl_agatek_bdConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4383,7 +4383,7 @@ namespace CarShowroomChain.polsl_agatek_bdDataSet3TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(polsl_agatek_bdDataSet3.client_order_history_car_resDataTable dataTable) {
+        public virtual int Fill(polsl_agatek_bdDataSet2.client_order_history_car_resDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4396,9 +4396,9 @@ namespace CarShowroomChain.polsl_agatek_bdDataSet3TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual polsl_agatek_bdDataSet3.client_order_history_car_resDataTable GetData() {
+        public virtual polsl_agatek_bdDataSet2.client_order_history_car_resDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            polsl_agatek_bdDataSet3.client_order_history_car_resDataTable dataTable = new polsl_agatek_bdDataSet3.client_order_history_car_resDataTable();
+            polsl_agatek_bdDataSet2.client_order_history_car_resDataTable dataTable = new polsl_agatek_bdDataSet2.client_order_history_car_resDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -4543,7 +4543,7 @@ namespace CarShowroomChain.polsl_agatek_bdDataSet3TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::MySql.Data.MySqlClient.MySqlConnection();
-            this._connection.ConnectionString = global::CarShowroomChain.Properties.Settings.Default.polsl_agatek_bdConnectionString;
+            this._connection.ConnectionString = global::CarShowroomChain.Properties.Settings.Default.polsl_agatek_bdConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4562,7 +4562,7 @@ namespace CarShowroomChain.polsl_agatek_bdDataSet3TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(polsl_agatek_bdDataSet3.client_order_history_car_sellDataTable dataTable) {
+        public virtual int Fill(polsl_agatek_bdDataSet2.client_order_history_car_sellDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4575,9 +4575,9 @@ namespace CarShowroomChain.polsl_agatek_bdDataSet3TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual polsl_agatek_bdDataSet3.client_order_history_car_sellDataTable GetData() {
+        public virtual polsl_agatek_bdDataSet2.client_order_history_car_sellDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            polsl_agatek_bdDataSet3.client_order_history_car_sellDataTable dataTable = new polsl_agatek_bdDataSet3.client_order_history_car_sellDataTable();
+            polsl_agatek_bdDataSet2.client_order_history_car_sellDataTable dataTable = new polsl_agatek_bdDataSet2.client_order_history_car_sellDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -4722,7 +4722,7 @@ namespace CarShowroomChain.polsl_agatek_bdDataSet3TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::MySql.Data.MySqlClient.MySqlConnection();
-            this._connection.ConnectionString = global::CarShowroomChain.Properties.Settings.Default.polsl_agatek_bdConnectionString;
+            this._connection.ConnectionString = global::CarShowroomChain.Properties.Settings.Default.polsl_agatek_bdConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4741,7 +4741,7 @@ namespace CarShowroomChain.polsl_agatek_bdDataSet3TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(polsl_agatek_bdDataSet3.client_order_history_serviceDataTable dataTable) {
+        public virtual int Fill(polsl_agatek_bdDataSet2.client_order_history_serviceDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4754,9 +4754,9 @@ namespace CarShowroomChain.polsl_agatek_bdDataSet3TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual polsl_agatek_bdDataSet3.client_order_history_serviceDataTable GetData() {
+        public virtual polsl_agatek_bdDataSet2.client_order_history_serviceDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            polsl_agatek_bdDataSet3.client_order_history_serviceDataTable dataTable = new polsl_agatek_bdDataSet3.client_order_history_serviceDataTable();
+            polsl_agatek_bdDataSet2.client_order_history_serviceDataTable dataTable = new polsl_agatek_bdDataSet2.client_order_history_serviceDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -4898,7 +4898,7 @@ namespace CarShowroomChain.polsl_agatek_bdDataSet3TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::MySql.Data.MySqlClient.MySqlConnection();
-            this._connection.ConnectionString = global::CarShowroomChain.Properties.Settings.Default.polsl_agatek_bdConnectionString;
+            this._connection.ConnectionString = global::CarShowroomChain.Properties.Settings.Default.polsl_agatek_bdConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4916,7 +4916,7 @@ namespace CarShowroomChain.polsl_agatek_bdDataSet3TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(polsl_agatek_bdDataSet3.full_reservationDataTable dataTable) {
+        public virtual int Fill(polsl_agatek_bdDataSet2.full_reservationDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4929,9 +4929,9 @@ namespace CarShowroomChain.polsl_agatek_bdDataSet3TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual polsl_agatek_bdDataSet3.full_reservationDataTable GetData() {
+        public virtual polsl_agatek_bdDataSet2.full_reservationDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            polsl_agatek_bdDataSet3.full_reservationDataTable dataTable = new polsl_agatek_bdDataSet3.full_reservationDataTable();
+            polsl_agatek_bdDataSet2.full_reservationDataTable dataTable = new polsl_agatek_bdDataSet2.full_reservationDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -5087,7 +5087,7 @@ namespace CarShowroomChain.polsl_agatek_bdDataSet3TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::MySql.Data.MySqlClient.MySqlConnection();
-            this._connection.ConnectionString = global::CarShowroomChain.Properties.Settings.Default.polsl_agatek_bdConnectionString;
+            this._connection.ConnectionString = global::CarShowroomChain.Properties.Settings.Default.polsl_agatek_bdConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5104,7 +5104,7 @@ namespace CarShowroomChain.polsl_agatek_bdDataSet3TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(polsl_agatek_bdDataSet3.orders_in_progresDataTable dataTable) {
+        public virtual int Fill(polsl_agatek_bdDataSet2.orders_in_progresDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -5117,9 +5117,9 @@ namespace CarShowroomChain.polsl_agatek_bdDataSet3TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual polsl_agatek_bdDataSet3.orders_in_progresDataTable GetData() {
+        public virtual polsl_agatek_bdDataSet2.orders_in_progresDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            polsl_agatek_bdDataSet3.orders_in_progresDataTable dataTable = new polsl_agatek_bdDataSet3.orders_in_progresDataTable();
+            polsl_agatek_bdDataSet2.orders_in_progresDataTable dataTable = new polsl_agatek_bdDataSet2.orders_in_progresDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -5258,7 +5258,7 @@ namespace CarShowroomChain.polsl_agatek_bdDataSet3TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::MySql.Data.MySqlClient.MySqlConnection();
-            this._connection.ConnectionString = global::CarShowroomChain.Properties.Settings.Default.polsl_agatek_bdConnectionString;
+            this._connection.ConnectionString = global::CarShowroomChain.Properties.Settings.Default.polsl_agatek_bdConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5276,7 +5276,7 @@ namespace CarShowroomChain.polsl_agatek_bdDataSet3TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(polsl_agatek_bdDataSet3.salon_rankingDataTable dataTable) {
+        public virtual int Fill(polsl_agatek_bdDataSet2.salon_rankingDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -5289,9 +5289,9 @@ namespace CarShowroomChain.polsl_agatek_bdDataSet3TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual polsl_agatek_bdDataSet3.salon_rankingDataTable GetData() {
+        public virtual polsl_agatek_bdDataSet2.salon_rankingDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            polsl_agatek_bdDataSet3.salon_rankingDataTable dataTable = new polsl_agatek_bdDataSet3.salon_rankingDataTable();
+            polsl_agatek_bdDataSet2.salon_rankingDataTable dataTable = new polsl_agatek_bdDataSet2.salon_rankingDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -5365,7 +5365,7 @@ namespace CarShowroomChain.polsl_agatek_bdDataSet3TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateUpdatedRows(polsl_agatek_bdDataSet3 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(polsl_agatek_bdDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -5375,7 +5375,7 @@ namespace CarShowroomChain.polsl_agatek_bdDataSet3TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateInsertedRows(polsl_agatek_bdDataSet3 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(polsl_agatek_bdDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -5385,7 +5385,7 @@ namespace CarShowroomChain.polsl_agatek_bdDataSet3TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateDeletedRows(polsl_agatek_bdDataSet3 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(polsl_agatek_bdDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -5419,7 +5419,7 @@ namespace CarShowroomChain.polsl_agatek_bdDataSet3TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public virtual int UpdateAll(polsl_agatek_bdDataSet3 dataSet) {
+        public virtual int UpdateAll(polsl_agatek_bdDataSet2 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
